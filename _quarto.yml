@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Dog Capitals"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research/index.qmd
+        text: Research
+      - text: Programs
+        menu:
+          - href: programs/es-core.qmd
+            text: ES Core Futures
+          - href: programs/etf-vol.qmd
+            text: ETF Vol Targeting
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: false
