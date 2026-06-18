@@ -65,31 +65,31 @@ toward or below 1x.
 
 ## Equity Curve
 
-![Equity Curve](charts/es-core/equity_curves.png)
+![Equity Curve](es-core/equity_curves.png)
 
 ---
 
 ## Drawdown
 
-![Drawdown](charts/es-core/drawdown.png)
+![Drawdown](es-core/drawdown.png)
 
 ---
 
 ## Leverage
 
-![Leverage](charts/es-core/leverage.png)
+![Leverage](es-core/leverage.png)
 
 ---
 
 ## Rolling Sharpe
 
-![Rolling Sharpe](charts/es-core/rolling_sharpe.png)
+![Rolling Sharpe](es-core/rolling_sharpe.png)
 
 ---
 
 ## Weight Allocation
 
-![Weight Allocation](charts/es-core/weight_allocation.png)
+![Weight Allocation](es-core/weight_allocation.png)
 
 ---
 

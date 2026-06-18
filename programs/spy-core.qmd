@@ -65,25 +65,25 @@ performance relative to SPY.
 
 ## Equity Curve
 
-![Equity Curve](charts/spy-core/equity_curves.png)
+![Equity Curve](spy-core/equity_curves.png)
 
 ---
 
 ## Drawdown
 
-![Drawdown](charts/spy-core/drawdown.png)
+![Drawdown](spy-core/drawdown.png)
 
 ---
 
 ## Rolling Sharpe
 
-![Rolling Sharpe](charts/spy-core/rolling_sharpe.png)
+![Rolling Sharpe](spy-core/rolling_sharpe.png)
 
 ---
 
 ## Weight Allocation
 
-![Weight Allocation](charts/spy-core/weight_allocation.png)
+![Weight Allocation](spy-core/weight_allocation.png)
 
 ---
 
