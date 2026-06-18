@@ -25,12 +25,11 @@ performance are reported without adjustment.
 
 ## Programs {#programs}
 
-### ES Core Relative Allocation
+### ES Core
 
 U.S. large-cap equity futures (ES) as a permanent core with dynamic allocation
 to eight alternatives across equities, fixed income, real assets, and digital
-assets. Downside volatility targeting in the 10–20% range. Daily execution via
-Interactive Brokers.
+assets. Downside volatility targeting in the 10–20% range.
 
 **Backtest (2003–2026):** CAGR 9.54% · Sharpe 0.592 · Max DD -36.48%
 
