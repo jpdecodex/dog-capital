@@ -116,7 +116,7 @@
     "href": "programs/spy-core.html#instrument-universe",
     "title": "SPY Core",
     "section": "Instrument Universe",
-    "text": "Instrument Universe\nThe strategy trades four instruments via CEDEARs: SPY (S&P 500), QQQ (Nasdaq-100), GLD (Gold), and IBIT (Bitcoin ETF).\nSPY is the permanent core. The same organizing principle as ES Core applies: U.S. large-cap equity is the benchmark against which every alternative is evaluated on a risk-adjusted basis.\nThe strategy is designed for Argentine investors seeking USD-denominated returns. CEDEARs provide access to these instruments in the local market. —"
+    "text": "Instrument Universe\nThe strategy trades four instruments via CEDEARs: SPY (S&P 500), QQQ (Nasdaq-100), GLD (Gold), and IBIT (Bitcoin ETF).\nSPY is the permanent core. The same organizing principle as ES Core applies: U.S. large-cap equity is the benchmark against which every alternative is evaluated on a risk-adjusted basis.\nThe strategy is designed for Argentine investors seeking USD-denominated returns. CEDEARs provide access to these instruments in the local market."
   },
   {
     "objectID": "programs/spy-core.html#strategy-design",

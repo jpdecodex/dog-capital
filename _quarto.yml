@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - "programs/es-core/**"
+    - "programs/spy-core/**"
 
 website:
   title: "Dog Capital"
