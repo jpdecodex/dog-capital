@@ -20,6 +20,7 @@ evaluated on a risk-adjusted basis.
 
 The strategy is designed for Argentine investors seeking USD-denominated
 returns. CEDEARs provide access to these instruments in the local market.
+
 ---
 
 ## Strategy Design
