@@ -67,42 +67,42 @@
     "href": "programs/es-core.html#live-deployment",
     "title": "ES Core",
     "section": "Live Deployment",
-    "text": "Live Deployment\nPaper trading active. Track record will be published here as it accumulates.\n\n© 2026 Dog Capitals"
+    "text": "Live Deployment\nPaper trading active. Track record will be published here as it accumulates.\n\n© 2026 Dog Capital"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Dog Capitals",
+    "title": "Dog Capital",
     "section": "",
     "text": "About | Programs | Research | Enquiries"
   },
   {
     "objectID": "index.html#about",
     "href": "index.html#about",
-    "title": "Dog Capitals",
+    "title": "Dog Capital",
     "section": "About",
-    "text": "About\nDog Capitals is an independent quantitative research initiative focused on systematic volatility-targeting strategies. We build rules-based investment programs grounded in a single core thesis: the S&P 500 is the best asset to trade, and volatility is the best tool to manage it.\nAll strategies share the same framework — downside volatility targeting, dynamic leverage, and signal-lagged execution. Each program expresses that framework across a different market, capital size, and investor type.\nPrograms are developed entirely in-house. Backtest evidence and live performance are reported without adjustment."
+    "text": "About\nDog Capital is an independent quantitative research initiative focused on systematic volatility-targeting strategies. We build rules-based investment programs grounded in a single core thesis: the S&P 500 is the best asset to trade, and volatility is the best tool to manage it.\nAll strategies share the same framework — downside volatility targeting, dynamic leverage, and signal-lagged execution. Each program expresses that framework across a different market, capital size, and investor type.\nPrograms are developed entirely in-house. Backtest evidence and live performance are reported without adjustment."
   },
   {
     "objectID": "index.html#programs",
     "href": "index.html#programs",
-    "title": "Dog Capitals",
+    "title": "Dog Capital",
     "section": "Programs",
     "text": "Programs\n\nES Core Relative Allocation\nU.S. large-cap equity futures (ES) as a permanent core with dynamic allocation to eight alternatives across equities, fixed income, real assets, and digital assets. Downside volatility targeting in the 10–20% range. Daily execution via Interactive Brokers.\nBacktest (2003–2026): CAGR 9.54% · Sharpe 0.592 · Max DD -36.48%\nStrategy document →\n\n\n\nSPY Core\nMonthly rebalancing across four CEDEAR instruments (SPY, QQQ, GLD, IBIT) using the same vol targeting framework. S&P 500 as permanent core with a hard floor. No leverage. Designed for Argentine investors seeking USD-denominated returns with capital gains tax efficiency.\nBacktest (2005–2026): CAGR 21.46% · Sharpe 1.41 · Max DD -15.47%\nStrategy document →"
   },
   {
     "objectID": "index.html#research",
     "href": "index.html#research",
-    "title": "Dog Capitals",
+    "title": "Dog Capital",
     "section": "Research",
     "text": "Research\nThe conceptual foundation underlying each program is documented in the strategy papers linked above. The shared framework covers volatility estimation, signal construction, portfolio construction, and execution.\nView research framework →"
   },
   {
     "objectID": "index.html#enquiries",
     "href": "index.html#enquiries",
-    "title": "Dog Capitals",
+    "title": "Dog Capital",
     "section": "Enquiries",
-    "text": "Enquiries\nOpen to discussions with allocators, proprietary trading groups, and partners interested in separately managed accounts or fund structures.\nGet in touch →\n\n© 2026 Dog Capitals"
+    "text": "Enquiries\nOpen to discussions with allocators, proprietary trading groups, and partners interested in separately managed accounts or fund structures.\nGet in touch →\n\n© 2026 Dog Capital"
   },
   {
     "objectID": "programs/spy-core.html",
@@ -165,6 +165,6 @@
     "href": "programs/spy-core.html#live-deployment",
     "title": "SPY Core",
     "section": "Live Deployment",
-    "text": "Live Deployment\nLive account active. Performance will be published here as it accumulates.\n\n© 2026 Dog Capitals"
+    "text": "Live Deployment\nLive account active. Performance will be published here as it accumulates.\n\n© 2026 Dog Capital"
   }
 ]

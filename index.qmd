@@ -9,7 +9,7 @@ page-layout: full
 
 ## About {#about}
 
-Dog Capitals is an independent quantitative research initiative focused on
+Dog Capital is an independent quantitative research initiative focused on
 systematic volatility-targeting strategies. We build rules-based investment
 programs grounded in a single core thesis: the S&P 500 is the best asset to
 trade, and volatility is the best tool to manage it.
@@ -70,4 +70,4 @@ interested in separately managed accounts or fund structures.
 
 ---
 
-*© 2026 Dog Capitals*
+*© 2026 Dog Capital*
