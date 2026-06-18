@@ -13,7 +13,7 @@ website:
       - text: Programs
         menu:
           - href: programs/es-core.qmd
-            text: ES Core Futures
+            text: ES Core
           - href: programs/spy-core.qmd
             text: SPY Core
 
