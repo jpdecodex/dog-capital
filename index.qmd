@@ -38,7 +38,7 @@ Interactive Brokers.
 
 ---
 
-### ETF Vol Targeting
+### SPY Core
 
 Monthly rebalancing across four CEDEAR instruments (SPY, QQQ, GLD, IBIT)
 using the same vol targeting framework. S&P 500 as permanent core with a hard
@@ -47,7 +47,7 @@ returns with capital gains tax efficiency.
 
 **Backtest (2005–2026):** CAGR 21.46% · Sharpe 1.41 · Max DD -15.47%
 
-[Strategy document →](programs/etf-vol.qmd)
+[Strategy document →](programs/spy-core.qmd)
 
 ---
 

@@ -1,5 +1,75 @@
 [
   {
+    "objectID": "programs/es-core.html",
+    "href": "programs/es-core.html",
+    "title": "ES Core Relative Allocation",
+    "section": "",
+    "text": "U.S. large-cap equity futures as a permanent core with dynamic allocation to eight alternatives across equities, fixed income, real assets, and digital assets.\n← Back"
+  },
+  {
+    "objectID": "programs/es-core.html#instrument-universe",
+    "href": "programs/es-core.html#instrument-universe",
+    "title": "ES Core Relative Allocation",
+    "section": "Instrument Universe",
+    "text": "Instrument Universe\nThe strategy trades seven futures contracts: ES (S&P 500), NQ (Nasdaq-100), RTY (Russell 2000), GC (Gold), SI (Silver), ZN (10-year Treasury), and MBT (Micro Bitcoin). All are USD-denominated and trade on regulated U.S. exchanges.\nES is the permanent core. U.S. large-cap equity has been the most reliably positive long-run risk premium available to investors. Every alternative is evaluated against ES on a risk-adjusted basis. The permanent equity core ensures the strategy participates in the growth regime that historically accounts for the majority of compounded long-run return."
+  },
+  {
+    "objectID": "programs/es-core.html#strategy-design",
+    "href": "programs/es-core.html#strategy-design",
+    "title": "ES Core Relative Allocation",
+    "section": "Strategy Design",
+    "text": "Strategy Design\nES Core maintains a permanent allocation to ES and dynamically allocates up to 50% of the portfolio to the six alternative instruments based on their risk-adjusted performance relative to ES.\nFramework:\n\nPermanent core: ES with hard floor at 50%\nTactical sleeve: inverse downside semi-deviation weighted\nSleeve qualification: rolling Sortino vs ES &gt; 0\nVolatility target: 10–20% downside semi-deviation\nLeverage: dynamic, max 3.0x\nEMA(10) smoothing + 10% no-trade band\nSignal lag: 1 day\n\nLeverage is structurally necessary. The volatility targeting mechanism determines how much notional exposure each dollar of capital should support. In high-conviction, low-volatility environments the strategy runs above 1x notional leverage. In uncertain or high-volatility environments it contracts toward or below 1x."
+  },
+  {
+    "objectID": "programs/es-core.html#backtest-results",
+    "href": "programs/es-core.html#backtest-results",
+    "title": "ES Core Relative Allocation",
+    "section": "Backtest Results",
+    "text": "Backtest Results\n\nThese are hypothetical backtested results. They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.\n\n\n\n\nMetric\nStrategy\n\n\n\n\nCAGR\n9.54%\n\n\nSharpe\n0.592\n\n\nMax Drawdown\n-36.48%\n\n\nAvg Leverage\n1.93x\n\n\nPeriod\n2003–2026"
+  },
+  {
+    "objectID": "programs/es-core.html#equity-curve",
+    "href": "programs/es-core.html#equity-curve",
+    "title": "ES Core Relative Allocation",
+    "section": "Equity Curve",
+    "text": "Equity Curve\n\n\n\nEquity Curve"
+  },
+  {
+    "objectID": "programs/es-core.html#drawdown",
+    "href": "programs/es-core.html#drawdown",
+    "title": "ES Core Relative Allocation",
+    "section": "Drawdown",
+    "text": "Drawdown\n\n\n\nDrawdown"
+  },
+  {
+    "objectID": "programs/es-core.html#leverage",
+    "href": "programs/es-core.html#leverage",
+    "title": "ES Core Relative Allocation",
+    "section": "Leverage",
+    "text": "Leverage\n\n\n\nLeverage"
+  },
+  {
+    "objectID": "programs/es-core.html#rolling-sharpe",
+    "href": "programs/es-core.html#rolling-sharpe",
+    "title": "ES Core Relative Allocation",
+    "section": "Rolling Sharpe",
+    "text": "Rolling Sharpe\n\n\n\nRolling Sharpe"
+  },
+  {
+    "objectID": "programs/es-core.html#weight-allocation",
+    "href": "programs/es-core.html#weight-allocation",
+    "title": "ES Core Relative Allocation",
+    "section": "Weight Allocation",
+    "text": "Weight Allocation\n\n\n\nWeight Allocation"
+  },
+  {
+    "objectID": "programs/es-core.html#live-deployment",
+    "href": "programs/es-core.html#live-deployment",
+    "title": "ES Core Relative Allocation",
+    "section": "Live Deployment",
+    "text": "Live Deployment\nPaper trading active. Track record will be published here as it accumulates.\n\n© 2026 Dog Capitals"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Dog Capitals",
@@ -18,7 +88,7 @@
     "href": "index.html#programs",
     "title": "Dog Capitals",
     "section": "Programs",
-    "text": "Programs\n\nES Core Relative Allocation\nU.S. large-cap equity futures (ES) as a permanent core with dynamic allocation to eight alternatives across equities, fixed income, real assets, and digital assets. Downside volatility targeting in the 10–20% range. Daily execution via Interactive Brokers.\nBacktest (2003–2026): CAGR 9.54% · Sharpe 0.592 · Max DD -36.48%\nStrategy document →\n\n\n\nETF Vol Targeting\nMonthly rebalancing across four CEDEAR instruments (SPY, QQQ, GLD, IBIT) using the same vol targeting framework. S&P 500 as permanent core with a hard floor. No leverage. Designed for Argentine investors seeking USD-denominated returns with capital gains tax efficiency.\nBacktest (2005–2026): CAGR 21.46% · Sharpe 1.41 · Max DD -15.47%\nStrategy document →"
+    "text": "Programs\n\nES Core Relative Allocation\nU.S. large-cap equity futures (ES) as a permanent core with dynamic allocation to eight alternatives across equities, fixed income, real assets, and digital assets. Downside volatility targeting in the 10–20% range. Daily execution via Interactive Brokers.\nBacktest (2003–2026): CAGR 9.54% · Sharpe 0.592 · Max DD -36.48%\nStrategy document →\n\n\n\nSPY Core\nMonthly rebalancing across four CEDEAR instruments (SPY, QQQ, GLD, IBIT) using the same vol targeting framework. S&P 500 as permanent core with a hard floor. No leverage. Designed for Argentine investors seeking USD-denominated returns with capital gains tax efficiency.\nBacktest (2005–2026): CAGR 21.46% · Sharpe 1.41 · Max DD -15.47%\nStrategy document →"
   },
   {
     "objectID": "index.html#research",
@@ -33,5 +103,68 @@
     "title": "Dog Capitals",
     "section": "Enquiries",
     "text": "Enquiries\nOpen to discussions with allocators, proprietary trading groups, and partners interested in separately managed accounts or fund structures.\nGet in touch →\n\n© 2026 Dog Capitals"
+  },
+  {
+    "objectID": "programs/spy-core.html",
+    "href": "programs/spy-core.html",
+    "title": "SPY Core",
+    "section": "",
+    "text": "Monthly rebalancing across four CEDEAR instruments using the same vol targeting framework as ES Core. S&P 500 as permanent core. No leverage.\n← Back"
+  },
+  {
+    "objectID": "programs/spy-core.html#instrument-universe",
+    "href": "programs/spy-core.html#instrument-universe",
+    "title": "SPY Core",
+    "section": "Instrument Universe",
+    "text": "Instrument Universe\nThe strategy trades four instruments via CEDEARs: SPY (S&P 500), QQQ (Nasdaq-100), GLD (Gold), and IBIT (Bitcoin ETF).\nSPY is the permanent core. The same organizing principle as ES Core applies: U.S. large-cap equity is the benchmark against which every alternative is evaluated on a risk-adjusted basis.\nThe strategy is designed for Argentine investors seeking USD-denominated returns. CEDEARs provide access to these instruments in the local market. Capital gains on CEDEARs are exempt from Argentine income tax up to $100,000,000 ARS annually."
+  },
+  {
+    "objectID": "programs/spy-core.html#strategy-design",
+    "href": "programs/spy-core.html#strategy-design",
+    "title": "SPY Core",
+    "section": "Strategy Design",
+    "text": "Strategy Design\nSPY Core maintains a permanent allocation to SPY and dynamically allocates the tactical sleeve to QQQ, GLD, and IBIT based on their risk-adjusted performance relative to SPY.\nFramework:\n\nPermanent core: SPY with hard floor at 50%\nTactical sleeve: inverse downside semi-deviation weighted\nSleeve qualification: rolling Sortino vs SPY &gt; 0\nVolatility target: 10–20% downside semi-deviation\nLeverage: none (L_MAX = 1.0)\nEMA(10) smoothing + 10% no-trade band\nSignal lag: 1 day\nCadence: weekly signal, monthly execution\nIdle capital: money market fund"
+  },
+  {
+    "objectID": "programs/spy-core.html#backtest-results",
+    "href": "programs/spy-core.html#backtest-results",
+    "title": "SPY Core",
+    "section": "Backtest Results",
+    "text": "Backtest Results\n\nThese are hypothetical backtested results. They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.\n\n\n\n\nMetric\nStrategy\n\n\n\n\nCAGR\n21.46%\n\n\nSharpe\n1.41\n\n\nSortino\n1.29\n\n\nMax Drawdown\n-15.47%\n\n\nPeriod\n2005–2026\n\n\n\nBacktest run on USD underlyings."
+  },
+  {
+    "objectID": "programs/spy-core.html#equity-curve",
+    "href": "programs/spy-core.html#equity-curve",
+    "title": "SPY Core",
+    "section": "Equity Curve",
+    "text": "Equity Curve\n\n\n\nEquity Curve"
+  },
+  {
+    "objectID": "programs/spy-core.html#drawdown",
+    "href": "programs/spy-core.html#drawdown",
+    "title": "SPY Core",
+    "section": "Drawdown",
+    "text": "Drawdown\n\n\n\nDrawdown"
+  },
+  {
+    "objectID": "programs/spy-core.html#rolling-sharpe",
+    "href": "programs/spy-core.html#rolling-sharpe",
+    "title": "SPY Core",
+    "section": "Rolling Sharpe",
+    "text": "Rolling Sharpe\n\n\n\nRolling Sharpe"
+  },
+  {
+    "objectID": "programs/spy-core.html#weight-allocation",
+    "href": "programs/spy-core.html#weight-allocation",
+    "title": "SPY Core",
+    "section": "Weight Allocation",
+    "text": "Weight Allocation\n\n\n\nWeight Allocation"
+  },
+  {
+    "objectID": "programs/spy-core.html#live-deployment",
+    "href": "programs/spy-core.html#live-deployment",
+    "title": "SPY Core",
+    "section": "Live Deployment",
+    "text": "Live Deployment\nLive account active. Performance will be published here as it accumulates.\n\n© 2026 Dog Capitals"
   }
 ]

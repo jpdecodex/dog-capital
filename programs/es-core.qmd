@@ -1,0 +1,102 @@
+---
+title: "ES Core Relative Allocation"
+---
+
+U.S. large-cap equity futures as a permanent core with dynamic allocation
+to eight alternatives across equities, fixed income, real assets, and digital assets.
+
+[← Back](../index.qmd#programs)
+
+---
+
+## Instrument Universe
+
+The strategy trades seven futures contracts: ES (S&P 500), NQ (Nasdaq-100),
+RTY (Russell 2000), GC (Gold), SI (Silver), ZN (10-year Treasury), and MBT
+(Micro Bitcoin). All are USD-denominated and trade on regulated U.S. exchanges.
+
+ES is the permanent core. U.S. large-cap equity has been the most reliably
+positive long-run risk premium available to investors. Every alternative is
+evaluated against ES on a risk-adjusted basis. The permanent equity core
+ensures the strategy participates in the growth regime that historically
+accounts for the majority of compounded long-run return.
+
+---
+
+## Strategy Design
+
+ES Core maintains a permanent allocation to ES and dynamically allocates
+up to 50% of the portfolio to the six alternative instruments based on their
+risk-adjusted performance relative to ES.
+
+**Framework:**
+
+- Permanent core: ES with hard floor at 50%
+- Tactical sleeve: inverse downside semi-deviation weighted
+- Sleeve qualification: rolling Sortino vs ES > 0
+- Volatility target: 10–20% downside semi-deviation
+- Leverage: dynamic, max 3.0x
+- EMA(10) smoothing + 10% no-trade band
+- Signal lag: 1 day
+
+Leverage is structurally necessary. The volatility targeting mechanism
+determines how much notional exposure each dollar of capital should support.
+In high-conviction, low-volatility environments the strategy runs above 1x
+notional leverage. In uncertain or high-volatility environments it contracts
+toward or below 1x.
+
+---
+
+## Backtest Results
+
+> **These are hypothetical backtested results.** They were not achieved by
+> any investor. Past hypothetical performance is not a reliable indicator
+> of future results.
+
+| Metric | Strategy |
+|--------|----------|
+| CAGR | 9.54% |
+| Sharpe | 0.592 |
+| Max Drawdown | -36.48% |
+| Avg Leverage | 1.93x |
+| Period | 2003–2026 |
+
+---
+
+## Equity Curve
+
+![Equity Curve](charts/es-core/equity_curves.png)
+
+---
+
+## Drawdown
+
+![Drawdown](charts/es-core/drawdown.png)
+
+---
+
+## Leverage
+
+![Leverage](charts/es-core/leverage.png)
+
+---
+
+## Rolling Sharpe
+
+![Rolling Sharpe](charts/es-core/rolling_sharpe.png)
+
+---
+
+## Weight Allocation
+
+![Weight Allocation](charts/es-core/weight_allocation.png)
+
+---
+
+## Live Deployment
+
+Paper trading active. Track record will be published here as it accumulates.
+
+---
+
+*© 2026 Dog Capitals*
