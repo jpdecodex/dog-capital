@@ -20,9 +20,6 @@ evaluated on a risk-adjusted basis.
 
 The strategy is designed for Argentine investors seeking USD-denominated
 returns. CEDEARs provide access to these instruments in the local market.
-Capital gains on CEDEARs are exempt from Argentine income tax up to
-$100,000,000 ARS annually.
-
 ---
 
 ## Strategy Design
