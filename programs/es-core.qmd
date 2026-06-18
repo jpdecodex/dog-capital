@@ -1,5 +1,5 @@
 ---
-title: "ES Core Relative Allocation"
+title: "ES Core"
 ---
 
 U.S. large-cap equity futures as a permanent core with dynamic allocation

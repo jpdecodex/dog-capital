@@ -2,70 +2,70 @@
   {
     "objectID": "programs/es-core.html",
     "href": "programs/es-core.html",
-    "title": "ES Core Relative Allocation",
+    "title": "ES Core",
     "section": "",
     "text": "U.S. large-cap equity futures as a permanent core with dynamic allocation to eight alternatives across equities, fixed income, real assets, and digital assets.\n← Back"
   },
   {
     "objectID": "programs/es-core.html#instrument-universe",
     "href": "programs/es-core.html#instrument-universe",
-    "title": "ES Core Relative Allocation",
+    "title": "ES Core",
     "section": "Instrument Universe",
     "text": "Instrument Universe\nThe strategy trades seven futures contracts: ES (S&P 500), NQ (Nasdaq-100), RTY (Russell 2000), GC (Gold), SI (Silver), ZN (10-year Treasury), and MBT (Micro Bitcoin). All are USD-denominated and trade on regulated U.S. exchanges.\nES is the permanent core. U.S. large-cap equity has been the most reliably positive long-run risk premium available to investors. Every alternative is evaluated against ES on a risk-adjusted basis. The permanent equity core ensures the strategy participates in the growth regime that historically accounts for the majority of compounded long-run return."
   },
   {
     "objectID": "programs/es-core.html#strategy-design",
     "href": "programs/es-core.html#strategy-design",
-    "title": "ES Core Relative Allocation",
+    "title": "ES Core",
     "section": "Strategy Design",
     "text": "Strategy Design\nES Core maintains a permanent allocation to ES and dynamically allocates up to 50% of the portfolio to the six alternative instruments based on their risk-adjusted performance relative to ES.\nFramework:\n\nPermanent core: ES with hard floor at 50%\nTactical sleeve: inverse downside semi-deviation weighted\nSleeve qualification: rolling Sortino vs ES &gt; 0\nVolatility target: 10–20% downside semi-deviation\nLeverage: dynamic, max 3.0x\nEMA(10) smoothing + 10% no-trade band\nSignal lag: 1 day\n\nLeverage is structurally necessary. The volatility targeting mechanism determines how much notional exposure each dollar of capital should support. In high-conviction, low-volatility environments the strategy runs above 1x notional leverage. In uncertain or high-volatility environments it contracts toward or below 1x."
   },
   {
     "objectID": "programs/es-core.html#backtest-results",
     "href": "programs/es-core.html#backtest-results",
-    "title": "ES Core Relative Allocation",
+    "title": "ES Core",
     "section": "Backtest Results",
     "text": "Backtest Results\n\nThese are hypothetical backtested results. They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.\n\n\n\n\nMetric\nStrategy\n\n\n\n\nCAGR\n9.54%\n\n\nSharpe\n0.592\n\n\nMax Drawdown\n-36.48%\n\n\nAvg Leverage\n1.93x\n\n\nPeriod\n2003–2026"
   },
   {
     "objectID": "programs/es-core.html#equity-curve",
     "href": "programs/es-core.html#equity-curve",
-    "title": "ES Core Relative Allocation",
+    "title": "ES Core",
     "section": "Equity Curve",
     "text": "Equity Curve\n\n\n\nEquity Curve"
   },
   {
     "objectID": "programs/es-core.html#drawdown",
     "href": "programs/es-core.html#drawdown",
-    "title": "ES Core Relative Allocation",
+    "title": "ES Core",
     "section": "Drawdown",
     "text": "Drawdown\n\n\n\nDrawdown"
   },
   {
     "objectID": "programs/es-core.html#leverage",
     "href": "programs/es-core.html#leverage",
-    "title": "ES Core Relative Allocation",
+    "title": "ES Core",
     "section": "Leverage",
     "text": "Leverage\n\n\n\nLeverage"
   },
   {
     "objectID": "programs/es-core.html#rolling-sharpe",
     "href": "programs/es-core.html#rolling-sharpe",
-    "title": "ES Core Relative Allocation",
+    "title": "ES Core",
     "section": "Rolling Sharpe",
     "text": "Rolling Sharpe\n\n\n\nRolling Sharpe"
   },
   {
     "objectID": "programs/es-core.html#weight-allocation",
     "href": "programs/es-core.html#weight-allocation",
-    "title": "ES Core Relative Allocation",
+    "title": "ES Core",
     "section": "Weight Allocation",
     "text": "Weight Allocation\n\n\n\nWeight Allocation"
   },
   {
     "objectID": "programs/es-core.html#live-deployment",
     "href": "programs/es-core.html#live-deployment",
-    "title": "ES Core Relative Allocation",
+    "title": "ES Core",
     "section": "Live Deployment",
     "text": "Live Deployment\nPaper trading active. Track record will be published here as it accumulates.\n\n© 2026 Dog Capitals"
   },
