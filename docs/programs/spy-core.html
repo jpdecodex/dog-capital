@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>etf-vol – Dog Capitals</title>
+<title>SPY Core – Dog Capitals</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -110,8 +110,8 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">ES Core Futures</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../programs/etf-vol.html">
- <span class="dropdown-text">ETF Vol Targeting</span></a>
+    <a class="dropdown-item" href="../programs/spy-core.html">
+ <span class="dropdown-text">SPY Core</span></a>
   </li>  
     </ul>
   </li>
@@ -128,13 +128,140 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">SPY Core</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<p>Monthly rebalancing across four CEDEAR instruments using the same vol targeting framework as ES Core. S&amp;P 500 as permanent core. No leverage.</p>
+<p><a href="../index.html#programs">← Back</a></p>
+<hr>
+<section id="instrument-universe" class="level2">
+<h2 class="anchored" data-anchor-id="instrument-universe">Instrument Universe</h2>
+<p>The strategy trades four instruments via CEDEARs: SPY (S&amp;P 500), QQQ (Nasdaq-100), GLD (Gold), and IBIT (Bitcoin ETF).</p>
+<p>SPY is the permanent core. The same organizing principle as ES Core applies: U.S. large-cap equity is the benchmark against which every alternative is evaluated on a risk-adjusted basis.</p>
+<p>The strategy is designed for Argentine investors seeking USD-denominated returns. CEDEARs provide access to these instruments in the local market. Capital gains on CEDEARs are exempt from Argentine income tax up to $100,000,000 ARS annually.</p>
+<hr>
+</section>
+<section id="strategy-design" class="level2">
+<h2 class="anchored" data-anchor-id="strategy-design">Strategy Design</h2>
+<p>SPY Core maintains a permanent allocation to SPY and dynamically allocates the tactical sleeve to QQQ, GLD, and IBIT based on their risk-adjusted performance relative to SPY.</p>
+<p><strong>Framework:</strong></p>
+<ul>
+<li>Permanent core: SPY with hard floor at 50%</li>
+<li>Tactical sleeve: inverse downside semi-deviation weighted</li>
+<li>Sleeve qualification: rolling Sortino vs SPY &gt; 0</li>
+<li>Volatility target: 10–20% downside semi-deviation</li>
+<li>Leverage: none (L_MAX = 1.0)</li>
+<li>EMA(10) smoothing + 10% no-trade band</li>
+<li>Signal lag: 1 day</li>
+<li>Cadence: weekly signal, monthly execution</li>
+<li>Idle capital: money market fund</li>
+</ul>
+<hr>
+</section>
+<section id="backtest-results" class="level2">
+<h2 class="anchored" data-anchor-id="backtest-results">Backtest Results</h2>
+<blockquote class="blockquote">
+<p><strong>These are hypothetical backtested results.</strong> They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.</p>
+</blockquote>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CAGR</td>
+<td>21.46%</td>
+</tr>
+<tr class="even">
+<td>Sharpe</td>
+<td>1.41</td>
+</tr>
+<tr class="odd">
+<td>Sortino</td>
+<td>1.29</td>
+</tr>
+<tr class="even">
+<td>Max Drawdown</td>
+<td>-15.47%</td>
+</tr>
+<tr class="odd">
+<td>Period</td>
+<td>2005–2026</td>
+</tr>
+</tbody>
+</table>
+<p><em>Backtest run on USD underlyings.</em></p>
+<hr>
+</section>
+<section id="equity-curve" class="level2">
+<h2 class="anchored" data-anchor-id="equity-curve">Equity Curve</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="charts/spy-core/equity_curves.png" class="img-fluid figure-img"></p>
+<figcaption>Equity Curve</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="drawdown" class="level2">
+<h2 class="anchored" data-anchor-id="drawdown">Drawdown</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="charts/spy-core/drawdown.png" class="img-fluid figure-img"></p>
+<figcaption>Drawdown</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="rolling-sharpe" class="level2">
+<h2 class="anchored" data-anchor-id="rolling-sharpe">Rolling Sharpe</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="charts/spy-core/rolling_sharpe.png" class="img-fluid figure-img"></p>
+<figcaption>Rolling Sharpe</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="weight-allocation" class="level2">
+<h2 class="anchored" data-anchor-id="weight-allocation">Weight Allocation</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="charts/spy-core/weight_allocation.png" class="img-fluid figure-img"></p>
+<figcaption>Weight Allocation</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="live-deployment" class="level2">
+<h2 class="anchored" data-anchor-id="live-deployment">Live Deployment</h2>
+<p>Live account active. Performance will be published here as it accumulates.</p>
+<hr>
+<p><em>© 2026 Dog Capitals</em></p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

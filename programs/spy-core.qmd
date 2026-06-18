@@ -1,0 +1,96 @@
+---
+title: "SPY Core"
+---
+
+Monthly rebalancing across four CEDEAR instruments using the same
+vol targeting framework as ES Core. S&P 500 as permanent core. No leverage.
+
+[← Back](../index.qmd#programs)
+
+---
+
+## Instrument Universe
+
+The strategy trades four instruments via CEDEARs: SPY (S&P 500), QQQ
+(Nasdaq-100), GLD (Gold), and IBIT (Bitcoin ETF).
+
+SPY is the permanent core. The same organizing principle as ES Core applies:
+U.S. large-cap equity is the benchmark against which every alternative is
+evaluated on a risk-adjusted basis.
+
+The strategy is designed for Argentine investors seeking USD-denominated
+returns. CEDEARs provide access to these instruments in the local market.
+Capital gains on CEDEARs are exempt from Argentine income tax up to
+$100,000,000 ARS annually.
+
+---
+
+## Strategy Design
+
+SPY Core maintains a permanent allocation to SPY and dynamically allocates
+the tactical sleeve to QQQ, GLD, and IBIT based on their risk-adjusted
+performance relative to SPY.
+
+**Framework:**
+
+- Permanent core: SPY with hard floor at 50%
+- Tactical sleeve: inverse downside semi-deviation weighted
+- Sleeve qualification: rolling Sortino vs SPY > 0
+- Volatility target: 10–20% downside semi-deviation
+- Leverage: none (L_MAX = 1.0)
+- EMA(10) smoothing + 10% no-trade band
+- Signal lag: 1 day
+- Cadence: weekly signal, monthly execution
+- Idle capital: money market fund
+
+---
+
+## Backtest Results
+
+> **These are hypothetical backtested results.** They were not achieved by
+> any investor. Past hypothetical performance is not a reliable indicator
+> of future results.
+
+| Metric | Strategy |
+|--------|----------|
+| CAGR | 21.46% |
+| Sharpe | 1.41 |
+| Sortino | 1.29 |
+| Max Drawdown | -15.47% |
+| Period | 2005–2026 |
+
+*Backtest run on USD underlyings.*
+
+---
+
+## Equity Curve
+
+![Equity Curve](charts/spy-core/equity_curves.png)
+
+---
+
+## Drawdown
+
+![Drawdown](charts/spy-core/drawdown.png)
+
+---
+
+## Rolling Sharpe
+
+![Rolling Sharpe](charts/spy-core/rolling_sharpe.png)
+
+---
+
+## Weight Allocation
+
+![Weight Allocation](charts/spy-core/weight_allocation.png)
+
+---
+
+## Live Deployment
+
+Live account active. Performance will be published here as it accumulates.
+
+---
+
+*© 2026 Dog Capitals*

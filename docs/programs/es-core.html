@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>es-core – Dog Capitals</title>
+<title>ES Core Relative Allocation – Dog Capitals</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -110,8 +110,8 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">ES Core Futures</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../programs/etf-vol.html">
- <span class="dropdown-text">ETF Vol Targeting</span></a>
+    <a class="dropdown-item" href="../programs/spy-core.html">
+ <span class="dropdown-text">SPY Core</span></a>
   </li>  
     </ul>
   </li>
@@ -128,13 +128,147 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">ES Core Relative Allocation</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<p>U.S. large-cap equity futures as a permanent core with dynamic allocation to eight alternatives across equities, fixed income, real assets, and digital assets.</p>
+<p><a href="../index.html#programs">← Back</a></p>
+<hr>
+<section id="instrument-universe" class="level2">
+<h2 class="anchored" data-anchor-id="instrument-universe">Instrument Universe</h2>
+<p>The strategy trades seven futures contracts: ES (S&amp;P 500), NQ (Nasdaq-100), RTY (Russell 2000), GC (Gold), SI (Silver), ZN (10-year Treasury), and MBT (Micro Bitcoin). All are USD-denominated and trade on regulated U.S. exchanges.</p>
+<p>ES is the permanent core. U.S. large-cap equity has been the most reliably positive long-run risk premium available to investors. Every alternative is evaluated against ES on a risk-adjusted basis. The permanent equity core ensures the strategy participates in the growth regime that historically accounts for the majority of compounded long-run return.</p>
+<hr>
+</section>
+<section id="strategy-design" class="level2">
+<h2 class="anchored" data-anchor-id="strategy-design">Strategy Design</h2>
+<p>ES Core maintains a permanent allocation to ES and dynamically allocates up to 50% of the portfolio to the six alternative instruments based on their risk-adjusted performance relative to ES.</p>
+<p><strong>Framework:</strong></p>
+<ul>
+<li>Permanent core: ES with hard floor at 50%</li>
+<li>Tactical sleeve: inverse downside semi-deviation weighted</li>
+<li>Sleeve qualification: rolling Sortino vs ES &gt; 0</li>
+<li>Volatility target: 10–20% downside semi-deviation</li>
+<li>Leverage: dynamic, max 3.0x</li>
+<li>EMA(10) smoothing + 10% no-trade band</li>
+<li>Signal lag: 1 day</li>
+</ul>
+<p>Leverage is structurally necessary. The volatility targeting mechanism determines how much notional exposure each dollar of capital should support. In high-conviction, low-volatility environments the strategy runs above 1x notional leverage. In uncertain or high-volatility environments it contracts toward or below 1x.</p>
+<hr>
+</section>
+<section id="backtest-results" class="level2">
+<h2 class="anchored" data-anchor-id="backtest-results">Backtest Results</h2>
+<blockquote class="blockquote">
+<p><strong>These are hypothetical backtested results.</strong> They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.</p>
+</blockquote>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CAGR</td>
+<td>9.54%</td>
+</tr>
+<tr class="even">
+<td>Sharpe</td>
+<td>0.592</td>
+</tr>
+<tr class="odd">
+<td>Max Drawdown</td>
+<td>-36.48%</td>
+</tr>
+<tr class="even">
+<td>Avg Leverage</td>
+<td>1.93x</td>
+</tr>
+<tr class="odd">
+<td>Period</td>
+<td>2003–2026</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="equity-curve" class="level2">
+<h2 class="anchored" data-anchor-id="equity-curve">Equity Curve</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="charts/es-core/equity_curves.png" class="img-fluid figure-img"></p>
+<figcaption>Equity Curve</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="drawdown" class="level2">
+<h2 class="anchored" data-anchor-id="drawdown">Drawdown</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="charts/es-core/drawdown.png" class="img-fluid figure-img"></p>
+<figcaption>Drawdown</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="leverage" class="level2">
+<h2 class="anchored" data-anchor-id="leverage">Leverage</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="charts/es-core/leverage.png" class="img-fluid figure-img"></p>
+<figcaption>Leverage</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="rolling-sharpe" class="level2">
+<h2 class="anchored" data-anchor-id="rolling-sharpe">Rolling Sharpe</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="charts/es-core/rolling_sharpe.png" class="img-fluid figure-img"></p>
+<figcaption>Rolling Sharpe</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="weight-allocation" class="level2">
+<h2 class="anchored" data-anchor-id="weight-allocation">Weight Allocation</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="charts/es-core/weight_allocation.png" class="img-fluid figure-img"></p>
+<figcaption>Weight Allocation</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="live-deployment" class="level2">
+<h2 class="anchored" data-anchor-id="live-deployment">Live Deployment</h2>
+<p>Paper trading active. Track record will be published here as it accumulates.</p>
+<hr>
+<p><em>© 2026 Dog Capitals</em></p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

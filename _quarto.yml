@@ -14,8 +14,8 @@ website:
         menu:
           - href: programs/es-core.qmd
             text: ES Core Futures
-          - href: programs/etf-vol.qmd
-            text: ETF Vol Targeting
+          - href: programs/spy-core.qmd
+            text: SPY Core
 
 format:
   html:
