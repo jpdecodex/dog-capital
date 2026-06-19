@@ -18,14 +18,14 @@
     "href": "programs/es-core.html#strategy-design",
     "title": "ES Core",
     "section": "Strategy Design",
-    "text": "Strategy Design\nES Core maintains a permanent allocation to ES and dynamically allocates up to 50% of the portfolio to the six alternative instruments based on their risk-adjusted performance relative to ES.\nFramework:\n\nPermanent core: ES with hard floor at 50%\nTactical sleeve: inverse downside semi-deviation weighted\nSleeve qualification: rolling Sortino vs ES &gt; 0\nVolatility target: 10–20% downside semi-deviation\nLeverage: dynamic, max 3.0x\nEMA(10) smoothing + 10% no-trade band\nSignal lag: 1 day\n\nLeverage is structurally necessary. The volatility targeting mechanism determines how much notional exposure each dollar of capital should support. In high-conviction, low-volatility environments the strategy runs above 1x notional leverage. In uncertain or high-volatility environments it contracts toward or below 1x."
+    "text": "Strategy Design\nES Core maintains a permanent allocation to ES and dynamically allocates up to 50% of the portfolio to the six alternative instruments based on their risk-adjusted performance relative to ES.\nFramework:\n\nPermanent core: ES with hard floor at 50%\nTactical sleeve: inverse downside semi-deviation weighted\nSleeve qualification: rolling Sortino vs ES &gt; 0\nVolatility target: 10–28% downside semi-deviation\nLeverage: dynamic, max 3.0x\nEMA(10) smoothing + 10% no-trade band\nSignal lag: 1 day\n\nLeverage is structurally necessary. The volatility targeting mechanism determines how much notional exposure each dollar of capital should support. In high-conviction, low-volatility environments the strategy runs above 1x notional leverage. In uncertain or high-volatility environments it contracts toward or below 1x."
   },
   {
     "objectID": "programs/es-core.html#backtest-results",
     "href": "programs/es-core.html#backtest-results",
     "title": "ES Core",
     "section": "Backtest Results",
-    "text": "Backtest Results\n\nThese are hypothetical backtested results. They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.\n\n\n\n\nMetric\nStrategy\n\n\n\n\nCAGR\n9.54%\n\n\nSharpe\n0.592\n\n\nMax Drawdown\n-36.48%\n\n\nAvg Leverage\n1.93x\n\n\nPeriod\n2003–2026"
+    "text": "Backtest Results\n\nThese are hypothetical backtested results. They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.\n\nPeriod: 2003–2026. Data: yfinance adjusted prices.\n\n\n\nMetric\nES Buy & Hold\nFull Strategy\n\n\n\n\nTotal Return\n478.7%\n1,989.0%\n\n\nCAGR\n6.43%\n11.39%\n\n\nAnn. Volatility\n15.66%\n24.41%\n\n\nSharpe Ratio\n0.476\n0.565\n\n\nSortino Ratio\n0.478\n0.537\n\n\nCalmar Ratio\n0.113\n0.231\n\n\nMax Drawdown\n-56.96%\n-49.29%\n\n\nCVaR 95%\n-2.45%\n-4.01%\n\n\nCVaR 99%\n-4.41%\n-6.69%\n\n\nTail Ratio\n0.960\n0.990\n\n\nSkewness\n0.251\n-0.757\n\n\nKurtosis\n22.878\n6.405\n\n\nAvg Leverage\n1.00x\n2.38x"
   },
   {
     "objectID": "programs/es-core.html#equity-curve",
@@ -88,7 +88,7 @@
     "href": "index.html#programs",
     "title": "Dog Capital",
     "section": "Programs",
-    "text": "Programs\n\nES Core\nU.S. large-cap equity futures (ES) as a permanent core with dynamic allocation to eight alternatives across equities, fixed income, real assets, and digital assets. Downside volatility targeting in the 10–20% range.\nBacktest (2003–2026): CAGR 9.54% · Sharpe 0.592 · Max DD -36.48%\nStrategy document →\n\n\n\nSPY Core\nMonthly rebalancing across four CEDEAR instruments (SPY, QQQ, GLD, IBIT) using the same vol targeting framework. S&P 500 as permanent core with a hard floor. No leverage. Designed for Argentine investors seeking USD-denominated returns with capital gains tax efficiency.\nBacktest (2005–2026): CAGR 9.62% · Sharpe 0.750 · Max DD -33.29%\nStrategy document →"
+    "text": "Programs\n\nES Core\nU.S. large-cap equity futures (ES) as a permanent core with dynamic allocation to eight alternatives across equities, fixed income, real assets, and digital assets. Downside volatility targeting in the 10–20% range.\nBacktest (2003–2026): CAGR 11.39% · Sharpe 0.565 · Max DD -49.29%\nStrategy document →\n\n\n\nSPY Core\nMonthly rebalancing across four CEDEAR instruments (SPY, QQQ, GLD, IBIT) using the same vol targeting framework. S&P 500 as permanent core with a hard floor. No leverage. Designed for Argentine investors seeking USD-denominated returns with capital gains tax efficiency.\nBacktest (2005–2026): CAGR 9.62% · Sharpe 0.750 · Max DD -33.29%\nStrategy document →"
   },
   {
     "objectID": "index.html#research",

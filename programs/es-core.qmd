@@ -34,7 +34,7 @@ risk-adjusted performance relative to ES.
 - Permanent core: ES with hard floor at 50%
 - Tactical sleeve: inverse downside semi-deviation weighted
 - Sleeve qualification: rolling Sortino vs ES > 0
-- Volatility target: 10–20% downside semi-deviation
+- Volatility target: 10–28% downside semi-deviation
 - Leverage: dynamic, max 3.0x
 - EMA(10) smoothing + 10% no-trade band
 - Signal lag: 1 day
@@ -53,13 +53,23 @@ toward or below 1x.
 > any investor. Past hypothetical performance is not a reliable indicator
 > of future results.
 
-| Metric | Strategy |
-|--------|----------|
-| CAGR | 9.54% |
-| Sharpe | 0.592 |
-| Max Drawdown | -36.48% |
-| Avg Leverage | 1.93x |
-| Period | 2003–2026 |
+*Period: 2003–2026. Data: yfinance adjusted prices.*
+
+| Metric | ES Buy & Hold | Full Strategy |
+|--------|:-------------:|:-------------:|
+| Total Return | 478.7% | 1,989.0% |
+| CAGR | 6.43% | 11.39% |
+| Ann. Volatility | 15.66% | 24.41% |
+| Sharpe Ratio | 0.476 | 0.565 |
+| Sortino Ratio | 0.478 | 0.537 |
+| Calmar Ratio | 0.113 | 0.231 |
+| Max Drawdown | -56.96% | -49.29% |
+| CVaR 95% | -2.45% | -4.01% |
+| CVaR 99% | -4.41% | -6.69% |
+| Tail Ratio | 0.960 | 0.990 |
+| Skewness | 0.251 | -0.757 |
+| Kurtosis | 22.878 | 6.405 |
+| Avg Leverage | 1.00x | 2.38x |
 
 ---
 
