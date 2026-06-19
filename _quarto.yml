@@ -7,18 +7,7 @@ project:
 
 website:
   title: "Dog Capital"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - href: research/index.qmd
-        text: Research
-      - text: Programs
-        menu:
-          - href: programs/es-core.qmd
-            text: ES Core
-          - href: programs/spy-core.qmd
-            text: SPY Core
+  navbar: false
 
 format:
   html:

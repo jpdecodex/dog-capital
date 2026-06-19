@@ -27,7 +27,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -44,11 +43,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-6b423f165eeea3787de40cb4f8e821c3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -75,105 +74,67 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Dog Capital</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./research/index.html"> 
-<span class="menu-text">Research</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-programs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Programs</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-programs">    
-        <li>
-    <a class="dropdown-item" href="./programs/es-core.html">
- <span class="dropdown-text">ES Core</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./programs/spy-core.html">
- <span class="dropdown-text">SPY Core</span></a>
-  </li>  
-    </ul>
-  </li>
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">
+Dog Capital
+</h1></header>
 
 
 
 
-<p><a href="#about">About</a> | <a href="#programs">Programs</a> | <a href="#research">Research</a> | <a href="#enquiries">Enquiries</a></p>
-<hr>
+<div id="site-header">
+
+<p>
+Quantitative Macro Strategies
+</p>
+</div>
+<div id="site-nav">
+<p><a href="#about">About</a> <a href="#programs">Programs</a> <a href="#research">Research</a> <a href="#enquiries">Enquiries</a></p>
+</div>
 <section id="about" class="level2">
 <h2 class="anchored" data-anchor-id="about">About</h2>
 <p>Dog Capital is an independent quantitative research initiative focused on systematic volatility-targeting strategies. We build rules-based investment programs grounded in a single core thesis: the S&amp;P 500 is the best asset to trade, and volatility is the best tool to manage it.</p>
 <p>All strategies share the same framework — downside volatility targeting, dynamic leverage, and signal-lagged execution. Each program expresses that framework across a different market, capital size, and investor type.</p>
 <p>Programs are developed entirely in-house. Backtest evidence and live performance are reported without adjustment.</p>
-<hr>
 </section>
 <section id="programs" class="level2">
 <h2 class="anchored" data-anchor-id="programs">Programs</h2>
-<section id="es-core" class="level3">
+<section id="es-core" class="level3 program-card">
 <h3 class="anchored" data-anchor-id="es-core">ES Core</h3>
-<p>U.S. large-cap equity futures (ES) as a permanent core with dynamic allocation to eight alternatives across equities, fixed income, real assets, and digital assets. Downside volatility targeting in the 10–20% range.</p>
+<p>U.S. large-cap equity futures (ES) as a permanent core with dynamic allocation to seven alternatives across equities, fixed income, real assets, and digital assets. Downside volatility targeting in the 10–28% range. Dynamic leverage up to 3×. Daily rebalancing.</p>
 <p><strong>Backtest (Sep 2001–2026):</strong> CAGR 10.08% · Sharpe 0.515 · Max DD -48.26%</p>
 <p><a href="./programs/es-core.html">Strategy document →</a></p>
-<hr>
 </section>
-<section id="spy-core" class="level3">
+<section id="spy-core" class="level3 program-card">
 <h3 class="anchored" data-anchor-id="spy-core">SPY Core</h3>
 <p>Monthly rebalancing across four CEDEAR instruments (SPY, QQQ, GLD, IBIT) using the same vol targeting framework. S&amp;P 500 as permanent core with a hard floor. No leverage. Designed for Argentine investors seeking USD-denominated returns with capital gains tax efficiency.</p>
 <p><strong>Backtest (Sep 2001–2026):</strong> CAGR 8.79% · Sharpe 0.677 · Max DD -33.29%</p>
 <p><a href="./programs/spy-core.html">Strategy document →</a></p>
-<hr>
 </section>
 </section>
 <section id="research" class="level2">
 <h2 class="anchored" data-anchor-id="research">Research</h2>
 <p>The conceptual foundation underlying each program is documented in the strategy papers linked above. The shared framework covers volatility estimation, signal construction, portfolio construction, and execution.</p>
 <p><a href="./research/index.html">View research framework →</a></p>
-<hr>
 </section>
 <section id="enquiries" class="level2">
 <h2 class="anchored" data-anchor-id="enquiries">Enquiries</h2>
 <p>Open to discussions with allocators, proprietary trading groups, and partners interested in separately managed accounts or fund structures.</p>
 <p><a href="mailto:contact@dogcapital.com">Get in touch →</a></p>
-<hr>
-<p><em>© 2026 Dog Capital</em></p>
-
-
 </section>
+<div id="site-footer">
+<p>© 2026 Dog Capital &nbsp;·&nbsp; Last updated: 2026-06-19</p>
+</div>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

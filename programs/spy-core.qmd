@@ -5,7 +5,7 @@ title: "SPY Core"
 Monthly rebalancing across four CEDEAR instruments using the same
 vol targeting framework as ES Core. S&P 500 as permanent core. No leverage.
 
-[← Back](../index.qmd#programs)
+<a href="../index.qmd#programs" class="back-link">← Back</a>
 
 ---
 

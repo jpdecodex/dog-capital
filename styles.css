@@ -1,1 +1,233 @@
-/* css styles */
+/* ================================================================
+   Dog Capital — custom styles
+   Visual reference: riskresearch.github.io/rr-strategy-research
+   ================================================================ */
+
+/* --- Fonts & base -------------------------------------------- */
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  color: #1a1a2e;
+  line-height: 1.7;
+  background-color: #ffffff;
+}
+
+/* --- Layout — narrow centered column -------------------------- */
+.quarto-container,
+#quarto-content > * {
+  max-width: 860px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Override Bootstrap's fluid grid */
+.container, .container-fluid {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* Hide Quarto navbar entirely — we use inline page nav */
+#quarto-header {
+  display: none !important;
+}
+
+/* Remove extra Quarto chrome */
+#quarto-sidebar,
+#quarto-toc-toggle {
+  display: none !important;
+}
+
+/* Pull content to the top now that the navbar is gone */
+#quarto-content {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+main.content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* --- Typography ---------------------------------------------- */
+h1, h2, h3, h4 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Page title / site name */
+h1 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #1a1a2e;
+  margin-bottom: 0.15rem;
+}
+
+/* Section headings */
+h2 {
+  font-size: 0.72rem;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #00437c;
+  border: none;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Sub-headings (program names) */
+h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1a1a2e;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Links ---------------------------------------------------- */
+a {
+  color: #00437c;
+  text-decoration: none;
+}
+a:hover {
+  color: #00437c;
+  text-decoration: underline;
+}
+
+/* --- Site header & nav --------------------------------------- */
+#site-header {
+  text-align: left;
+  padding: 2.5rem 0 1rem 0;
+  border-bottom: 1px solid #e0e6ee;
+  margin-bottom: 1rem;
+}
+
+#site-header p {
+  color: #5a6a7a;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+#site-nav {
+  text-align: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e0e6ee;
+  margin-bottom: 2rem;
+}
+
+#site-nav a {
+  color: #00437c;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 1.2rem;
+}
+
+#site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* --- Sections ------------------------------------------------- */
+.section {
+  margin-bottom: 2.5rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e0e6ee;
+  margin: 2rem 0;
+}
+
+/* --- Program cards -------------------------------------------- */
+.program-card {
+  border-left: 3px solid #00437c;
+  background-color: #fafbfd;
+  padding: 1rem 1.5rem;
+  margin: 1.25rem 0;
+}
+
+.program-card h3 {
+  margin-top: 0;
+}
+
+/* --- Metrics table -------------------------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.88rem;
+}
+
+table th {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #5a6a7a;
+  padding: 0.4rem 0.75rem;
+  border-bottom: 2px solid #e0e6ee;
+  text-align: left;
+}
+
+table td {
+  font-family: "Courier New", Courier, monospace;
+  padding: 0.35rem 0.75rem;
+  border-bottom: 1px solid #f0f0f0;
+  color: #1a1a2e;
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Metric name column stays in Verdana */
+table td:first-child {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 0.82rem;
+  color: #3a4a5a;
+}
+
+/* --- Blockquote (disclaimer) ---------------------------------- */
+blockquote {
+  border-left: 2px solid #e0e6ee;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  color: #5a6a7a;
+  font-size: 0.82rem;
+  background: transparent;
+}
+
+/* --- Images (charts) ------------------------------------------ */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/* --- Footer --------------------------------------------------- */
+#site-footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #8a9ab0;
+  border-top: 1px solid #e0e6ee;
+  padding: 1.5rem 0 2rem 0;
+  margin-top: 3rem;
+}
+
+/* Suppress Quarto's own footer chrome */
+#quarto-footer {
+  display: none !important;
+}
+
+/* --- Back links (program pages) ------------------------------ */
+.back-link {
+  font-size: 0.78rem;
+  color: #00437c;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}

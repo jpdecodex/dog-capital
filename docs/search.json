@@ -72,37 +72,37 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Dog Capital",
+    "title": "\nDog Capital\n",
     "section": "",
-    "text": "About | Programs | Research | Enquiries"
+    "text": "Quantitative Macro Strategies"
   },
   {
     "objectID": "index.html#about",
     "href": "index.html#about",
-    "title": "Dog Capital",
+    "title": "\nDog Capital\n",
     "section": "About",
     "text": "About\nDog Capital is an independent quantitative research initiative focused on systematic volatility-targeting strategies. We build rules-based investment programs grounded in a single core thesis: the S&P 500 is the best asset to trade, and volatility is the best tool to manage it.\nAll strategies share the same framework — downside volatility targeting, dynamic leverage, and signal-lagged execution. Each program expresses that framework across a different market, capital size, and investor type.\nPrograms are developed entirely in-house. Backtest evidence and live performance are reported without adjustment."
   },
   {
     "objectID": "index.html#programs",
     "href": "index.html#programs",
-    "title": "Dog Capital",
+    "title": "\nDog Capital\n",
     "section": "Programs",
-    "text": "Programs\n\nES Core\nU.S. large-cap equity futures (ES) as a permanent core with dynamic allocation to eight alternatives across equities, fixed income, real assets, and digital assets. Downside volatility targeting in the 10–20% range.\nBacktest (Sep 2001–2026): CAGR 10.08% · Sharpe 0.515 · Max DD -48.26%\nStrategy document →\n\n\n\nSPY Core\nMonthly rebalancing across four CEDEAR instruments (SPY, QQQ, GLD, IBIT) using the same vol targeting framework. S&P 500 as permanent core with a hard floor. No leverage. Designed for Argentine investors seeking USD-denominated returns with capital gains tax efficiency.\nBacktest (Sep 2001–2026): CAGR 8.79% · Sharpe 0.677 · Max DD -33.29%\nStrategy document →"
+    "text": "Programs\n\nES Core\nU.S. large-cap equity futures (ES) as a permanent core with dynamic allocation to seven alternatives across equities, fixed income, real assets, and digital assets. Downside volatility targeting in the 10–28% range. Dynamic leverage up to 3×. Daily rebalancing.\nBacktest (Sep 2001–2026): CAGR 10.08% · Sharpe 0.515 · Max DD -48.26%\nStrategy document →\n\n\nSPY Core\nMonthly rebalancing across four CEDEAR instruments (SPY, QQQ, GLD, IBIT) using the same vol targeting framework. S&P 500 as permanent core with a hard floor. No leverage. Designed for Argentine investors seeking USD-denominated returns with capital gains tax efficiency.\nBacktest (Sep 2001–2026): CAGR 8.79% · Sharpe 0.677 · Max DD -33.29%\nStrategy document →"
   },
   {
     "objectID": "index.html#research",
     "href": "index.html#research",
-    "title": "Dog Capital",
+    "title": "\nDog Capital\n",
     "section": "Research",
     "text": "Research\nThe conceptual foundation underlying each program is documented in the strategy papers linked above. The shared framework covers volatility estimation, signal construction, portfolio construction, and execution.\nView research framework →"
   },
   {
     "objectID": "index.html#enquiries",
     "href": "index.html#enquiries",
-    "title": "Dog Capital",
+    "title": "\nDog Capital\n",
     "section": "Enquiries",
-    "text": "Enquiries\nOpen to discussions with allocators, proprietary trading groups, and partners interested in separately managed accounts or fund structures.\nGet in touch →\n\n© 2026 Dog Capital"
+    "text": "Enquiries\nOpen to discussions with allocators, proprietary trading groups, and partners interested in separately managed accounts or fund structures.\nGet in touch →"
   },
   {
     "objectID": "programs/spy-core.html",

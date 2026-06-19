@@ -3,11 +3,21 @@ title: ""
 page-layout: full
 ---
 
-[About](#about) | [Programs](#programs) | [Research](#research) | [Enquiries](#enquiries)
+<div id="site-header">
+<h1>Dog Capital</h1>
+<p>Quantitative Macro Strategies</p>
+</div>
 
----
+<div id="site-nav">
+<a href="#about">About</a>
+<a href="#programs">Programs</a>
+<a href="#research">Research</a>
+<a href="#enquiries">Enquiries</a>
+</div>
 
-## About {#about}
+<div class="section" id="about">
+
+## About
 
 Dog Capital is an independent quantitative research initiative focused on
 systematic volatility-targeting strategies. We build rules-based investment
@@ -21,21 +31,28 @@ framework across a different market, capital size, and investor type.
 Programs are developed entirely in-house. Backtest evidence and live
 performance are reported without adjustment.
 
----
+</div>
 
-## Programs {#programs}
+<div class="section" id="programs">
+
+## Programs
+
+<div class="program-card">
 
 ### ES Core
 
 U.S. large-cap equity futures (ES) as a permanent core with dynamic allocation
-to eight alternatives across equities, fixed income, real assets, and digital
-assets. Downside volatility targeting in the 10–20% range.
+to seven alternatives across equities, fixed income, real assets, and digital
+assets. Downside volatility targeting in the 10–28% range. Dynamic leverage up
+to 3×. Daily rebalancing.
 
 **Backtest (Sep 2001–2026):** CAGR 10.08% · Sharpe 0.515 · Max DD -48.26%
 
 [Strategy document →](programs/es-core.qmd)
 
----
+</div>
+
+<div class="program-card">
 
 ### SPY Core
 
@@ -48,9 +65,13 @@ returns with capital gains tax efficiency.
 
 [Strategy document →](programs/spy-core.qmd)
 
----
+</div>
 
-## Research {#research}
+</div>
+
+<div class="section" id="research">
+
+## Research
 
 The conceptual foundation underlying each program is documented in the strategy
 papers linked above. The shared framework covers volatility estimation,
@@ -58,15 +79,19 @@ signal construction, portfolio construction, and execution.
 
 [View research framework →](research/index.qmd)
 
----
+</div>
 
-## Enquiries {#enquiries}
+<div class="section" id="enquiries">
+
+## Enquiries
 
 Open to discussions with allocators, proprietary trading groups, and partners
 interested in separately managed accounts or fund structures.
 
 [Get in touch →](mailto:contact@dogcapital.com)
 
----
+</div>
 
-*© 2026 Dog Capital*
+<div id="site-footer">
+&copy; 2026 Dog Capital &nbsp;&middot;&nbsp; Last updated: 2026-06-19
+</div>
