@@ -98,7 +98,7 @@ running the same monthly vol-targeting strategy throughout.
 
 ![Strategy vs $200/month DCA](spy-core/dca_overlay.png)
 
-*Orange: pure strategy ($10K lump sum). Blue: strategy + $200/month. Red dashed: total capital invested.*
+*Grey dashed: SPY Buy & Hold + $200/month. Blue: SPY Core strategy + $200/month. Same capital deployed to both — the gap is the strategy's alpha.*
 
 ---
 
