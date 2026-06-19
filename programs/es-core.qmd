@@ -53,23 +53,23 @@ toward or below 1x.
 > any investor. Past hypothetical performance is not a reliable indicator
 > of future results.
 
-*Period: 2003–2026. Data: yfinance adjusted prices.*
+*Period: Sep 2001–2026. Data: yfinance adjusted prices.*
 
 | Metric | ES Buy & Hold | Full Strategy |
 |--------|:-------------:|:-------------:|
-| Total Return | 478.7% | 1,989.0% |
-| CAGR | 6.43% | 11.39% |
-| Ann. Volatility | 15.66% | 24.41% |
-| Sharpe Ratio | 0.476 | 0.565 |
-| Sortino Ratio | 0.478 | 0.537 |
-| Calmar Ratio | 0.113 | 0.231 |
-| Max Drawdown | -56.96% | -49.29% |
-| CVaR 95% | -2.45% | -4.01% |
-| CVaR 99% | -4.41% | -6.69% |
-| Tail Ratio | 0.960 | 0.990 |
-| Skewness | 0.251 | -0.757 |
-| Kurtosis | 22.878 | 6.405 |
-| Avg Leverage | 1.00x | 2.38x |
+| Total Return | 452.3% | 1,711.4% |
+| CAGR | 5.83% | 10.08% |
+| Ann. Volatility | 16.03% | 24.51% |
+| Sharpe Ratio | 0.434 | 0.515 |
+| Sortino Ratio | 0.437 | 0.491 |
+| Calmar Ratio | 0.104 | 0.209 |
+| Max Drawdown | -55.85% | -48.26% |
+| CVaR 95% | -2.50% | -3.97% |
+| CVaR 99% | -4.29% | -6.56% |
+| Tail Ratio | 0.950 | 0.978 |
+| Skewness | 0.275 | -0.693 |
+| Kurtosis | 18.247 | 5.929 |
+| Avg Leverage | 1.00x | 2.35x |
 
 ---
 

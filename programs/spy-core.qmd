@@ -49,21 +49,21 @@ performance relative to SPY.
 > any investor. Past hypothetical performance is not a reliable indicator
 > of future results.
 
-| Metric | Monthly Cadence |
-|--------|----------------|
-| CAGR | 9.62% |
-| Sharpe | 0.750 |
-| Sortino | 0.693 |
-| Calmar | 0.289 |
-| Max Drawdown | -33.29% |
-| CVaR 95% | -2.09% |
-| CVaR 99% | -3.30% |
-| Tail Ratio | 0.953 |
-| Skewness | -0.546 |
-| Kurtosis | 3.688 |
-| Period | 2005–2026 |
+| Metric | SPY Buy & Hold | Monthly Cadence |
+|--------|:--------------:|:---------------:|
+| CAGR | 9.86% | 8.79% |
+| Sharpe | 0.589 | 0.677 |
+| Sortino | — | 0.633 |
+| Calmar | — | 0.264 |
+| Max Drawdown | -55.19% | -33.29% |
+| CVaR 95% | — | -2.10% |
+| CVaR 99% | — | -3.21% |
+| Tail Ratio | — | 0.956 |
+| Skewness | — | -0.404 |
+| Kurtosis | — | 3.044 |
+| Period | Sep 2001–2026 | Sep 2001–2026 |
 
-*Backtest on USD underlyings, $10,000 lump sum, no contributions. Monthly cadence: rebalance on last trading day of each month.*
+*Backtest on USD underlyings, $10,000 lump sum, no contributions. GLD joins Nov 2004, IBIT joins Jan 2024.*
 
 ---
 
