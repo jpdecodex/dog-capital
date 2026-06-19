@@ -91,6 +91,17 @@ performance relative to SPY.
 
 ---
 
+## DCA Scenario — $200/month
+
+What a real investor accumulates starting with $10,000 and adding $200 every month,
+running the same monthly vol-targeting strategy throughout.
+
+![Strategy vs $200/month DCA](spy-core/dca_overlay.png)
+
+*Orange: pure strategy ($10K lump sum). Blue: strategy + $200/month. Red dashed: total capital invested.*
+
+---
+
 ## Live Deployment
 
 Live account active. Performance will be published here as it accumulates.
