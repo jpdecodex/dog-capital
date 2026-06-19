@@ -74,70 +74,63 @@
     "href": "index.html",
     "title": "\nDog Capital\n",
     "section": "",
-    "text": "Quantitative Macro Strategies"
+    "text": "Systematic strategies for the Argentine investor"
   },
   {
     "objectID": "index.html#about",
     "href": "index.html#about",
     "title": "\nDog Capital\n",
     "section": "About",
-    "text": "About\nDog Capital is an independent quantitative research initiative focused on systematic volatility-targeting strategies. We build rules-based investment programs grounded in a single core thesis: the S&P 500 is the best asset to trade, and volatility is the best tool to manage it.\nAll strategies share the same framework — downside volatility targeting, dynamic leverage, and signal-lagged execution. Each program expresses that framework across a different market, capital size, and investor type.\nPrograms are developed entirely in-house. Backtest evidence and live performance are reported without adjustment."
+    "text": "About\nDog Capital builds and runs systematic investment programs for Argentine investors.\nThe core idea is simple: the S&P 500 is the best long-term asset available, and volatility is the best tool to manage it. Rather than trying to time markets, we use realized volatility to size positions dynamically — scaling in when markets are calm, scaling out when they are not.\nAll programs operate via instruments available to Argentine retail investors: CEDEARs on Balanz, and futures via international brokers. There is no black box — signal logic, backtest evidence, and live performance are published openly."
   },
   {
     "objectID": "index.html#programs",
     "href": "index.html#programs",
     "title": "\nDog Capital\n",
     "section": "Programs",
-    "text": "Programs\n\nES Core\nU.S. large-cap equity futures (ES) as a permanent core with dynamic allocation to seven alternatives across equities, fixed income, real assets, and digital assets. Downside volatility targeting in the 10–28% range. Dynamic leverage up to 3×. Daily rebalancing.\nBacktest (Sep 2001–2026): CAGR 10.08% · Sharpe 0.515 · Max DD -48.26%\nStrategy document →\n\n\nSPY Core\nMonthly rebalancing across four CEDEAR instruments (SPY, QQQ, GLD, IBIT) using the same vol targeting framework. S&P 500 as permanent core with a hard floor. No leverage. Designed for Argentine investors seeking USD-denominated returns with capital gains tax efficiency.\nBacktest (Sep 2001–2026): CAGR 8.79% · Sharpe 0.677 · Max DD -33.29%\nStrategy document →"
+    "text": "Programs\n\nSPY Core\nLive CEDEARs Monthly No leverage\nMonthly accumulation into SPY CEDEARs via Balanz, sized by downside volatility targeting. When realized volatility is low the strategy deploys capital fully; when it rises, it scales back. Idle capital earns the dólar-linked rate.\nDesigned for Argentine investors building USD-denominated savings over the long term.\nBacktest (2001–2026): CAGR 9.45% · Sharpe 0.693 · Max DD -36.97%\nStrategy document →"
   },
   {
     "objectID": "index.html#research",
     "href": "index.html#research",
     "title": "\nDog Capital\n",
     "section": "Research",
-    "text": "Research\nThe conceptual foundation underlying each program is documented in the strategy papers linked above. The shared framework covers volatility estimation, signal construction, portfolio construction, and execution.\nView research framework →"
+    "text": "Research\nStrategy logic, parameter calibration, and backtest methodology are documented in the program pages above. The framework — downside semi-deviation targeting, signal smoothing, no-trade band, additions-only execution — is the same across all programs."
   },
   {
-    "objectID": "index.html#enquiries",
-    "href": "index.html#enquiries",
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
     "title": "\nDog Capital\n",
-    "section": "Enquiries",
-    "text": "Enquiries\nOpen to discussions with allocators, proprietary trading groups, and partners interested in separately managed accounts or fund structures.\nGet in touch →"
+    "section": "Contact",
+    "text": "Contact\nIndependent. Not a fund. Open to conversations.\npapesjuan@gmail.com"
   },
   {
     "objectID": "programs/spy-core.html",
     "href": "programs/spy-core.html",
     "title": "SPY Core",
     "section": "",
-    "text": "Monthly rebalancing across four CEDEAR instruments using the same vol targeting framework as ES Core. S&P 500 as permanent core. No leverage.\n← Back"
+    "text": "← Dog Capital\nMonthly vol-targeting accumulation into SPY CEDEARs via Balanz. No leverage. Designed for Argentine investors building USD-denominated savings systematically."
   },
   {
-    "objectID": "programs/spy-core.html#instrument-universe",
-    "href": "programs/spy-core.html#instrument-universe",
+    "objectID": "programs/spy-core.html#how-it-works",
+    "href": "programs/spy-core.html#how-it-works",
     "title": "SPY Core",
-    "section": "Instrument Universe",
-    "text": "Instrument Universe\nThe strategy trades four instruments via CEDEARs: SPY (S&P 500), QQQ (Nasdaq-100), GLD (Gold), and IBIT (Bitcoin ETF).\nSPY is the permanent core. The same organizing principle as ES Core applies: U.S. large-cap equity is the benchmark against which every alternative is evaluated on a risk-adjusted basis.\nThe strategy is designed for Argentine investors seeking USD-denominated returns. CEDEARs provide access to these instruments in the local market."
-  },
-  {
-    "objectID": "programs/spy-core.html#strategy-design",
-    "href": "programs/spy-core.html#strategy-design",
-    "title": "SPY Core",
-    "section": "Strategy Design",
-    "text": "Strategy Design\nSPY Core maintains a permanent allocation to SPY and dynamically allocates the tactical sleeve to QQQ, GLD, and IBIT based on their risk-adjusted performance relative to SPY.\nFramework:\n\nPermanent core: SPY with hard floor at 50%\nTactical sleeve: inverse downside semi-deviation weighted\nSleeve qualification: rolling Sortino vs SPY &gt; 0\nVolatility target: 10–20% downside semi-deviation\nLeverage: none (L_MAX = 1.0)\nEMA(10) smoothing + 10% no-trade band\nSignal lag: 1 day\nCadence: weekly signal, monthly execution\nIdle capital: money market fund"
+    "section": "How it works",
+    "text": "How it works\nEach month, the strategy computes the realized downside volatility of SPY over the prior 21 trading days. It then sizes the monthly buy to bring total exposure toward a 20% annualized downside volatility target.\nWhen markets are calm, the full monthly allocation is deployed. When realized volatility exceeds the target, the strategy scales back — or holds — and parks idle capital in a dólar-linked money market fund (Balanz Fondo Dólar Linked). No selling unless a sustained volatility breach triggers a REDUCE alert.\nSignal logic:\n\nInstrument: SPY (CEDEAR, 10:1 ratio, Balanz)\nVolatility measure: downside semi-deviation of daily returns\nLookback: 21 trading days\nVol target: 20% annualized\nLeverage: none — strategy can only de-risk, never lever up\nSmoothing: EMA(10) + 10% no-trade band to reduce unnecessary turnover\nCadence: monthly execution, first trading day of the month\nIdle capital: Balanz Fondo Dólar Linked"
   },
   {
     "objectID": "programs/spy-core.html#backtest-results",
     "href": "programs/spy-core.html#backtest-results",
     "title": "SPY Core",
-    "section": "Backtest Results",
-    "text": "Backtest Results\n\nThese are hypothetical backtested results. They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.\n\n\n\n\nMetric\nSPY Buy & Hold\nMonthly Cadence\n\n\n\n\nCAGR\n9.86%\n8.79%\n\n\nSharpe\n0.589\n0.677\n\n\nSortino\n—\n0.633\n\n\nCalmar\n—\n0.264\n\n\nMax Drawdown\n-55.19%\n-33.29%\n\n\nCVaR 95%\n—\n-2.10%\n\n\nCVaR 99%\n—\n-3.21%\n\n\nTail Ratio\n—\n0.956\n\n\nSkewness\n—\n-0.404\n\n\nKurtosis\n—\n3.044\n\n\nPeriod\nSep 2001–2026\nSep 2001–2026\n\n\n\nBacktest on USD underlyings, $10,000 lump sum, no contributions. GLD joins Nov 2004, IBIT joins Jan 2024."
+    "section": "Backtest results",
+    "text": "Backtest results\n\nHypothetical backtested results. Not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.\n\n\n\n\nMetric\nSPY Buy & Hold\nSPY Core\n\n\n\n\nCAGR\n9.86%\n9.45%\n\n\nSharpe\n0.589\n0.693\n\n\nMax Drawdown\n-55.19%\n-36.97%\n\n\nPeriod\n2001–2026\n2001–2026\n\n\n\nThe strategy gives up a small amount of raw return in exchange for meaningfully better risk-adjusted performance and a 18 percentage point shallower max drawdown. For a long-term accumulation program, the drawdown reduction matters more than the CAGR gap.\nBacktest on USD underlying (SPY), $10,000 lump sum, no contributions."
   },
   {
     "objectID": "programs/spy-core.html#equity-curve",
     "href": "programs/spy-core.html#equity-curve",
     "title": "SPY Core",
-    "section": "Equity Curve",
-    "text": "Equity Curve\n\n\n\nEquity Curve"
+    "section": "Equity curve",
+    "text": "Equity curve\n\n\n\nEquity Curve"
   },
   {
     "objectID": "programs/spy-core.html#drawdown",
@@ -147,31 +140,24 @@
     "text": "Drawdown\n\n\n\nDrawdown"
   },
   {
-    "objectID": "programs/spy-core.html#rolling-sharpe",
-    "href": "programs/spy-core.html#rolling-sharpe",
-    "title": "SPY Core",
-    "section": "Rolling Sharpe",
-    "text": "Rolling Sharpe\n\n\n\nRolling Sharpe"
-  },
-  {
-    "objectID": "programs/spy-core.html#weight-allocation",
-    "href": "programs/spy-core.html#weight-allocation",
-    "title": "SPY Core",
-    "section": "Weight Allocation",
-    "text": "Weight Allocation\n\n\n\nWeight Allocation"
-  },
-  {
     "objectID": "programs/spy-core.html#dca-scenario-200month",
     "href": "programs/spy-core.html#dca-scenario-200month",
     "title": "SPY Core",
-    "section": "DCA Scenario — $200/month",
-    "text": "DCA Scenario — $200/month\nWhat a real investor accumulates starting with $10,000 and adding $200 every month, running the same monthly vol-targeting strategy throughout.\n\n\n\nStrategy vs $200/month DCA\n\n\nGrey dashed: SPY Buy & Hold + $200/month. Blue: SPY Core strategy + $200/month. Same capital deployed to both — the gap is the strategy’s alpha."
+    "section": "DCA scenario — $200/month",
+    "text": "DCA scenario — $200/month\nStarting with $10,000 and adding $200 every month. Same capital deployed to both.\n\n\n\nStrategy vs SPY B&H + $200/month\n\n\nGrey dashed: SPY Buy & Hold + $200/month. Blue: SPY Core + $200/month."
   },
   {
     "objectID": "programs/spy-core.html#live-deployment",
     "href": "programs/spy-core.html#live-deployment",
     "title": "SPY Core",
-    "section": "Live Deployment",
-    "text": "Live Deployment\nLive account active. Performance will be published here as it accumulates.\n\n© 2026 Dog Capital"
+    "section": "Live deployment",
+    "text": "Live deployment\nRunning live on Balanz since June 2026. Monthly signals sent via Telegram. Live performance will be published here as it accumulates."
+  },
+  {
+    "objectID": "programs/spy-core.html#why-cedears",
+    "href": "programs/spy-core.html#why-cedears",
+    "title": "SPY Core",
+    "section": "Why CEDEARs",
+    "text": "Why CEDEARs\nCEDEARs (Certificados de Depósito Argentinos) are Argentine depositary receipts that track USD-denominated underlying assets like SPY. They trade on BYMA in pesos but are priced at the MEP dollar rate, giving Argentine investors effective USD exposure without needing to move money offshore.\nSPY Core operates entirely on local infrastructure — no foreign account, no capital transfer, no AFIP complications. You buy CEDEARs on Balanz, the system tells you how many, you execute.\n\n© 2026 Dog Capital"
   }
 ]
