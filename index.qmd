@@ -31,7 +31,7 @@ U.S. large-cap equity futures (ES) as a permanent core with dynamic allocation
 to eight alternatives across equities, fixed income, real assets, and digital
 assets. Downside volatility targeting in the 10–20% range.
 
-**Backtest (2003–2026):** CAGR 11.39% · Sharpe 0.565 · Max DD -49.29%
+**Backtest (Sep 2001–2026):** CAGR 10.08% · Sharpe 0.515 · Max DD -48.26%
 
 [Strategy document →](programs/es-core.qmd)
 
@@ -44,7 +44,7 @@ using the same vol targeting framework. S&P 500 as permanent core with a hard
 floor. No leverage. Designed for Argentine investors seeking USD-denominated
 returns with capital gains tax efficiency.
 
-**Backtest (2005–2026):** CAGR 9.62% · Sharpe 0.750 · Max DD -33.29%
+**Backtest (Sep 2001–2026):** CAGR 8.79% · Sharpe 0.677 · Max DD -33.29%
 
 [Strategy document →](programs/spy-core.qmd)
 
