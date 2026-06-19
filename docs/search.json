@@ -130,7 +130,7 @@
     "href": "programs/spy-core.html#backtest-results",
     "title": "SPY Core",
     "section": "Backtest Results",
-    "text": "Backtest Results\n\nThese are hypothetical backtested results. They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.\n\n\n\n\nMetric\nStrategy\n\n\n\n\nCAGR\n21.46%\n\n\nSharpe\n1.41\n\n\nSortino\n1.29\n\n\nMax Drawdown\n-15.47%\n\n\nPeriod\n2005–2026\n\n\n\nBacktest run on USD underlyings."
+    "text": "Backtest Results\n\nThese are hypothetical backtested results. They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.\n\n\n\n\nMetric\nMonthly Cadence\n\n\n\n\nCAGR\n23.77%\n\n\nSharpe\n1.504\n\n\nSortino\n1.559\n\n\nCalmar\n1.208\n\n\nMax Drawdown\n-19.67%\n\n\nCVaR 95%\n-2.04%\n\n\nCVaR 99%\n-3.26%\n\n\nTail Ratio\n1.072\n\n\nSkewness\n0.863\n\n\nKurtosis\n11.667\n\n\nPeriod\n2005–2026\n\n\n\nBacktest run on USD underlyings. Monthly cadence: rebalance on last trading day of each month."
   },
   {
     "objectID": "programs/spy-core.html#equity-curve",

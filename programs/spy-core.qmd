@@ -49,15 +49,21 @@ performance relative to SPY.
 > any investor. Past hypothetical performance is not a reliable indicator
 > of future results.
 
-| Metric | Strategy |
-|--------|----------|
-| CAGR | 21.46% |
-| Sharpe | 1.41 |
-| Sortino | 1.29 |
-| Max Drawdown | -15.47% |
+| Metric | Monthly Cadence |
+|--------|----------------|
+| CAGR | 23.77% |
+| Sharpe | 1.504 |
+| Sortino | 1.559 |
+| Calmar | 1.208 |
+| Max Drawdown | -19.67% |
+| CVaR 95% | -2.04% |
+| CVaR 99% | -3.26% |
+| Tail Ratio | 1.072 |
+| Skewness | 0.863 |
+| Kurtosis | 11.667 |
 | Period | 2005–2026 |
 
-*Backtest run on USD underlyings.*
+*Backtest run on USD underlyings. Monthly cadence: rebalance on last trading day of each month.*
 
 ---
 
