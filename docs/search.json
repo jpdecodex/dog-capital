@@ -88,7 +88,7 @@
     "href": "index.html#programs",
     "title": "Dog Capital",
     "section": "Programs",
-    "text": "Programs\n\nES Core\nU.S. large-cap equity futures (ES) as a permanent core with dynamic allocation to eight alternatives across equities, fixed income, real assets, and digital assets. Downside volatility targeting in the 10–20% range.\nBacktest (2003–2026): CAGR 9.54% · Sharpe 0.592 · Max DD -36.48%\nStrategy document →\n\n\n\nSPY Core\nMonthly rebalancing across four CEDEAR instruments (SPY, QQQ, GLD, IBIT) using the same vol targeting framework. S&P 500 as permanent core with a hard floor. No leverage. Designed for Argentine investors seeking USD-denominated returns with capital gains tax efficiency.\nBacktest (2005–2026): CAGR 21.46% · Sharpe 1.41 · Max DD -15.47%\nStrategy document →"
+    "text": "Programs\n\nES Core\nU.S. large-cap equity futures (ES) as a permanent core with dynamic allocation to eight alternatives across equities, fixed income, real assets, and digital assets. Downside volatility targeting in the 10–20% range.\nBacktest (2003–2026): CAGR 9.54% · Sharpe 0.592 · Max DD -36.48%\nStrategy document →\n\n\n\nSPY Core\nMonthly rebalancing across four CEDEAR instruments (SPY, QQQ, GLD, IBIT) using the same vol targeting framework. S&P 500 as permanent core with a hard floor. No leverage. Designed for Argentine investors seeking USD-denominated returns with capital gains tax efficiency.\nBacktest (2005–2026): CAGR 9.62% · Sharpe 0.750 · Max DD -33.29%\nStrategy document →"
   },
   {
     "objectID": "index.html#research",
@@ -130,7 +130,7 @@
     "href": "programs/spy-core.html#backtest-results",
     "title": "SPY Core",
     "section": "Backtest Results",
-    "text": "Backtest Results\n\nThese are hypothetical backtested results. They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.\n\n\n\n\nMetric\nMonthly Cadence\n\n\n\n\nCAGR\n23.77%\n\n\nSharpe\n1.504\n\n\nSortino\n1.559\n\n\nCalmar\n1.208\n\n\nMax Drawdown\n-19.67%\n\n\nCVaR 95%\n-2.04%\n\n\nCVaR 99%\n-3.26%\n\n\nTail Ratio\n1.072\n\n\nSkewness\n0.863\n\n\nKurtosis\n11.667\n\n\nPeriod\n2005–2026\n\n\n\nBacktest run on USD underlyings. Monthly cadence: rebalance on last trading day of each month."
+    "text": "Backtest Results\n\nThese are hypothetical backtested results. They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.\n\n\n\n\nMetric\nMonthly Cadence\n\n\n\n\nCAGR\n9.62%\n\n\nSharpe\n0.750\n\n\nSortino\n0.693\n\n\nCalmar\n0.289\n\n\nMax Drawdown\n-33.29%\n\n\nCVaR 95%\n-2.09%\n\n\nCVaR 99%\n-3.30%\n\n\nTail Ratio\n0.953\n\n\nSkewness\n-0.546\n\n\nKurtosis\n3.688\n\n\nPeriod\n2005–2026\n\n\n\nBacktest on USD underlyings, $10,000 lump sum, no contributions. Monthly cadence: rebalance on last trading day of each month."
   },
   {
     "objectID": "programs/spy-core.html#equity-curve",

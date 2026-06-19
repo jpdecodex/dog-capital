@@ -44,7 +44,7 @@ using the same vol targeting framework. S&P 500 as permanent core with a hard
 floor. No leverage. Designed for Argentine investors seeking USD-denominated
 returns with capital gains tax efficiency.
 
-**Backtest (2005–2026):** CAGR 21.46% · Sharpe 1.41 · Max DD -15.47%
+**Backtest (2005–2026):** CAGR 9.62% · Sharpe 0.750 · Max DD -33.29%
 
 [Strategy document →](programs/spy-core.qmd)
 
