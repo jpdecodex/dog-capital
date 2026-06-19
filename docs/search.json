@@ -74,28 +74,7 @@
     "href": "index.html",
     "title": "\nDog Capital\n",
     "section": "",
-    "text": "Systematic strategies for Argentine investors"
-  },
-  {
-    "objectID": "index.html#about",
-    "href": "index.html#about",
-    "title": "\nDog Capital\n",
-    "section": "About",
-    "text": "About\nDog Capital builds and runs systematic investment programs for Argentine investors.\nMarkets are efficient. Beating the S&P 500 consistently over a long period is hard — most strategies that claim to do it don’t survive transaction costs or look-ahead bias. Rather than searching for alpha that probably isn’t there, we focus on a simpler goal: match the benchmark while meaningfully reducing drawdowns.\nWe do this through volatility targeting — sizing positions based on realized downside volatility rather than trying to predict direction. Scale in when markets are calm, scale back when they are not. The result is a smoother ride with comparable long-term returns.\nPrograms run on instruments available to Argentine retail investors: CEDEARs via local brokers. Code is proprietary; results are public."
-  },
-  {
-    "objectID": "index.html#programs",
-    "href": "index.html#programs",
-    "title": "\nDog Capital\n",
-    "section": "Programs",
-    "text": "Programs\n\nSPY Core\nLive CEDEARs Monthly No leverage\nMonthly accumulation into SPY CEDEARs, sized by downside volatility targeting. When realized volatility is low the strategy deploys capital fully; when it rises, it scales back. Idle capital earns the dólar-linked rate.\nDesigned for Argentine investors building USD-denominated savings over the long term.\nBacktest (2001–2026): CAGR 9.45% · Sharpe 0.693 · Max DD -36.97%\nStrategy document →"
-  },
-  {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "\nDog Capital\n",
-    "section": "Contact",
-    "text": "Contact\nIndependent. Not a fund. Open to conversations."
+    "text": "Systematic strategies for Argentine investors\n\n\n\nComing soon.\n\n\n© 2026 Dog Capital  ·  Buenos Aires"
   },
   {
     "objectID": "programs/spy-core.html",

@@ -8,67 +8,10 @@ page-layout: full
 <p>Systematic strategies for Argentine investors</p>
 </div>
 
-<div id="site-nav">
-<a href="#about">About</a>
-<a href="#programs">Programs</a>
-<a href="#contact">Contact</a>
-</div>
-
-<div class="section" id="about">
-
-## About
-
-Dog Capital builds and runs systematic investment programs for Argentine investors.
-
-Markets are efficient. Beating the S&P 500 consistently over a long period is hard —
-most strategies that claim to do it don't survive transaction costs or look-ahead bias.
-Rather than searching for alpha that probably isn't there, we focus on a simpler goal:
-match the benchmark while meaningfully reducing drawdowns.
-
-We do this through volatility targeting — sizing positions based on realized downside
-volatility rather than trying to predict direction. Scale in when markets are calm,
-scale back when they are not. The result is a smoother ride with comparable long-term returns.
-
-Programs run on instruments available to Argentine retail investors: CEDEARs via local
-brokers. Code is proprietary; results are public.
-
-</div>
-
-<div class="section" id="programs">
-
-## Programs
-
-<div class="program-card">
-
-### SPY Core
-
-<span class="tag live">Live</span>
-<span class="tag">CEDEARs</span>
-<span class="tag">Monthly</span>
-<span class="tag">No leverage</span>
-
-Monthly accumulation into SPY CEDEARs, sized by downside volatility targeting.
-When realized volatility is low the strategy deploys capital fully; when it rises,
-it scales back. Idle capital earns the dólar-linked rate.
-
-Designed for Argentine investors building USD-denominated savings over the long term.
-
-**Backtest (2001–2026):** CAGR 9.45% · Sharpe 0.693 · Max DD -36.97%
-
-[Strategy document →](programs/spy-core.qmd)
-
-</div>
-
-</div>
-
-<div class="section" id="contact">
-
-## Contact
-
-Independent. Not a fund. Open to conversations.
-
+<div style="padding: 4rem 0 2rem 0; color: #888; font-size: 0.9rem;">
+Coming soon.
 </div>
 
 <div id="site-footer">
-&copy; 2026 Dog Capital &nbsp;&middot;&nbsp; Buenos Aires &nbsp;&middot;&nbsp; Last updated: June 2026
+&copy; 2026 Dog Capital &nbsp;&middot;&nbsp; Buenos Aires
 </div>
