@@ -8,8 +8,13 @@ page-layout: full
 <p>Systematic strategies for Argentine investors</p>
 </div>
 
-<div style="padding: 4rem 0 2rem 0; color: #888; font-size: 0.9rem;">
-Coming soon.
+<div id="programs" style="padding: 4rem 0 2rem 0;">
+
+### Programs
+
+- [ETF Core](programs/etf-core.qmd) — Vol-targeted CEDEARs for Argentine investors
+- [ES Core](programs/es-core.qmd) — Vol-targeted S&P 500 futures
+
 </div>
 
 <div id="site-footer">
