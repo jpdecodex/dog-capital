@@ -4,6 +4,7 @@ project:
   resources:
     - "programs/es-core/**"
     - "programs/spy-core/**"
+    - "programs/etf-core/**"
 
 website:
   title: "Dog Capital"
