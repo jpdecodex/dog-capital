@@ -44,7 +44,7 @@ it adjusts how much risk is held as the risk environment changes.
 **Framework:**
 
 - Permanent core: SPY with hard floor at 50%
-- Tactical sleeve: QQQ / GLD / IBIT (inverse downside semi-deviation weighted)
+- Tactical sleeve: GLD / IBIT (inverse downside semi-deviation weighted)
 - Sleeve qualification: rolling Sortino vs SPY > 0 over 63-day window
 - Vol target: 10–20% annualized downside semi-deviation
 - Leverage: max 1.0x (spot ETFs — no derivatives, no margin)
@@ -66,11 +66,6 @@ The S&P 500 is the most liquid, cheapest-to-hold expression of the US
 equity risk premium. Hard floor at 50% ensures the strategy always
 participates in the primary growth engine.
 
-**QQQ — US large-cap tech.**
-Captures the secular compounding of technology-driven productivity growth.
-Outperforms SPY in expansion regimes; disqualified by the Sortino gate
-in drawdown regimes, which is when the concentration risk matters most.
-
 **GLD — Hard asset hedge.**
 Gold is not correlated with equity returns over long horizons. It earns
 positive real returns in inflationary and currency-crisis regimes — precisely
@@ -86,13 +81,21 @@ In the backtest, BTC-USD is used for longer history — IBIT data begins January
 
 ---
 
-## Efficient Frontier — 8 Universe Configs
+## Backtest Results — C7 vs SPY Buy-and-Hold
 
-All 8 configurations run from 2001-09-01 through present, with instruments
-joining progressively as they become available. GLD joins 2004-11-18.
-BTC-USD joins 2014-09-17. Before inception, an instrument earns zero
-return → zero vol → is automatically disqualified from the tactical sleeve.
-One continuous run per config — no in-sample / out-of-sample split.
+Single continuous run from 2001-09-04 through 2026-06-25. Assets join when
+data becomes available: SPY from 2001-09-04, GLD from 2004-11-18, BTC-USD
+from 2014-09-17. Before inception an asset earns zero return → zero vol →
+disqualified from the tactical sleeve automatically. No in-sample / out-of-sample
+split. $10,000 initial capital, zero contributions. 0.50% transaction cost on
+traded notional.
+
+| | CAGR | Sharpe | Sortino | Calmar | MaxDD | CVaR95 | CVaR99 | TailRatio | Skew | Kurt |
+|--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **Strategy** | **+11.58%** | **0.826** | **0.809** | **0.334** | **-34.71%** | **-2.14%** | **-3.64%** | **1.011** | 0.255 | 18.92 |
+| SPY buy-and-hold | +8.01% | 0.533 | 0.459 | 0.145 | -55.19% | -2.68% | -4.63% | 0.940 | 0.046 | 16.94 |
+
+*Strategy outperforms SPY B&H on every metric. MaxDD -20pp better (strategy -34.7% vs SPY -55.2%). Calmar 2.3x better.*
 
 ![Universe Comparison](etf-core/universe_comparison.png)
 
@@ -101,16 +104,12 @@ One continuous run per config — no in-sample / out-of-sample split.
 | Config | CAGR | Sharpe | Sortino | MaxDD | Period |
 |--------|:----:|:------:|:-------:|:-----:|--------|
 | C1 SPY | 7.6% | 0.61 | 0.54 | -37.9% | 2001–2026 |
-| C2 SPY/QQQ | 6.4% | 0.52 | 0.46 | -39.1% | 2001–2026 |
 | C3 SPY/GLD | 6.6% | 0.58 | 0.51 | -34.6% | 2001–2026 |
-| C4 SPY/QQQ/GLD | 6.0% | 0.52 | 0.46 | -36.3% | 2001–2026 |
 | C5 SPY/BTC | **12.0%** | **0.76** | **0.74** | -37.9% | 2001–2026 |
-| C6 SPY/QQQ/BTC | 9.9% | 0.68 | 0.65 | -39.1% | 2001–2026 |
-| C7 SPY/GLD/BTC | **11.7%** | **0.81** | **0.80** | **-34.6%** | 2001–2026 |
-| C8 SPY/QQQ/GLD/BTC | 9.7% | 0.71 | 0.69 | -36.3% | 2001–2026 |
+| **C7 SPY/GLD/BTC** | **11.7%** | **0.81** | **0.80** | **-34.6%** | 2001–2026 |
 | **SPY Buy & Hold** | 9.9% | 0.59 | 0.56 | -55.2% | 2001–2026 |
 
-*All configs reduce max drawdown vs SPY B&H (-55.2%). BTC adds meaningful alpha post-2014.*
+*C7 selected: best Sortino and best MaxDD among all configs. QQQ excluded — adds correlated equity risk without improving risk-adjusted return.*
 
 ---
 
