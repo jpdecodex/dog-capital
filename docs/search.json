@@ -1,5 +1,61 @@
 [
   {
+    "objectID": "programs/etf-core.html",
+    "href": "programs/etf-core.html",
+    "title": "ETF Core",
+    "section": "",
+    "text": "U.S. and global ETFs as a permanent equity core with dynamic vol-targeted allocation to growth, real assets, and digital assets — executed as CEDEARs on the Argentine market.\n← Back"
+  },
+  {
+    "objectID": "programs/etf-core.html#why-not-just-pick-stocks",
+    "href": "programs/etf-core.html#why-not-just-pick-stocks",
+    "title": "ETF Core",
+    "section": "Why Not Just Pick Stocks",
+    "text": "Why Not Just Pick Stocks\nActive stock-picking underperforms in aggregate. The evidence is consistent across decades and geographies: after fees, most active managers trail a simple market-cap-weighted index. The reason is structural — markets price information quickly, and the skill required to exploit the remaining inefficiencies consistently exceeds what most participants can sustain.\nThe Efficient Market Hypothesis does not say prices are always right. It says that finding and trading on mispricings reliably enough to outperform, net of costs, is extremely hard. The empirical record confirms this. SPIVA data shows that over 15-year horizons, 88%+ of US active large-cap funds underperform the S&P 500.\nThe rational baseline is a diversified passive position. The question is not whether to own the index, but how to size exposure dynamically as risk changes over time."
+  },
+  {
+    "objectID": "programs/etf-core.html#vol-targeting-framework",
+    "href": "programs/etf-core.html#vol-targeting-framework",
+    "title": "ETF Core",
+    "section": "Vol Targeting Framework",
+    "text": "Vol Targeting Framework\nStatic leverage amplifies both returns and drawdowns equally. A strategy that targets a constant level of realized portfolio volatility — scaling exposure up in calm periods and reducing it in turbulent ones — produces a better risk-adjusted outcome without requiring any directional forecast.\nThis is not market timing. The signal is realized volatility, not expected returns. The strategy does not predict where prices will go; it adjusts how much risk is held as the risk environment changes.\nFramework:\n\nPermanent core: SPY with hard floor at 50%\nTactical sleeve: GLD / IBIT (inverse downside semi-deviation weighted)\nSleeve qualification: rolling Sortino vs SPY &gt; 0 over 63-day window\nVol target: 10–20% annualized downside semi-deviation\nLeverage: max 1.0x (spot ETFs — no derivatives, no margin)\nEMA(10) smoothing on leverage signal\n10% no-trade band to suppress noise-driven turnover\nReduce-only intra-month trigger if realized vol exceeds 20%\n\nThe downside semi-deviation captures only the left tail — it penalizes negative deviations from zero, not all volatility. This is the correct risk measure for a strategy targeting drawdown control rather than volatility symmetry."
+  },
+  {
+    "objectID": "programs/etf-core.html#instrument-rationale",
+    "href": "programs/etf-core.html#instrument-rationale",
+    "title": "ETF Core",
+    "section": "Instrument Rationale",
+    "text": "Instrument Rationale\nSPY — US broad market core. The S&P 500 is the most liquid, cheapest-to-hold expression of the US equity risk premium. Hard floor at 50% ensures the strategy always participates in the primary growth engine.\nGLD — Hard asset hedge. Gold is not correlated with equity returns over long horizons. It earns positive real returns in inflationary and currency-crisis regimes — precisely the periods when equities and bonds both suffer. The correlation benefit is most valuable in the tail, when diversification is needed most.\nIBIT (BTC-USD in backtest) — Non-sovereign asymmetric. Bitcoin’s return distribution has positive skewness and near-zero correlation with equities. At a small portfolio weight it adds right-tail optionality without proportionally increasing portfolio volatility. Executed via IBIT CEDEARs (10:1 ratio) on the Argentine market. In the backtest, BTC-USD is used for longer history — IBIT data begins January 2024."
+  },
+  {
+    "objectID": "programs/etf-core.html#backtest-results-c7-vs-spy-buy-and-hold",
+    "href": "programs/etf-core.html#backtest-results-c7-vs-spy-buy-and-hold",
+    "title": "ETF Core",
+    "section": "Backtest Results — C7 vs SPY Buy-and-Hold",
+    "text": "Backtest Results — C7 vs SPY Buy-and-Hold\nSingle continuous run from 2001-09-04 through 2026-06-25. Assets join when data becomes available: SPY from 2001-09-04, GLD from 2004-11-18, BTC-USD from 2014-09-17. Before inception an asset earns zero return → zero vol → disqualified from the tactical sleeve automatically. No in-sample / out-of-sample split. $10,000 initial capital, zero contributions. 0.50% transaction cost on traded notional.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCAGR\nSharpe\nSortino\nCalmar\nMaxDD\nCVaR95\nCVaR99\nTailRatio\nSkew\nKurt\n\n\n\n\nStrategy\n+11.58%\n0.826\n0.809\n0.334\n-34.71%\n-2.14%\n-3.64%\n1.011\n0.255\n18.92\n\n\nSPY buy-and-hold\n+8.01%\n0.533\n0.459\n0.145\n-55.19%\n-2.68%\n-4.63%\n0.940\n0.046\n16.94\n\n\n\nStrategy outperforms SPY B&H on every metric. MaxDD -20pp better (strategy -34.7% vs SPY -55.2%). Calmar 2.3x better.\n\n\n\nUniverse Comparison\n\n\nLog scale, normalised to 1 at 2001-09-04. Weekly rebalance, no contributions.\n\n\n\n\n\n\n\n\n\n\n\nConfig\nCAGR\nSharpe\nSortino\nMaxDD\nPeriod\n\n\n\n\nC1 SPY\n7.6%\n0.61\n0.54\n-37.9%\n2001–2026\n\n\nC3 SPY/GLD\n6.6%\n0.58\n0.51\n-34.6%\n2001–2026\n\n\nC5 SPY/BTC\n12.0%\n0.76\n0.74\n-37.9%\n2001–2026\n\n\nC7 SPY/GLD/BTC\n11.7%\n0.81\n0.80\n-34.6%\n2001–2026\n\n\nSPY Buy & Hold\n9.9%\n0.59\n0.56\n-55.2%\n2001–2026\n\n\n\nC7 selected: best Sortino and best MaxDD among all configs. QQQ excluded — adds correlated equity risk without improving risk-adjusted return."
+  },
+  {
+    "objectID": "programs/etf-core.html#monte-carlo-top-3-by-sortino",
+    "href": "programs/etf-core.html#monte-carlo-top-3-by-sortino",
+    "title": "ETF Core",
+    "section": "Monte Carlo — Top 3 by Sortino",
+    "text": "Monte Carlo — Top 3 by Sortino\n1,000 bootstrapped paths over a 10-year horizon, resampled monthly from the historical backtest return distribution.\nC7 SPY/GLD/BTC — highest Sortino (0.80), best drawdown control\n\n\n\nMonte Carlo C7\n\n\nP(2x capital in 5yr) = 50.6%  |  P(MaxDD ≥ 20% in 10yr) = 50.5%\n\nC5 SPY/BTC — highest CAGR (12.0%)\n\n\n\nMonte Carlo C5\n\n\nP(2x capital in 5yr) = 51.5%  |  P(MaxDD ≥ 20% in 10yr) = 69.6%\n\nC8 SPY/QQQ/GLD/BTC — full diversification\n\n\n\nMonte Carlo C8\n\n\nP(2x capital in 5yr) = 37.7%  |  P(MaxDD ≥ 20% in 10yr) = 55.6%\nC7 dominates on a risk-adjusted basis: similar return to C5 with meaningfully lower drawdown probability."
+  },
+  {
+    "objectID": "programs/etf-core.html#execution-layer",
+    "href": "programs/etf-core.html#execution-layer",
+    "title": "ETF Core",
+    "section": "Execution Layer",
+    "text": "Execution Layer\nThe strategy runs as a Python process on Railway (24/7). The monthly flow is conversational, driven by a Telegram bot:\n\nLast trading day of month → bot asks for last month’s fill confirms\nUser replies with nominales: YES SPY 21 QQQ 43 GLD 0 IBIT 79\nBot fetches live prices and MEP rate, runs signal, sends sizing table\nUser executes manually via broker app, replies FILLED\nBot updates holdings on Railway persistent volume\n\nIntra-month vol breach: bot sends a REDUCE alert automatically at market close if realized portfolio vol exceeds 20%.\nCurrent broker: Balanz (manual execution, no API). Target broker: IOL (API available — integration pending ID verification).\n\n\nDisclaimer. These are hypothetical backtested results. They were not achieved by any investor. Hypothetical performance does not reflect the impact of taxes, brokerage fees, slippage, or the inability to execute at historical prices. Past hypothetical performance is not a reliable indicator of future results. This is not investment advice.\n\n\n© 2026 Dog Capital"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "\nDog Capital\n",
+    "section": "",
+    "text": "Systematic strategies for Argentine investors\n\n\n\nPrograms\n\nETF Core — Vol-targeted CEDEARs for Argentine investors\nES Core — Vol-targeted S&P 500 futures\n\n\n\n© 2026 Dog Capital  ·  Buenos Aires"
+  },
+  {
     "objectID": "programs/es-core.html",
     "href": "programs/es-core.html",
     "title": "ES Core",
@@ -68,13 +124,6 @@
     "title": "ES Core",
     "section": "Live Deployment",
     "text": "Live Deployment\nPaper trading active. Track record will be published here as it accumulates.\n\n© 2026 Dog Capital"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "\nDog Capital\n",
-    "section": "",
-    "text": "Systematic strategies for Argentine investors\n\n\n\nComing soon.\n\n\n© 2026 Dog Capital  ·  Buenos Aires"
   },
   {
     "objectID": "programs/spy-core.html",
