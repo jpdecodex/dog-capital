@@ -32,6 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../favicon-32.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -69,6 +70,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -104,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>U.S. large-cap equity futures as a permanent core with dynamic allocation to eight alternatives across equities, fixed income, real assets, and digital assets.</p>
+<p>The core research strategy. U.S. large-cap equity futures as a permanent allocation with dynamic exposure to eight alternatives across equities, fixed income, real assets, and digital assets — the logic every Dog Capital program is built from.</p>
 <p><a href="../index.html#programs" class="back-link">← Back</a></p>
 <hr>
 <section id="instrument-universe" class="level2">
@@ -126,7 +128,16 @@ ul.task-list li input[type="checkbox"] {
 <li>EMA(10) smoothing + 10% no-trade band</li>
 <li>Signal lag: 1 day</li>
 </ul>
-<p>Leverage is structurally necessary. The volatility targeting mechanism determines how much notional exposure each dollar of capital should support. In high-conviction, low-volatility environments the strategy runs above 1x notional leverage. In uncertain or high-volatility environments it contracts toward or below 1x.</p>
+<p>Leverage is structurally necessary. The volatility targeting mechanism determines how much notional exposure each dollar of capital should support. In high-conviction, low-volatility environments the strategy runs above 1x notional leverage. In uncertain or high-volatility environments it contracts toward or below 1x. Sizing decisions are systematic — no discretionary overrides, no forecasting of direction.</p>
+<hr>
+</section>
+<section id="instrument-rationale" class="level2">
+<h2 class="anchored" data-anchor-id="instrument-rationale">Instrument Rationale</h2>
+<p><strong>ES — permanent equity core.</strong> The primary long-run growth engine. Every allocation decision is measured against it.</p>
+<p><strong>NQ / RTY — equity beta diversification.</strong> Different segments of the U.S. equity risk premium, qualified into the tactical sleeve only when their risk-adjusted profile improves on ES.</p>
+<p><strong>GC / SI — real-asset hedge.</strong> Exposure that tends to hold up when paper assets don’t, particularly in inflationary or currency-stress regimes.</p>
+<p><strong>ZN — duration hedge.</strong> A rates exposure that diversifies the portfolio’s sensitivity to growth versus rate-driven regimes.</p>
+<p><strong>MBT — asymmetric convexity.</strong> A small, disciplined sleeve for a return distribution with meaningfully different tail behavior than the rest of the book.</p>
 <hr>
 </section>
 <section id="backtest-results" class="level2">
@@ -134,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p><strong>These are hypothetical backtested results.</strong> They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.</p>
 </blockquote>
-<p><em>Period: Sep 2001–2026. Data: yfinance adjusted prices.</em></p>
+<p><em>Period: Sep 2001–2026. Data: yfinance adjusted prices, daily rebalance.</em></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -263,9 +274,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <hr>
 </section>
-<section id="live-deployment" class="level2">
-<h2 class="anchored" data-anchor-id="live-deployment">Live Deployment</h2>
-<p>Paper trading active. Track record will be published here as it accumulates.</p>
+<section id="execution-layer" class="level2">
+<h2 class="anchored" data-anchor-id="execution-layer">Execution Layer</h2>
+<p>ES Core is the research core the rest of Dog Capital’s programs are built from — every live and paper strategy in the lineup, including ETF Core, inherits its allocation logic. Direct futures execution at this scale requires substantial dedicated capital, so the strategy proves itself first on IBKR paper trading ahead of live deployment.</p>
+<hr>
+<blockquote class="blockquote">
+<p><strong>Disclaimer.</strong> These are hypothetical backtested results. They were not achieved by any investor. Hypothetical performance does not reflect the impact of taxes, brokerage fees, slippage, or the inability to execute at historical prices. Past hypothetical performance is not a reliable indicator of future results. This is not investment advice.</p>
+</blockquote>
 <hr>
 <p><em>© 2026 Dog Capital</em></p>
 

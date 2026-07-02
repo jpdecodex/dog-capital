@@ -32,14 +32,14 @@
     "href": "programs/etf-core.html#backtest-results-c7-vs-spy-buy-and-hold",
     "title": "ETF Core",
     "section": "Backtest Results — C7 vs SPY Buy-and-Hold",
-    "text": "Backtest Results — C7 vs SPY Buy-and-Hold\nSingle continuous run from 2001-09-04 through 2026-06-25. Assets join when data becomes available: SPY from 2001-09-04, GLD from 2004-11-18, BTC-USD from 2014-09-17. Before inception an asset earns zero return → zero vol → disqualified from the tactical sleeve automatically. No in-sample / out-of-sample split. $10,000 initial capital, zero contributions. 0.50% transaction cost on traded notional.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCAGR\nSharpe\nSortino\nCalmar\nMaxDD\nCVaR95\nCVaR99\nTailRatio\nSkew\nKurt\n\n\n\n\nStrategy\n+11.58%\n0.826\n0.809\n0.334\n-34.71%\n-2.14%\n-3.64%\n1.011\n0.255\n18.92\n\n\nSPY buy-and-hold\n+8.01%\n0.533\n0.459\n0.145\n-55.19%\n-2.68%\n-4.63%\n0.940\n0.046\n16.94\n\n\n\nStrategy outperforms SPY B&H on every metric. MaxDD -20pp better (strategy -34.7% vs SPY -55.2%). Calmar 2.3x better.\n\n\n\nUniverse Comparison\n\n\nLog scale, normalised to 1 at 2001-09-04. Weekly rebalance, no contributions.\n\n\n\n\n\n\n\n\n\n\n\nConfig\nCAGR\nSharpe\nSortino\nMaxDD\nPeriod\n\n\n\n\nC1 SPY\n7.6%\n0.61\n0.54\n-37.9%\n2001–2026\n\n\nC3 SPY/GLD\n6.6%\n0.58\n0.51\n-34.6%\n2001–2026\n\n\nC5 SPY/BTC\n12.0%\n0.76\n0.74\n-37.9%\n2001–2026\n\n\nC7 SPY/GLD/BTC\n11.7%\n0.81\n0.80\n-34.6%\n2001–2026\n\n\nSPY Buy & Hold\n9.9%\n0.59\n0.56\n-55.2%\n2001–2026\n\n\n\nC7 selected: best Sortino and best MaxDD among all configs. QQQ excluded — adds correlated equity risk without improving risk-adjusted return."
+    "text": "Backtest Results — C7 vs SPY Buy-and-Hold\nSingle continuous run from 2001-09-04 through 2026-07-02. Assets join when data becomes available: SPY from 2001-09-04, GLD from 2004-11-18, BTC-USD from 2014-09-17. Before inception an asset earns zero return → zero vol → disqualified from the tactical sleeve automatically. No in-sample / out-of-sample split. $10,000 initial capital, zero contributions. 0.50% transaction cost on traded notional.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCAGR\nSharpe\nSortino\nCalmar\nMaxDD\nCVaR95\nCVaR99\nTailRatio\nSkew\nKurt\n\n\n\n\nStrategy\n+11.68%\n0.810\n0.796\n0.338\n-34.57%\n-2.21%\n-3.70%\n1.008\n0.179\n16.41\n\n\nSPY buy-and-hold\n+8.06%\n0.536\n0.461\n0.146\n-55.19%\n-2.68%\n-4.63%\n0.941\n0.046\n16.94\n\n\n\nStrategy outperforms SPY B&H on every metric. MaxDD -21pp better (strategy -34.6% vs SPY -55.2%). Calmar 2.3x better.\n\n\n\nUniverse Comparison\n\n\nLog scale, normalised to 1 at 2001-09-04. Weekly rebalance, no contributions."
   },
   {
-    "objectID": "programs/etf-core.html#monte-carlo-top-3-by-sortino",
-    "href": "programs/etf-core.html#monte-carlo-top-3-by-sortino",
+    "objectID": "programs/etf-core.html#monte-carlo",
+    "href": "programs/etf-core.html#monte-carlo",
     "title": "ETF Core",
-    "section": "Monte Carlo — Top 3 by Sortino",
-    "text": "Monte Carlo — Top 3 by Sortino\n1,000 bootstrapped paths over a 10-year horizon, resampled monthly from the historical backtest return distribution.\nC7 SPY/GLD/BTC — highest Sortino (0.80), best drawdown control\n\n\n\nMonte Carlo C7\n\n\nP(2x capital in 5yr) = 50.6%  |  P(MaxDD ≥ 20% in 10yr) = 50.5%\n\nC5 SPY/BTC — highest CAGR (12.0%)\n\n\n\nMonte Carlo C5\n\n\nP(2x capital in 5yr) = 51.5%  |  P(MaxDD ≥ 20% in 10yr) = 69.6%\n\nC8 SPY/QQQ/GLD/BTC — full diversification\n\n\n\nMonte Carlo C8\n\n\nP(2x capital in 5yr) = 37.7%  |  P(MaxDD ≥ 20% in 10yr) = 55.6%\nC7 dominates on a risk-adjusted basis: similar return to C5 with meaningfully lower drawdown probability."
+    "section": "Monte Carlo",
+    "text": "Monte Carlo\n1,000 bootstrapped paths over a 10-year horizon, resampled monthly from the historical backtest return distribution — the C7 configuration actually offered.\n\n\n\nMonte Carlo C7\n\n\nP(2x capital in 5yr) = 47.2%  |  P(MaxDD ≥ 20% in 10yr) = 51.2%"
   },
   {
     "objectID": "programs/etf-core.html#execution-layer",
@@ -51,16 +51,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "\nDog Capital\n",
+    "title": "Dog Capital",
     "section": "",
-    "text": "Systematic strategies for Argentine investors\n\n\n\nPrograms\n\nETF Core — Vol-targeted CEDEARs for Argentine investors\nES Core — Vol-targeted S&P 500 futures\n\n\n\n© 2026 Dog Capital  ·  Buenos Aires"
+    "text": "Systematic Strategies for Argentine Investors\n\n\n\nPrograms\n\nLive\n\nETF Core\nVol-Targeted CEDEARs for Argentine Investors\n\n\n\nCAGR\n\n\n11.58%\n\n\n\n\nSharpe\n\n\n0.826\n\n\n\n\nMax DD\n\n\n-34.71%\n\n\n\nView research →\n\n\n\nPaper\n\nES Core\nVol-Targeted Futures\n\n\n\nCAGR\n\n\n10.08%\n\n\n\n\nSharpe\n\n\n0.515\n\n\n\n\nMax DD\n\n\n-48.26%\n\n\n\nView research →\n\n\n\n\n© 2026 Dog Capital  ·  Buenos Aires"
   },
   {
     "objectID": "programs/es-core.html",
     "href": "programs/es-core.html",
     "title": "ES Core",
     "section": "",
-    "text": "U.S. large-cap equity futures as a permanent core with dynamic allocation to eight alternatives across equities, fixed income, real assets, and digital assets.\n← Back"
+    "text": "The core research strategy. U.S. large-cap equity futures as a permanent allocation with dynamic exposure to eight alternatives across equities, fixed income, real assets, and digital assets — the logic every Dog Capital program is built from.\n← Back"
   },
   {
     "objectID": "programs/es-core.html#instrument-universe",
@@ -74,14 +74,21 @@
     "href": "programs/es-core.html#strategy-design",
     "title": "ES Core",
     "section": "Strategy Design",
-    "text": "Strategy Design\nES Core maintains a permanent allocation to ES and dynamically allocates up to 50% of the portfolio to the six alternative instruments based on their risk-adjusted performance relative to ES.\nFramework:\n\nPermanent core: ES with hard floor at 50%\nTactical sleeve: inverse downside semi-deviation weighted\nSleeve qualification: rolling Sortino vs ES &gt; 0\nVolatility target: 10–28% downside semi-deviation\nLeverage: dynamic, max 3.0x\nEMA(10) smoothing + 10% no-trade band\nSignal lag: 1 day\n\nLeverage is structurally necessary. The volatility targeting mechanism determines how much notional exposure each dollar of capital should support. In high-conviction, low-volatility environments the strategy runs above 1x notional leverage. In uncertain or high-volatility environments it contracts toward or below 1x."
+    "text": "Strategy Design\nES Core maintains a permanent allocation to ES and dynamically allocates up to 50% of the portfolio to the six alternative instruments based on their risk-adjusted performance relative to ES.\nFramework:\n\nPermanent core: ES with hard floor at 50%\nTactical sleeve: inverse downside semi-deviation weighted\nSleeve qualification: rolling Sortino vs ES &gt; 0\nVolatility target: 10–28% downside semi-deviation\nLeverage: dynamic, max 3.0x\nEMA(10) smoothing + 10% no-trade band\nSignal lag: 1 day\n\nLeverage is structurally necessary. The volatility targeting mechanism determines how much notional exposure each dollar of capital should support. In high-conviction, low-volatility environments the strategy runs above 1x notional leverage. In uncertain or high-volatility environments it contracts toward or below 1x. Sizing decisions are systematic — no discretionary overrides, no forecasting of direction."
+  },
+  {
+    "objectID": "programs/es-core.html#instrument-rationale",
+    "href": "programs/es-core.html#instrument-rationale",
+    "title": "ES Core",
+    "section": "Instrument Rationale",
+    "text": "Instrument Rationale\nES — permanent equity core. The primary long-run growth engine. Every allocation decision is measured against it.\nNQ / RTY — equity beta diversification. Different segments of the U.S. equity risk premium, qualified into the tactical sleeve only when their risk-adjusted profile improves on ES.\nGC / SI — real-asset hedge. Exposure that tends to hold up when paper assets don’t, particularly in inflationary or currency-stress regimes.\nZN — duration hedge. A rates exposure that diversifies the portfolio’s sensitivity to growth versus rate-driven regimes.\nMBT — asymmetric convexity. A small, disciplined sleeve for a return distribution with meaningfully different tail behavior than the rest of the book."
   },
   {
     "objectID": "programs/es-core.html#backtest-results",
     "href": "programs/es-core.html#backtest-results",
     "title": "ES Core",
     "section": "Backtest Results",
-    "text": "Backtest Results\n\nThese are hypothetical backtested results. They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.\n\nPeriod: Sep 2001–2026. Data: yfinance adjusted prices.\n\n\n\nMetric\nES Buy & Hold\nFull Strategy\n\n\n\n\nTotal Return\n452.3%\n1,711.4%\n\n\nCAGR\n5.83%\n10.08%\n\n\nAnn. Volatility\n16.03%\n24.51%\n\n\nSharpe Ratio\n0.434\n0.515\n\n\nSortino Ratio\n0.437\n0.491\n\n\nCalmar Ratio\n0.104\n0.209\n\n\nMax Drawdown\n-55.85%\n-48.26%\n\n\nCVaR 95%\n-2.50%\n-3.97%\n\n\nCVaR 99%\n-4.29%\n-6.56%\n\n\nTail Ratio\n0.950\n0.978\n\n\nSkewness\n0.275\n-0.693\n\n\nKurtosis\n18.247\n5.929\n\n\nAvg Leverage\n1.00x\n2.35x"
+    "text": "Backtest Results\n\nThese are hypothetical backtested results. They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.\n\nPeriod: Sep 2001–2026. Data: yfinance adjusted prices, daily rebalance.\n\n\n\nMetric\nES Buy & Hold\nFull Strategy\n\n\n\n\nTotal Return\n452.3%\n1,711.4%\n\n\nCAGR\n5.83%\n10.08%\n\n\nAnn. Volatility\n16.03%\n24.51%\n\n\nSharpe Ratio\n0.434\n0.515\n\n\nSortino Ratio\n0.437\n0.491\n\n\nCalmar Ratio\n0.104\n0.209\n\n\nMax Drawdown\n-55.85%\n-48.26%\n\n\nCVaR 95%\n-2.50%\n-3.97%\n\n\nCVaR 99%\n-4.29%\n-6.56%\n\n\nTail Ratio\n0.950\n0.978\n\n\nSkewness\n0.275\n-0.693\n\n\nKurtosis\n18.247\n5.929\n\n\nAvg Leverage\n1.00x\n2.35x"
   },
   {
     "objectID": "programs/es-core.html#equity-curve",
@@ -119,11 +126,11 @@
     "text": "Weight Allocation\n\n\n\nWeight Allocation"
   },
   {
-    "objectID": "programs/es-core.html#live-deployment",
-    "href": "programs/es-core.html#live-deployment",
+    "objectID": "programs/es-core.html#execution-layer",
+    "href": "programs/es-core.html#execution-layer",
     "title": "ES Core",
-    "section": "Live Deployment",
-    "text": "Live Deployment\nPaper trading active. Track record will be published here as it accumulates.\n\n© 2026 Dog Capital"
+    "section": "Execution Layer",
+    "text": "Execution Layer\nES Core is the research core the rest of Dog Capital’s programs are built from — every live and paper strategy in the lineup, including ETF Core, inherits its allocation logic. Direct futures execution at this scale requires substantial dedicated capital, so the strategy proves itself first on IBKR paper trading ahead of live deployment.\n\n\nDisclaimer. These are hypothetical backtested results. They were not achieved by any investor. Hypothetical performance does not reflect the impact of taxes, brokerage fees, slippage, or the inability to execute at historical prices. Past hypothetical performance is not a reliable indicator of future results. This is not investment advice.\n\n\n© 2026 Dog Capital"
   },
   {
     "objectID": "programs/spy-core.html",

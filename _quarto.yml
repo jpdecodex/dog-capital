@@ -1,6 +1,11 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "programs/*.qmd"
+    - "research/*.qmd"
+    - "!handoff/"
   resources:
     - "programs/es-core/**"
     - "programs/spy-core/**"
@@ -9,9 +14,13 @@ project:
 website:
   title: "Dog Capital"
   navbar: false
+  favicon: favicon-32.png
 
 format:
   html:
     theme: flatly
     css: styles.css
     toc: false
+    include-in-header:
+      text: |
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">

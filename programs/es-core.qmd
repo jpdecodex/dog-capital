@@ -133,7 +133,7 @@ ES Core is the research core the rest of Dog Capital's programs are built
 from — every live and paper strategy in the lineup, including ETF Core,
 inherits its allocation logic. Direct futures execution at this scale
 requires substantial dedicated capital, so the strategy proves itself first
-in paper trading ahead of live deployment.
+on IBKR paper trading ahead of live deployment.
 
 ---
 

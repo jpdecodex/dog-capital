@@ -4,16 +4,47 @@ page-layout: full
 ---
 
 <div id="site-header">
-<h1>Dog Capital</h1>
-<p>Systematic strategies for Argentine investors</p>
+<img src="LOGO-lockup.png" alt="Dog Capital" style="height: 36px; width: auto; display: block; margin: 0;">
+<p>Systematic Strategies for Argentine Investors</p>
 </div>
 
 <div id="programs" style="padding: 4rem 0 2rem 0;">
 
 ### Programs
 
-- [ETF Core](programs/etf-core.qmd) — Vol-targeted CEDEARs for Argentine investors
-- [ES Core](programs/es-core.qmd) — Vol-targeted S&P 500 futures
+<div class="program-card">
+<span class="tag live">Live</span>
+
+### ETF Core
+
+Vol-Targeted CEDEARs for Argentine Investors
+
+<div class="card-stats">
+<div><div class="stat-label">CAGR</div><div class="stat-value">11.58%</div></div>
+<div><div class="stat-label">Sharpe</div><div class="stat-value">0.826</div></div>
+<div><div class="stat-label">Max DD</div><div class="stat-value">-34.71%</div></div>
+</div>
+
+[View research →](programs/etf-core.qmd)
+
+</div>
+
+<div class="program-card">
+<span class="tag">Paper</span>
+
+### ES Core
+
+Vol-Targeted Futures
+
+<div class="card-stats">
+<div><div class="stat-label">CAGR</div><div class="stat-value">10.08%</div></div>
+<div><div class="stat-label">Sharpe</div><div class="stat-value">0.515</div></div>
+<div><div class="stat-label">Max DD</div><div class="stat-value">-48.26%</div></div>
+</div>
+
+[View research →](programs/es-core.qmd)
+
+</div>
 
 </div>
 
