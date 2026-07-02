@@ -4,10 +4,10 @@
 Public marketing site for Dog Capital, built with Quarto and deployed to GitHub Pages at jpdecodex.github.io/dog-capitals. Showcases the systematic strategies (ES Core, ETF Core) with backtest research pages for Argentine investors.
 
 ## Current state
-Live. Homepage lists ETF Core and ES Core programs. ETF Core research page has full 25yr backtest metrics (QQQ dropped, SPY buy & hold comparison added). Site identity redesigned around Argentina/SPY-only positioning; RR Capital-style skeleton (custom CSS, inline nav, section divs, program cards).
+Live. Homepage lists ETF Core and ES Core programs. ETF Core research page has full 25yr backtest metrics (QQQ dropped, SPY buy & hold comparison added). ES Core research page rewritten to full narrative depth (instrument rationale, execution layer, disclaimer) matching ETF Core, framed as the parent research strategy every other program forks from — hedge-fund-style copy, no mechanism or infra detail disclosed. Site identity redesigned around Argentina/SPY-only positioning; RR Capital-style skeleton (custom CSS, inline nav, section divs, program cards).
 
 ## Next action
-ES Core research page + full design pass (Claude Design → Quarto).
+Full design pass (Claude Design → Quarto): restyle charts minimalist/on-brand using the existing Dog Capital logo, then sync the component system (program-card, metrics table, nav, hero, disclaimer block) through a claude.ai/design project before merging refined CSS back into styles.css incrementally.
 
 ## Architecture decisions
 - Quarto + GitHub Pages (`docs/` build output), no JS framework — consistent with the rest of the ecosystem (see playbook ADR 005).

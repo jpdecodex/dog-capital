@@ -2,8 +2,10 @@
 title: "ES Core"
 ---
 
-U.S. large-cap equity futures as a permanent core with dynamic allocation
-to eight alternatives across equities, fixed income, real assets, and digital assets.
+The core research strategy. U.S. large-cap equity futures as a permanent
+allocation with dynamic exposure to eight alternatives across equities,
+fixed income, real assets, and digital assets — the logic every Dog Capital
+program is built from.
 
 <a href="../index.qmd#programs" class="back-link">← Back</a>
 
@@ -43,7 +45,29 @@ Leverage is structurally necessary. The volatility targeting mechanism
 determines how much notional exposure each dollar of capital should support.
 In high-conviction, low-volatility environments the strategy runs above 1x
 notional leverage. In uncertain or high-volatility environments it contracts
-toward or below 1x.
+toward or below 1x. Sizing decisions are systematic — no discretionary
+overrides, no forecasting of direction.
+
+---
+
+## Instrument Rationale
+
+**ES — permanent equity core.** The primary long-run growth engine.
+Every allocation decision is measured against it.
+
+**NQ / RTY — equity beta diversification.** Different segments of the
+U.S. equity risk premium, qualified into the tactical sleeve only when
+their risk-adjusted profile improves on ES.
+
+**GC / SI — real-asset hedge.** Exposure that tends to hold up when
+paper assets don't, particularly in inflationary or currency-stress regimes.
+
+**ZN — duration hedge.** A rates exposure that diversifies the portfolio's
+sensitivity to growth versus rate-driven regimes.
+
+**MBT — asymmetric convexity.** A small, disciplined sleeve for a return
+distribution with meaningfully different tail behavior than the rest of
+the book.
 
 ---
 
@@ -53,7 +77,7 @@ toward or below 1x.
 > any investor. Past hypothetical performance is not a reliable indicator
 > of future results.
 
-*Period: Sep 2001–2026. Data: yfinance adjusted prices.*
+*Period: Sep 2001–2026. Data: yfinance adjusted prices, daily rebalance.*
 
 | Metric | ES Buy & Hold | Full Strategy |
 |--------|:-------------:|:-------------:|
@@ -103,9 +127,21 @@ toward or below 1x.
 
 ---
 
-## Live Deployment
+## Execution Layer
 
-Paper trading active. Track record will be published here as it accumulates.
+ES Core is the research core the rest of Dog Capital's programs are built
+from — every live and paper strategy in the lineup, including ETF Core,
+inherits its allocation logic. Direct futures execution at this scale
+requires substantial dedicated capital, so the strategy proves itself first
+in paper trading ahead of live deployment.
+
+---
+
+> **Disclaimer.** These are hypothetical backtested results. They were not
+> achieved by any investor. Hypothetical performance does not reflect the
+> impact of taxes, brokerage fees, slippage, or the inability to execute
+> at historical prices. Past hypothetical performance is not a reliable
+> indicator of future results. This is not investment advice.
 
 ---
 
