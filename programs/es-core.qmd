@@ -77,22 +77,40 @@ the book.
 > any investor. Past hypothetical performance is not a reliable indicator
 > of future results.
 
-*Period: Sep 2001–2026. Data: yfinance adjusted prices, daily rebalance.*
+Single continuous run from 2001-09-01 (2001-09-04 first trading day) through
+2026-07-03 — the same start date used across every Dog Capital program,
+chosen to begin just after the dot-com peak's collapse rather than a
+friendlier window. ES/NQ/GC/SI/ZN data begins 2001-01-02; RTY joins
+2017-07-10; the digital-asset sleeve's price series (BTC-USD) joins
+2017-12-18. Before inception an instrument earns zero return → zero vol →
+disqualified from the tactical sleeve automatically. Signals lag execution
+by one day — no lookahead.
+
+Every trade costs $5 commission per round-turn contract plus 1 tick of
+slippage per side, priced at each instrument's real tick value. The
+digital-asset sleeve is priced via BTC-USD spot for a longer continuous
+history than its actual futures contract provides, but costed and margined
+using that contract's real economics (Micro Bitcoin futures, CME — 0.1
+BTC/contract, $0.50/tick), gated open from December 2017 (CME's Bitcoin
+futures market debut) rather than Micro Bitcoin's own 2021 listing. Price
+data is sourced from yfinance continuous futures and spot series; a Norgate
+Data upgrade for cleaner futures-roll methodology is tracked in the
+backlog. $1,000,000 initial capital, no contributions.
 
 | Metric | ES Buy & Hold | Full Strategy |
 |--------|:-------------:|:-------------:|
-| Total Return | 452.3% | 1,711.4% |
-| CAGR | 5.83% | 10.08% |
-| Ann. Volatility | 16.03% | 24.51% |
-| Sharpe Ratio | 0.434 | 0.515 |
-| Sortino Ratio | 0.437 | 0.491 |
-| Calmar Ratio | 0.104 | 0.209 |
+| Total Return | 446.9% | 1,587.7% |
+| CAGR | 5.78% | 9.80% |
+| Ann. Volatility | 16.03% | 24.50% |
+| Sharpe Ratio | 0.431 | 0.505 |
+| Sortino Ratio | 0.435 | 0.483 |
+| Calmar Ratio | 0.104 | 0.203 |
 | Max Drawdown | -55.85% | -48.26% |
 | CVaR 95% | -2.50% | -3.97% |
-| CVaR 99% | -4.29% | -6.56% |
-| Tail Ratio | 0.950 | 0.978 |
-| Skewness | 0.275 | -0.693 |
-| Kurtosis | 18.247 | 5.929 |
+| CVaR 99% | -4.27% | -6.53% |
+| Tail Ratio | 0.950 | 0.979 |
+| Skewness | 0.275 | -0.691 |
+| Kurtosis | 18.238 | 5.904 |
 | Avg Leverage | 1.00x | 2.35x |
 
 ---
@@ -124,6 +142,17 @@ the book.
 ## Weight Allocation
 
 ![Weight Allocation](es-core/weight_allocation.png)
+
+---
+
+## Monte Carlo
+
+1,000 bootstrapped paths over a 10-year horizon, resampled monthly from
+the historical backtest return distribution.
+
+![Monte Carlo](es-core/montecarlo.png)
+
+P(2x capital in 5yr) = **39.9%** &nbsp;|&nbsp; P(MaxDD ≥ 20% in 10yr) = **99.3%**
 
 ---
 

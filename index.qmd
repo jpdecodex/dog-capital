@@ -29,12 +29,12 @@ page-layout: full
 The core research strategy — U.S. large-cap equity futures with a dynamic tactical sleeve.
 
 <div class="card-stats">
-<div><div class="stat-label">CAGR</div><div class="stat-value">11.10%</div></div>
-<div><div class="stat-label">Sharpe</div><div class="stat-value">0.554</div></div>
-<div><div class="stat-label">Max DD</div><div class="stat-value">-49.29%</div></div>
+<div><div class="stat-label">CAGR</div><div class="stat-value">9.80%</div></div>
+<div><div class="stat-label">Sharpe</div><div class="stat-value">0.505</div></div>
+<div><div class="stat-label">Max DD</div><div class="stat-value">-48.26%</div></div>
 </div>
 
-*Backtest, 2003–2026 — not a live track record.*
+*Backtest, 2001–2026 — not a live track record.*
 
 [View research →](programs/es-core.qmd)
 
