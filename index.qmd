@@ -34,6 +34,8 @@ The core research strategy — U.S. large-cap equity futures with a dynamic tact
 <div><div class="stat-label">Max DD</div><div class="stat-value">-49.29%</div></div>
 </div>
 
+*Backtest, 2003–2026 — not a live track record.*
+
 [View research →](programs/es-core.qmd)
 
 </div>
@@ -51,6 +53,8 @@ U.S. and global ETFs as a permanent equity core, executed as CEDEARs on the Arge
 <div><div class="stat-label">Sharpe</div><div class="stat-value">0.810</div></div>
 <div><div class="stat-label">Max DD</div><div class="stat-value">-34.57%</div></div>
 </div>
+
+*Backtest, 2001–2026 — live execution track record not yet published.*
 
 [View research →](programs/etf-core.qmd)
 
