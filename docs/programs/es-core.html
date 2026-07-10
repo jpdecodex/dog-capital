@@ -145,7 +145,8 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p><strong>These are hypothetical backtested results.</strong> They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.</p>
 </blockquote>
-<p><em>Period: Sep 2001–2026. Data: yfinance adjusted prices, daily rebalance.</em></p>
+<p>Single continuous run from 2001-09-01 (2001-09-04 first trading day) through 2026-07-03 — the same start date used across every Dog Capital program, chosen to begin just after the dot-com peak’s collapse rather than a friendlier window. ES/NQ/GC/SI/ZN data begins 2001-01-02; RTY joins 2017-07-10; the digital-asset sleeve’s price series (BTC-USD) joins 2017-12-18. Before inception an instrument earns zero return → zero vol → disqualified from the tactical sleeve automatically. Signals lag execution by one day — no lookahead.</p>
+<p>Every trade costs $5 commission per round-turn contract plus 1 tick of slippage per side, priced at each instrument’s real tick value. The digital-asset sleeve is priced via BTC-USD spot for a longer continuous history than its actual futures contract provides, but costed and margined using that contract’s real economics (Micro Bitcoin futures, CME — 0.1 BTC/contract, $0.50/tick), gated open from December 2017 (CME’s Bitcoin futures market debut) rather than Micro Bitcoin’s own 2021 listing. Price data is sourced from yfinance continuous futures and spot series; a Norgate Data upgrade for cleaner futures-roll methodology is tracked in the backlog. $1,000,000 initial capital, no contributions.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -157,33 +158,33 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Total Return</td>
-<td style="text-align: center;">452.3%</td>
-<td style="text-align: center;">1,711.4%</td>
+<td style="text-align: center;">446.9%</td>
+<td style="text-align: center;">1,587.7%</td>
 </tr>
 <tr class="even">
 <td>CAGR</td>
-<td style="text-align: center;">5.83%</td>
-<td style="text-align: center;">10.08%</td>
+<td style="text-align: center;">5.78%</td>
+<td style="text-align: center;">9.80%</td>
 </tr>
 <tr class="odd">
 <td>Ann. Volatility</td>
 <td style="text-align: center;">16.03%</td>
-<td style="text-align: center;">24.51%</td>
+<td style="text-align: center;">24.50%</td>
 </tr>
 <tr class="even">
 <td>Sharpe Ratio</td>
-<td style="text-align: center;">0.434</td>
-<td style="text-align: center;">0.515</td>
+<td style="text-align: center;">0.431</td>
+<td style="text-align: center;">0.505</td>
 </tr>
 <tr class="odd">
 <td>Sortino Ratio</td>
-<td style="text-align: center;">0.437</td>
-<td style="text-align: center;">0.491</td>
+<td style="text-align: center;">0.435</td>
+<td style="text-align: center;">0.483</td>
 </tr>
 <tr class="even">
 <td>Calmar Ratio</td>
 <td style="text-align: center;">0.104</td>
-<td style="text-align: center;">0.209</td>
+<td style="text-align: center;">0.203</td>
 </tr>
 <tr class="odd">
 <td>Max Drawdown</td>
@@ -197,23 +198,23 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>CVaR 99%</td>
-<td style="text-align: center;">-4.29%</td>
-<td style="text-align: center;">-6.56%</td>
+<td style="text-align: center;">-4.27%</td>
+<td style="text-align: center;">-6.53%</td>
 </tr>
 <tr class="even">
 <td>Tail Ratio</td>
 <td style="text-align: center;">0.950</td>
-<td style="text-align: center;">0.978</td>
+<td style="text-align: center;">0.979</td>
 </tr>
 <tr class="odd">
 <td>Skewness</td>
 <td style="text-align: center;">0.275</td>
-<td style="text-align: center;">-0.693</td>
+<td style="text-align: center;">-0.691</td>
 </tr>
 <tr class="even">
 <td>Kurtosis</td>
-<td style="text-align: center;">18.247</td>
-<td style="text-align: center;">5.929</td>
+<td style="text-align: center;">18.238</td>
+<td style="text-align: center;">5.904</td>
 </tr>
 <tr class="odd">
 <td>Avg Leverage</td>
@@ -272,6 +273,18 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Weight Allocation</figcaption>
 </figure>
 </div>
+<hr>
+</section>
+<section id="monte-carlo" class="level2">
+<h2 class="anchored" data-anchor-id="monte-carlo">Monte Carlo</h2>
+<p>1,000 bootstrapped paths over a 10-year horizon, resampled monthly from the historical backtest return distribution.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="es-core/montecarlo.png" class="img-fluid figure-img"></p>
+<figcaption>Monte Carlo</figcaption>
+</figure>
+</div>
+<p>P(2x capital in 5yr) = <strong>39.9%</strong> &nbsp;|&nbsp; P(MaxDD ≥ 20% in 10yr) = <strong>99.3%</strong></p>
 <hr>
 </section>
 <section id="execution-layer" class="level2">

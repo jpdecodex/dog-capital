@@ -1,59 +1,59 @@
 [
   {
-    "objectID": "programs/etf-core.html",
-    "href": "programs/etf-core.html",
-    "title": "ETF Core",
+    "objectID": "programs/spy-core.html",
+    "href": "programs/spy-core.html",
+    "title": "SPY Core",
     "section": "",
     "text": "U.S. and global ETFs as a permanent equity core with dynamic vol-targeted allocation to growth, real assets, and digital assets — executed as CEDEARs on the Argentine market.\n← Back"
   },
   {
-    "objectID": "programs/etf-core.html#why-not-just-pick-stocks",
-    "href": "programs/etf-core.html#why-not-just-pick-stocks",
-    "title": "ETF Core",
+    "objectID": "programs/spy-core.html#why-not-just-pick-stocks",
+    "href": "programs/spy-core.html#why-not-just-pick-stocks",
+    "title": "SPY Core",
     "section": "Why Not Just Pick Stocks",
     "text": "Why Not Just Pick Stocks\nActive stock-picking underperforms in aggregate. The evidence is consistent across decades and geographies: after fees, most active managers trail a simple market-cap-weighted index. The reason is structural — markets price information quickly, and the skill required to exploit the remaining inefficiencies consistently exceeds what most participants can sustain.\nThe Efficient Market Hypothesis does not say prices are always right. It says that finding and trading on mispricings reliably enough to outperform, net of costs, is extremely hard. The empirical record confirms this. SPIVA data shows that over 15-year horizons, 88%+ of US active large-cap funds underperform the S&P 500.\nThe rational baseline is a diversified passive position. The question is not whether to own the index, but how to size exposure dynamically as risk changes over time."
   },
   {
-    "objectID": "programs/etf-core.html#vol-targeting-framework",
-    "href": "programs/etf-core.html#vol-targeting-framework",
-    "title": "ETF Core",
+    "objectID": "programs/spy-core.html#vol-targeting-framework",
+    "href": "programs/spy-core.html#vol-targeting-framework",
+    "title": "SPY Core",
     "section": "Vol Targeting Framework",
     "text": "Vol Targeting Framework\nStatic leverage amplifies both returns and drawdowns equally. A strategy that targets a constant level of realized portfolio volatility — scaling exposure up in calm periods and reducing it in turbulent ones — produces a better risk-adjusted outcome without requiring any directional forecast.\nThis is not market timing. The signal is realized volatility, not expected returns. The strategy does not predict where prices will go; it adjusts how much risk is held as the risk environment changes.\nFramework:\n\nPermanent core: SPY with hard floor at 50%\nTactical sleeve: GLD / IBIT (inverse downside semi-deviation weighted)\nSleeve qualification: rolling Sortino vs SPY &gt; 0 over 63-day window\nVol target: 10–20% annualized downside semi-deviation\nLeverage: max 1.0x (spot ETFs — no derivatives, no margin)\nEMA(10) smoothing on leverage signal\n10% no-trade band to suppress noise-driven turnover\nReduce-only intra-month trigger if realized vol exceeds 20%\n\nThe downside semi-deviation captures only the left tail — it penalizes negative deviations from zero, not all volatility. This is the correct risk measure for a strategy targeting drawdown control rather than volatility symmetry."
   },
   {
-    "objectID": "programs/etf-core.html#instrument-rationale",
-    "href": "programs/etf-core.html#instrument-rationale",
-    "title": "ETF Core",
+    "objectID": "programs/spy-core.html#instrument-rationale",
+    "href": "programs/spy-core.html#instrument-rationale",
+    "title": "SPY Core",
     "section": "Instrument Rationale",
     "text": "Instrument Rationale\nSPY — US broad market core. The S&P 500 is the most liquid, cheapest-to-hold expression of the US equity risk premium. Hard floor at 50% ensures the strategy always participates in the primary growth engine.\nGLD — Hard asset hedge. Gold is not correlated with equity returns over long horizons. It earns positive real returns in inflationary and currency-crisis regimes — precisely the periods when equities and bonds both suffer. The correlation benefit is most valuable in the tail, when diversification is needed most.\nIBIT (BTC-USD in backtest) — Non-sovereign asymmetric. Bitcoin’s return distribution has positive skewness and near-zero correlation with equities. At a small portfolio weight it adds right-tail optionality without proportionally increasing portfolio volatility. Executed via IBIT CEDEARs (10:1 ratio) on the Argentine market. In the backtest, BTC-USD is used for longer history — IBIT data begins January 2024."
   },
   {
-    "objectID": "programs/etf-core.html#backtest-results-c7-vs-spy-buy-and-hold",
-    "href": "programs/etf-core.html#backtest-results-c7-vs-spy-buy-and-hold",
-    "title": "ETF Core",
+    "objectID": "programs/spy-core.html#backtest-results-c7-vs-spy-buy-and-hold",
+    "href": "programs/spy-core.html#backtest-results-c7-vs-spy-buy-and-hold",
+    "title": "SPY Core",
     "section": "Backtest Results — C7 vs SPY Buy-and-Hold",
     "text": "Backtest Results — C7 vs SPY Buy-and-Hold\nSingle continuous run from 2001-09-04 through 2026-07-02. Assets join when data becomes available: SPY from 2001-09-04, GLD from 2004-11-18, BTC-USD from 2014-09-17. Before inception an asset earns zero return → zero vol → disqualified from the tactical sleeve automatically. No in-sample / out-of-sample split. $10,000 initial capital, zero contributions. 0.50% transaction cost on traded notional.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCAGR\nSharpe\nSortino\nCalmar\nMaxDD\nCVaR95\nCVaR99\nTailRatio\nSkew\nKurt\n\n\n\n\nStrategy\n+11.68%\n0.810\n0.796\n0.338\n-34.57%\n-2.21%\n-3.70%\n1.008\n0.179\n16.41\n\n\nSPY buy-and-hold\n+8.06%\n0.536\n0.461\n0.146\n-55.19%\n-2.68%\n-4.63%\n0.941\n0.046\n16.94\n\n\n\nStrategy outperforms SPY B&H on every metric. MaxDD -21pp better (strategy -34.6% vs SPY -55.2%). Calmar 2.3x better.\n\n\n\nUniverse Comparison\n\n\nLog scale, normalised to 1 at 2001-09-04. Weekly rebalance, no contributions."
   },
   {
-    "objectID": "programs/etf-core.html#monte-carlo",
-    "href": "programs/etf-core.html#monte-carlo",
-    "title": "ETF Core",
+    "objectID": "programs/spy-core.html#monte-carlo",
+    "href": "programs/spy-core.html#monte-carlo",
+    "title": "SPY Core",
     "section": "Monte Carlo",
     "text": "Monte Carlo\n1,000 bootstrapped paths over a 10-year horizon, resampled monthly from the historical backtest return distribution — the C7 configuration actually offered.\n\n\n\nMonte Carlo C7\n\n\nP(2x capital in 5yr) = 47.2%  |  P(MaxDD ≥ 20% in 10yr) = 51.2%"
   },
   {
-    "objectID": "programs/etf-core.html#execution-layer",
-    "href": "programs/etf-core.html#execution-layer",
-    "title": "ETF Core",
+    "objectID": "programs/spy-core.html#execution-layer",
+    "href": "programs/spy-core.html#execution-layer",
+    "title": "SPY Core",
     "section": "Execution Layer",
-    "text": "Execution Layer\nThe strategy runs as a Python process on Railway (24/7). The monthly flow is conversational, driven by a Telegram bot:\n\nLast trading day of month → bot asks for last month’s fill confirms\nUser replies with nominales: YES SPY 21 QQQ 43 GLD 0 IBIT 79\nBot fetches live prices and MEP rate, runs signal, sends sizing table\nUser executes manually via broker app, replies FILLED\nBot updates holdings on Railway persistent volume\n\nIntra-month vol breach: bot sends a REDUCE alert automatically at market close if realized portfolio vol exceeds 20%.\nCurrent broker: Balanz (manual execution, no API). Target broker: IOL (API available — integration pending ID verification).\n\n\nDisclaimer. These are hypothetical backtested results. They were not achieved by any investor. Hypothetical performance does not reflect the impact of taxes, brokerage fees, slippage, or the inability to execute at historical prices. Past hypothetical performance is not a reliable indicator of future results. This is not investment advice.\n\n\n© 2026 Dog Capital"
+    "text": "Execution Layer\nSignal generation and sizing run monthly, on the last trading day of the month. Execution on IOL is automated end-to-end — no manual confirmation step for scheduled runs.\nLive broker: IOL (Invertir Online) — real, funded account, auto-execution built and live since July 2026. Balanz: legacy manual execution via a Telegram-driven flow, winding down.\nIntra-month vol breach: an automated REDUCE check runs if realized portfolio vol exceeds 20%.\n\n\nDisclaimer. These are hypothetical backtested results. They were not achieved by any investor. Hypothetical performance does not reflect the impact of taxes, brokerage fees, slippage, or the inability to execute at historical prices. Past hypothetical performance is not a reliable indicator of future results. This is not investment advice.\n\n\n© 2026 Dog Capital"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Dog Capital",
     "section": "",
-    "text": "Systematic Strategies for Argentine Investors\n\n\n\nPrograms\n\nLive\n\nETF Core\nVol-Targeted CEDEARs for Argentine Investors\n\n\n\nCAGR\n\n\n11.58%\n\n\n\n\nSharpe\n\n\n0.826\n\n\n\n\nMax DD\n\n\n-34.71%\n\n\n\nView research →\n\n\n\nPaper\n\nES Core\nVol-Targeted Futures\n\n\n\nCAGR\n\n\n10.08%\n\n\n\n\nSharpe\n\n\n0.515\n\n\n\n\nMax DD\n\n\n-48.26%\n\n\n\nView research →\n\n\n\n\n© 2026 Dog Capital  ·  Buenos Aires"
+    "text": "Systematic Strategies for Argentine Investors.\n\n\nRules-based — Evidence-driven — Transparently-tracked\n\n\n\nActive Strategies\n\n\n\nActive Strategies\n\n\nPaper Trading Interactive Brokers\n\nES Core — Futures\nThe core research strategy — S&P500 futures core with a dynamic tactical sleeve. Executed as Futures on CME.\n\nPaper Results Overview\n\n\n\n\nCAGR\n\n\nPopulating\n\n\n\n\nSharpe\n\n\nPopulating\n\n\n\n\nMax DD\n\n\nPopulating\n\n\n\n\nBacktest CAGR 9.80% · 04-09-2001 to 03-07-2026\n\nView research →\n\n\n\nLive Trading Invertir Online\n\nSPY Core — ETFs\nU.S. large-cap ETF as a permanent equity core with a dynamic tactical sleeve. Executed as CEDEARs on BYMA.\n\nLive Results Overview\n\n\n\n\nCAGR\n\n\nPopulating\n\n\n\n\nSharpe\n\n\nPopulating\n\n\n\n\nMax DD\n\n\nPopulating\n\n\n\n\nBacktest CAGR 11.68% · 04-09-2001 to 02-07-2026\n\nView research →\n\n\n\n\n\n\n© 2026 Dog Capital  ·  Buenos Aires"
   },
   {
     "objectID": "programs/es-core.html",
@@ -88,7 +88,7 @@
     "href": "programs/es-core.html#backtest-results",
     "title": "ES Core",
     "section": "Backtest Results",
-    "text": "Backtest Results\n\nThese are hypothetical backtested results. They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.\n\nPeriod: Sep 2001–2026. Data: yfinance adjusted prices, daily rebalance.\n\n\n\nMetric\nES Buy & Hold\nFull Strategy\n\n\n\n\nTotal Return\n452.3%\n1,711.4%\n\n\nCAGR\n5.83%\n10.08%\n\n\nAnn. Volatility\n16.03%\n24.51%\n\n\nSharpe Ratio\n0.434\n0.515\n\n\nSortino Ratio\n0.437\n0.491\n\n\nCalmar Ratio\n0.104\n0.209\n\n\nMax Drawdown\n-55.85%\n-48.26%\n\n\nCVaR 95%\n-2.50%\n-3.97%\n\n\nCVaR 99%\n-4.29%\n-6.56%\n\n\nTail Ratio\n0.950\n0.978\n\n\nSkewness\n0.275\n-0.693\n\n\nKurtosis\n18.247\n5.929\n\n\nAvg Leverage\n1.00x\n2.35x"
+    "text": "Backtest Results\n\nThese are hypothetical backtested results. They were not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.\n\nSingle continuous run from 2001-09-01 (2001-09-04 first trading day) through 2026-07-03 — the same start date used across every Dog Capital program, chosen to begin just after the dot-com peak’s collapse rather than a friendlier window. ES/NQ/GC/SI/ZN data begins 2001-01-02; RTY joins 2017-07-10; the digital-asset sleeve’s price series (BTC-USD) joins 2017-12-18. Before inception an instrument earns zero return → zero vol → disqualified from the tactical sleeve automatically. Signals lag execution by one day — no lookahead.\nEvery trade costs $5 commission per round-turn contract plus 1 tick of slippage per side, priced at each instrument’s real tick value. The digital-asset sleeve is priced via BTC-USD spot for a longer continuous history than its actual futures contract provides, but costed and margined using that contract’s real economics (Micro Bitcoin futures, CME — 0.1 BTC/contract, $0.50/tick), gated open from December 2017 (CME’s Bitcoin futures market debut) rather than Micro Bitcoin’s own 2021 listing. Price data is sourced from yfinance continuous futures and spot series; a Norgate Data upgrade for cleaner futures-roll methodology is tracked in the backlog. $1,000,000 initial capital, no contributions.\n\n\n\nMetric\nES Buy & Hold\nFull Strategy\n\n\n\n\nTotal Return\n446.9%\n1,587.7%\n\n\nCAGR\n5.78%\n9.80%\n\n\nAnn. Volatility\n16.03%\n24.50%\n\n\nSharpe Ratio\n0.431\n0.505\n\n\nSortino Ratio\n0.435\n0.483\n\n\nCalmar Ratio\n0.104\n0.203\n\n\nMax Drawdown\n-55.85%\n-48.26%\n\n\nCVaR 95%\n-2.50%\n-3.97%\n\n\nCVaR 99%\n-4.27%\n-6.53%\n\n\nTail Ratio\n0.950\n0.979\n\n\nSkewness\n0.275\n-0.691\n\n\nKurtosis\n18.238\n5.904\n\n\nAvg Leverage\n1.00x\n2.35x"
   },
   {
     "objectID": "programs/es-core.html#equity-curve",
@@ -126,66 +126,17 @@
     "text": "Weight Allocation\n\n\n\nWeight Allocation"
   },
   {
+    "objectID": "programs/es-core.html#monte-carlo",
+    "href": "programs/es-core.html#monte-carlo",
+    "title": "ES Core",
+    "section": "Monte Carlo",
+    "text": "Monte Carlo\n1,000 bootstrapped paths over a 10-year horizon, resampled monthly from the historical backtest return distribution.\n\n\n\nMonte Carlo\n\n\nP(2x capital in 5yr) = 39.9%  |  P(MaxDD ≥ 20% in 10yr) = 99.3%"
+  },
+  {
     "objectID": "programs/es-core.html#execution-layer",
     "href": "programs/es-core.html#execution-layer",
     "title": "ES Core",
     "section": "Execution Layer",
     "text": "Execution Layer\nES Core is the research core the rest of Dog Capital’s programs are built from — every live and paper strategy in the lineup, including ETF Core, inherits its allocation logic. Direct futures execution at this scale requires substantial dedicated capital, so the strategy proves itself first on IBKR paper trading ahead of live deployment.\n\n\nDisclaimer. These are hypothetical backtested results. They were not achieved by any investor. Hypothetical performance does not reflect the impact of taxes, brokerage fees, slippage, or the inability to execute at historical prices. Past hypothetical performance is not a reliable indicator of future results. This is not investment advice.\n\n\n© 2026 Dog Capital"
-  },
-  {
-    "objectID": "programs/spy-core.html",
-    "href": "programs/spy-core.html",
-    "title": "SPY Core",
-    "section": "",
-    "text": "← Dog Capital\nMonthly vol-targeting accumulation into SPY CEDEARs via Balanz. No leverage. Designed for Argentine investors building USD-denominated savings systematically."
-  },
-  {
-    "objectID": "programs/spy-core.html#how-it-works",
-    "href": "programs/spy-core.html#how-it-works",
-    "title": "SPY Core",
-    "section": "How it works",
-    "text": "How it works\nEach month, the strategy computes the realized downside volatility of SPY over the prior 21 trading days. It then sizes the monthly buy to bring total exposure toward a 20% annualized downside volatility target.\nWhen markets are calm, the full monthly allocation is deployed. When realized volatility exceeds the target, the strategy scales back — or holds — and parks idle capital in a dólar-linked money market fund (Balanz Fondo Dólar Linked). No selling unless a sustained volatility breach triggers a REDUCE alert.\nSignal logic:\n\nInstrument: SPY (CEDEAR, 10:1 ratio, Balanz)\nVolatility measure: downside semi-deviation of daily returns\nLookback: 21 trading days\nVol target: 20% annualized\nLeverage: none — strategy can only de-risk, never lever up\nSmoothing: EMA(10) + 10% no-trade band to reduce unnecessary turnover\nCadence: monthly execution, first trading day of the month\nIdle capital: Balanz Fondo Dólar Linked"
-  },
-  {
-    "objectID": "programs/spy-core.html#backtest-results",
-    "href": "programs/spy-core.html#backtest-results",
-    "title": "SPY Core",
-    "section": "Backtest results",
-    "text": "Backtest results\n\nHypothetical backtested results. Not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.\n\n\n\n\nMetric\nSPY Buy & Hold\nSPY Core\n\n\n\n\nCAGR\n9.86%\n9.45%\n\n\nSharpe\n0.589\n0.693\n\n\nMax Drawdown\n-55.19%\n-36.97%\n\n\nPeriod\n2001–2026\n2001–2026\n\n\n\nThe strategy gives up a small amount of raw return in exchange for meaningfully better risk-adjusted performance and a 18 percentage point shallower max drawdown. For a long-term accumulation program, the drawdown reduction matters more than the CAGR gap.\nBacktest on USD underlying (SPY), $10,000 lump sum, no contributions."
-  },
-  {
-    "objectID": "programs/spy-core.html#equity-curve",
-    "href": "programs/spy-core.html#equity-curve",
-    "title": "SPY Core",
-    "section": "Equity curve",
-    "text": "Equity curve\n\n\n\nEquity Curve"
-  },
-  {
-    "objectID": "programs/spy-core.html#drawdown",
-    "href": "programs/spy-core.html#drawdown",
-    "title": "SPY Core",
-    "section": "Drawdown",
-    "text": "Drawdown\n\n\n\nDrawdown"
-  },
-  {
-    "objectID": "programs/spy-core.html#dca-scenario-200month",
-    "href": "programs/spy-core.html#dca-scenario-200month",
-    "title": "SPY Core",
-    "section": "DCA scenario — $200/month",
-    "text": "DCA scenario — $200/month\nStarting with $10,000 and adding $200 every month. Same capital deployed to both.\n\n\n\nStrategy vs SPY B&H + $200/month\n\n\nGrey dashed: SPY Buy & Hold + $200/month. Blue: SPY Core + $200/month."
-  },
-  {
-    "objectID": "programs/spy-core.html#live-deployment",
-    "href": "programs/spy-core.html#live-deployment",
-    "title": "SPY Core",
-    "section": "Live deployment",
-    "text": "Live deployment\nRunning live on Balanz since June 2026. Monthly signals sent via Telegram. Live performance will be published here as it accumulates."
-  },
-  {
-    "objectID": "programs/spy-core.html#why-cedears",
-    "href": "programs/spy-core.html#why-cedears",
-    "title": "SPY Core",
-    "section": "Why CEDEARs",
-    "text": "Why CEDEARs\nCEDEARs (Certificados de Depósito Argentinos) are Argentine depositary receipts that track USD-denominated underlying assets like SPY. They trade on BYMA in pesos but are priced at the MEP dollar rate, giving Argentine investors effective USD exposure without needing to move money offshore.\nSPY Core operates entirely on local infrastructure — no foreign account, no capital transfer, no AFIP complications. You buy CEDEARs on Balanz, the system tells you how many, you execute.\n\n© 2026 Dog Capital"
   }
 ]

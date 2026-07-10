@@ -2,6 +2,16 @@
    Dog Capital — custom styles
    ================================================================ */
 
+/* --- Root ---------------------------------------------------------
+   The flatly Bootswatch theme (_quarto.yml) sets html font-size to 17px,
+   not the standard 16px — every rem-based measurement site-wide (column
+   width, card padding, tag/label sizes) was quietly rendering ~6.25%
+   larger than its spec value as a result. Reset explicitly rather than
+   re-deriving every rem value against a non-standard base. */
+html {
+  font-size: 16px;
+}
+
 /* --- Base -------------------------------------------------------- */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -135,12 +145,21 @@ hr {
   margin: 2rem 0;
 }
 
+/* --- Program grid -------------------------------------------------
+   Side-by-side when there's room, stacks on narrow viewports —
+   deliberately not tabs: both strategies stay visible at once,
+   consistent with the site's transparency positioning. */
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
 /* --- Program card ------------------------------------------------ */
 .program-card {
   border: 1px solid #ebebeb;
   border-radius: 6px;
   padding: 1.25rem 1.5rem;
-  margin: 1.25rem 0;
   transition: border-color 120ms ease;
 }
 
@@ -154,7 +173,7 @@ hr {
 
 .program-card .tag {
   display: inline-block;
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #888;
@@ -171,16 +190,31 @@ hr {
   background: #f3fbf5;
 }
 
+.program-card .stats-group-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  margin-top: 0.9rem;
+}
+
 .program-card .card-stats {
   display: flex;
   gap: 1.25rem;
-  padding-top: 0.9rem;
-  margin-bottom: 1rem;
+  padding-top: 0.4rem;
+  margin-bottom: 0.4rem;
   border-top: 1px solid #f5f5f5;
 }
 
+.program-card .backtest-ref {
+  font-size: 0.78rem;
+  color: #888;
+  margin-top: 0.6rem;
+}
+
 .program-card .stat-label {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #888;
