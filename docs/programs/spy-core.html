@@ -106,107 +106,133 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="../index.html" class="back-link">← Dog Capital</a></p>
-<p>Monthly vol-targeting accumulation into SPY CEDEARs via Balanz. No leverage. Designed for Argentine investors building USD-denominated savings systematically.</p>
+<p>U.S. and global ETFs as a permanent equity core with dynamic vol-targeted allocation to growth, real assets, and digital assets — executed as CEDEARs on the Argentine market.</p>
+<p><a href="../index.html#programs" class="back-link">← Back</a></p>
 <hr>
-<section id="how-it-works" class="level2">
-<h2 class="anchored" data-anchor-id="how-it-works">How it works</h2>
-<p>Each month, the strategy computes the realized downside volatility of SPY over the prior 21 trading days. It then sizes the monthly buy to bring total exposure toward a 20% annualized downside volatility target.</p>
-<p>When markets are calm, the full monthly allocation is deployed. When realized volatility exceeds the target, the strategy scales back — or holds — and parks idle capital in a dólar-linked money market fund (Balanz Fondo Dólar Linked). No selling unless a sustained volatility breach triggers a REDUCE alert.</p>
-<p><strong>Signal logic:</strong></p>
-<ul>
-<li>Instrument: SPY (CEDEAR, 10:1 ratio, Balanz)</li>
-<li>Volatility measure: downside semi-deviation of daily returns</li>
-<li>Lookback: 21 trading days</li>
-<li>Vol target: 20% annualized</li>
-<li>Leverage: none — strategy can only de-risk, never lever up</li>
-<li>Smoothing: EMA(10) + 10% no-trade band to reduce unnecessary turnover</li>
-<li>Cadence: monthly execution, first trading day of the month</li>
-<li>Idle capital: Balanz Fondo Dólar Linked</li>
-</ul>
+<section id="why-not-just-pick-stocks" class="level2">
+<h2 class="anchored" data-anchor-id="why-not-just-pick-stocks">Why Not Just Pick Stocks</h2>
+<p>Active stock-picking underperforms in aggregate. The evidence is consistent across decades and geographies: after fees, most active managers trail a simple market-cap-weighted index. The reason is structural — markets price information quickly, and the skill required to exploit the remaining inefficiencies consistently exceeds what most participants can sustain.</p>
+<p>The Efficient Market Hypothesis does not say prices are always right. It says that finding and trading on mispricings reliably enough to outperform, net of costs, is extremely hard. The empirical record confirms this. SPIVA data shows that over 15-year horizons, 88%+ of US active large-cap funds underperform the S&amp;P 500.</p>
+<p>The rational baseline is a diversified passive position. The question is not whether to own the index, but how to size exposure dynamically as risk changes over time.</p>
 <hr>
 </section>
-<section id="backtest-results" class="level2">
-<h2 class="anchored" data-anchor-id="backtest-results">Backtest results</h2>
-<blockquote class="blockquote">
-<p><strong>Hypothetical backtested results.</strong> Not achieved by any investor. Past hypothetical performance is not a reliable indicator of future results.</p>
-</blockquote>
+<section id="vol-targeting-framework" class="level2">
+<h2 class="anchored" data-anchor-id="vol-targeting-framework">Vol Targeting Framework</h2>
+<p>Static leverage amplifies both returns and drawdowns equally. A strategy that targets a constant level of realized portfolio volatility — scaling exposure up in calm periods and reducing it in turbulent ones — produces a better risk-adjusted outcome without requiring any directional forecast.</p>
+<p>This is not market timing. The signal is realized volatility, not expected returns. The strategy does not predict where prices will go; it adjusts how much risk is held as the risk environment changes.</p>
+<p><strong>Framework:</strong></p>
+<ul>
+<li>Permanent core: SPY with hard floor at 50%</li>
+<li>Tactical sleeve: GLD / IBIT (inverse downside semi-deviation weighted)</li>
+<li>Sleeve qualification: rolling Sortino vs SPY &gt; 0 over 63-day window</li>
+<li>Vol target: 10–20% annualized downside semi-deviation</li>
+<li>Leverage: max 1.0x (spot ETFs — no derivatives, no margin)</li>
+<li>EMA(10) smoothing on leverage signal</li>
+<li>10% no-trade band to suppress noise-driven turnover</li>
+<li>Reduce-only intra-month trigger if realized vol exceeds 20%</li>
+</ul>
+<p>The downside semi-deviation captures only the left tail — it penalizes negative deviations from zero, not all volatility. This is the correct risk measure for a strategy targeting drawdown control rather than volatility symmetry.</p>
+<hr>
+</section>
+<section id="instrument-rationale" class="level2">
+<h2 class="anchored" data-anchor-id="instrument-rationale">Instrument Rationale</h2>
+<p><strong>SPY — US broad market core.</strong> The S&amp;P 500 is the most liquid, cheapest-to-hold expression of the US equity risk premium. Hard floor at 50% ensures the strategy always participates in the primary growth engine.</p>
+<p><strong>GLD — Hard asset hedge.</strong> Gold is not correlated with equity returns over long horizons. It earns positive real returns in inflationary and currency-crisis regimes — precisely the periods when equities and bonds both suffer. The correlation benefit is most valuable in the tail, when diversification is needed most.</p>
+<p><strong>IBIT (BTC-USD in backtest) — Non-sovereign asymmetric.</strong> Bitcoin’s return distribution has positive skewness and near-zero correlation with equities. At a small portfolio weight it adds right-tail optionality without proportionally increasing portfolio volatility. Executed via IBIT CEDEARs (10:1 ratio) on the Argentine market. In the backtest, BTC-USD is used for longer history — IBIT data begins January 2024.</p>
+<hr>
+</section>
+<section id="backtest-results-c7-vs-spy-buy-and-hold" class="level2">
+<h2 class="anchored" data-anchor-id="backtest-results-c7-vs-spy-buy-and-hold">Backtest Results — C7 vs SPY Buy-and-Hold</h2>
+<p>Single continuous run from 2001-09-04 through 2026-07-02. Assets join when data becomes available: SPY from 2001-09-04, GLD from 2004-11-18, BTC-USD from 2014-09-17. Before inception an asset earns zero return → zero vol → disqualified from the tactical sleeve automatically. No in-sample / out-of-sample split. $10,000 initial capital, zero contributions. 0.50% transaction cost on traded notional.</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Metric</th>
-<th style="text-align: center;">SPY Buy &amp; Hold</th>
-<th style="text-align: center;">SPY Core</th>
+<th></th>
+<th style="text-align: center;">CAGR</th>
+<th style="text-align: center;">Sharpe</th>
+<th style="text-align: center;">Sortino</th>
+<th style="text-align: center;">Calmar</th>
+<th style="text-align: center;">MaxDD</th>
+<th style="text-align: center;">CVaR95</th>
+<th style="text-align: center;">CVaR99</th>
+<th style="text-align: center;">TailRatio</th>
+<th style="text-align: center;">Skew</th>
+<th style="text-align: center;">Kurt</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>CAGR</td>
-<td style="text-align: center;">9.86%</td>
-<td style="text-align: center;">9.45%</td>
+<td><strong>Strategy</strong></td>
+<td style="text-align: center;"><strong>+11.68%</strong></td>
+<td style="text-align: center;"><strong>0.810</strong></td>
+<td style="text-align: center;"><strong>0.796</strong></td>
+<td style="text-align: center;"><strong>0.338</strong></td>
+<td style="text-align: center;"><strong>-34.57%</strong></td>
+<td style="text-align: center;"><strong>-2.21%</strong></td>
+<td style="text-align: center;"><strong>-3.70%</strong></td>
+<td style="text-align: center;"><strong>1.008</strong></td>
+<td style="text-align: center;">0.179</td>
+<td style="text-align: center;">16.41</td>
 </tr>
 <tr class="even">
-<td>Sharpe</td>
-<td style="text-align: center;">0.589</td>
-<td style="text-align: center;">0.693</td>
-</tr>
-<tr class="odd">
-<td>Max Drawdown</td>
+<td>SPY buy-and-hold</td>
+<td style="text-align: center;">+8.06%</td>
+<td style="text-align: center;">0.536</td>
+<td style="text-align: center;">0.461</td>
+<td style="text-align: center;">0.146</td>
 <td style="text-align: center;">-55.19%</td>
-<td style="text-align: center;">-36.97%</td>
-</tr>
-<tr class="even">
-<td>Period</td>
-<td style="text-align: center;">2001–2026</td>
-<td style="text-align: center;">2001–2026</td>
+<td style="text-align: center;">-2.68%</td>
+<td style="text-align: center;">-4.63%</td>
+<td style="text-align: center;">0.941</td>
+<td style="text-align: center;">0.046</td>
+<td style="text-align: center;">16.94</td>
 </tr>
 </tbody>
 </table>
-<p>The strategy gives up a small amount of raw return in exchange for meaningfully better risk-adjusted performance and a 18 percentage point shallower max drawdown. For a long-term accumulation program, the drawdown reduction matters more than the CAGR gap.</p>
-<p><em>Backtest on USD underlying (SPY), $10,000 lump sum, no contributions.</em></p>
-<hr>
-</section>
-<section id="equity-curve" class="level2">
-<h2 class="anchored" data-anchor-id="equity-curve">Equity curve</h2>
+<p><em>Strategy outperforms SPY B&amp;H on every metric. MaxDD -21pp better (strategy -34.6% vs SPY -55.2%). Calmar 2.3x better.</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="spy-core/equity_curves.png" class="img-fluid figure-img"></p>
-<figcaption>Equity Curve</figcaption>
+<p><img src="spy-core/universe_comparison.png" class="img-fluid figure-img"></p>
+<figcaption>Universe Comparison</figcaption>
 </figure>
 </div>
+<p><em>Log scale, normalised to 1 at 2001-09-04. Weekly rebalance, no contributions.</em></p>
 <hr>
 </section>
-<section id="drawdown" class="level2">
-<h2 class="anchored" data-anchor-id="drawdown">Drawdown</h2>
+<section id="monte-carlo" class="level2">
+<h2 class="anchored" data-anchor-id="monte-carlo">Monte Carlo</h2>
+<p>1,000 bootstrapped paths over a 10-year horizon, resampled monthly from the historical backtest return distribution — the C7 configuration actually offered.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="spy-core/drawdown.png" class="img-fluid figure-img"></p>
-<figcaption>Drawdown</figcaption>
+<p><img src="spy-core/montecarlo_C7_SPY_GLD_BTC.png" class="img-fluid figure-img"></p>
+<figcaption>Monte Carlo C7</figcaption>
 </figure>
 </div>
+<p>P(2x capital in 5yr) = <strong>47.2%</strong> &nbsp;|&nbsp; P(MaxDD ≥ 20% in 10yr) = <strong>51.2%</strong></p>
 <hr>
 </section>
-<section id="dca-scenario-200month" class="level2">
-<h2 class="anchored" data-anchor-id="dca-scenario-200month">DCA scenario — $200/month</h2>
-<p>Starting with $10,000 and adding $200 every month. Same capital deployed to both.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="spy-core/dca_overlay.png" class="img-fluid figure-img"></p>
-<figcaption>Strategy vs SPY B&amp;H + $200/month</figcaption>
-</figure>
-</div>
-<p><em>Grey dashed: SPY Buy &amp; Hold + $200/month. Blue: SPY Core + $200/month.</em></p>
+<section id="execution-layer" class="level2">
+<h2 class="anchored" data-anchor-id="execution-layer">Execution Layer</h2>
+<p>Signal generation and sizing run monthly, on the last trading day of the month. Execution on IOL is automated end-to-end — no manual confirmation step for scheduled runs.</p>
+<p>Live broker: IOL (Invertir Online) — real, funded account, auto-execution built and live since July 2026. Balanz: legacy manual execution via a Telegram-driven flow, winding down.</p>
+<p>Intra-month vol breach: an automated REDUCE check runs if realized portfolio vol exceeds 20%.</p>
 <hr>
-</section>
-<section id="live-deployment" class="level2">
-<h2 class="anchored" data-anchor-id="live-deployment">Live deployment</h2>
-<p>Running live on Balanz since June 2026. Monthly signals sent via Telegram. Live performance will be published here as it accumulates.</p>
-<hr>
-</section>
-<section id="why-cedears" class="level2">
-<h2 class="anchored" data-anchor-id="why-cedears">Why CEDEARs</h2>
-<p>CEDEARs (Certificados de Depósito Argentinos) are Argentine depositary receipts that track USD-denominated underlying assets like SPY. They trade on BYMA in pesos but are priced at the MEP dollar rate, giving Argentine investors effective USD exposure without needing to move money offshore.</p>
-<p>SPY Core operates entirely on local infrastructure — no foreign account, no capital transfer, no AFIP complications. You buy CEDEARs on Balanz, the system tells you how many, you execute.</p>
+<blockquote class="blockquote">
+<p><strong>Disclaimer.</strong> These are hypothetical backtested results. They were not achieved by any investor. Hypothetical performance does not reflect the impact of taxes, brokerage fees, slippage, or the inability to execute at historical prices. Past hypothetical performance is not a reliable indicator of future results. This is not investment advice.</p>
+</blockquote>
 <hr>
 <p><em>© 2026 Dog Capital</em></p>
 

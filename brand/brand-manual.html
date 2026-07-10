@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dog Capital — Brand Manual</title>
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #1c1c1c;
+    background: #ffffff;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 24px 100px; }
+
+  /* Masthead */
+  .masthead { padding: 64px 0 22px; border-bottom: 1px solid #ebebeb; margin-bottom: 8px; }
+  .eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; color: #888; margin-bottom: 12px; }
+  h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 8px; color: #1c1c1c; }
+  .dek { color: #888; font-size: 13.5px; margin: 0; max-width: 560px; }
+
+  /* Table of contents */
+  .toc { display: flex; gap: 20px; flex-wrap: wrap; padding: 16px 0 28px; border-bottom: 1px solid #ebebeb; margin-bottom: 8px; }
+  .toc a { color: #555; font-size: 12.5px; text-decoration: none; letter-spacing: 0.3px; }
+  .toc a:hover { color: #1c1c1c; }
+
+  /* Sections */
+  section h2 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; color: #888; border: none; margin-top: 56px; margin-bottom: 18px; }
+  .lead { margin: 0 0 20px; font-size: 13.5px; color: #333; }
+  .label-sm { margin: 0 0 8px; font-size: 13px; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+  .caption { margin: 0 0 28px; font-size: 12px; color: #888; text-align: center; }
+  .footnote { margin: 0 0 32px; font-size: 12px; color: #aaa; }
+
+  /* Frames */
+  .frame { border: 1px solid #ebebeb; border-radius: 6px; padding: 48px 24px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; background: #fff; }
+
+  /* 01 — Mark */
+  .mark-row { display: flex; gap: 16px; margin-bottom: 28px; }
+  .mark-row .frame { flex: 1; padding: 28px 20px; margin-bottom: 0; }
+  .mark-row .copy { flex: 1; display: flex; flex-direction: column; justify-content: center; font-size: 13px; color: #333; }
+  .mark-row .copy p { margin: 0 0 8px; }
+  .mark-row .copy p:last-child { margin: 0; color: #888; font-size: 12.5px; }
+
+  .clearspace-frame { border: 1px solid #ebebeb; border-radius: 6px; padding: 32px 24px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; background: #fafaf9; }
+  .clearspace-inner { border: 1px dashed #c9c9c9; padding: 24px; }
+
+  .spec-list { margin: 0 0 26px; padding-left: 20px; font-size: 13.5px; color: #333; }
+  .spec-list li { margin-bottom: 6px; }
+  .spec-list li:last-child { margin-bottom: 0; }
+
+  .callout { border-radius: 6px; padding: 18px 20px; margin-bottom: 8px; }
+  .callout-warn { border: 1px solid #f3d9d9; background: #fff6f6; }
+  .callout-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #a33; margin-bottom: 8px; }
+  .callout p { margin: 0; font-size: 13px; color: #333; }
+
+  /* 02 — Color */
+  .swatch-grid { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 8px; }
+  .swatch { width: 150px; }
+  .swatch-chip { height: 64px; border-radius: 6px; margin-bottom: 8px; }
+  .swatch-chip.bordered { border: 1px solid #e2e2e0; }
+  .swatch-name { font-size: 13px; font-weight: 600; }
+  .swatch-hex { font-size: 12px; color: #888; }
+  .swatch-desc { font-size: 11px; color: #aaa; margin-top: 2px; }
+
+  .usage-grid { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+  .usage-card { flex: 1 1 220px; border: 1px solid #ebebeb; border-radius: 6px; padding: 16px 18px; }
+  .usage-card p { margin: 0; font-size: 12.5px; color: #555; }
+
+  .tag { display: inline-block; font-size: 10.5px; text-transform: uppercase; letter-spacing: 1px; border-radius: 3px; padding: 2px 7px; margin-bottom: 8px; }
+  .tag-live { color: #2d7a3a; border: 1px solid #b7dfc0; background: #f3fbf5; }
+  .tag-paper { color: #888; border: 1px solid #ddd; }
+
+  /* 03 — Typography */
+  .type-frame { border: 1px solid #ebebeb; border-radius: 6px; padding: 28px 24px; margin-bottom: 20px; }
+  .type-serif-sample { font-family: Georgia, "Times New Roman", serif; font-size: 34px; color: #1c1c1c; margin-bottom: 6px; }
+  .type-frame .note { margin: 0; font-size: 12.5px; color: #888; }
+  .type-sans-sample { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; color: #1c1c1c; margin-bottom: 4px; }
+  .type-frame .lead-body { font-size: 15px; color: #1c1c1c; margin: 0 0 8px; }
+  .type-frame .stack { font-size: 12px; color: #888; margin: 0; }
+
+  table.spec-table { width: 100%; border-collapse: collapse; margin: 0 0 32px; font-size: 13px; }
+  table.spec-table th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #888; padding: 6px 10px 6px 0; border-bottom: 1px solid #ebebeb; font-weight: 600; }
+  table.spec-table td { padding: 8px 10px 8px 0; border-bottom: 1px solid #f5f5f5; }
+  table.spec-table tr:last-child td { border-bottom: none; }
+
+  /* 04 — Voice */
+  .voice-grid { display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+  .voice-card { flex: 1 1 260px; border: 1px solid #ebebeb; border-radius: 6px; padding: 18px 20px; }
+  .voice-card.dont { border-color: #f3d9d9; background: #fff6f6; }
+  .voice-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; }
+  .voice-label.do { color: #2d7a3a; }
+  .voice-label.dont-label { color: #a33; }
+  .voice-card ul { margin: 0; padding-left: 18px; font-size: 13px; color: #333; }
+  .voice-card li { margin-bottom: 6px; }
+  .voice-card li:last-child { margin-bottom: 0; }
+
+  /* 05 — Components */
+  .component-frame { border: 1px solid #ebebeb; border-radius: 6px; overflow: hidden; margin-bottom: 24px; }
+  .component-header-body { padding: 56px 28px 20px; }
+  .component-header-body img { height: 36px; width: auto; display: block; margin: 0; }
+  .component-header-body p { color: #888; font-size: 13.5px; margin: 10px 0 0; }
+  .component-nav { border-top: 1px solid #ebebeb; padding: 14px 28px; display: flex; gap: 24px; }
+  .component-nav span { color: #555; font-size: 12px; letter-spacing: 0.3px; }
+
+  .card-grid { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+  .program-card { flex: 1 1 300px; border: 1px solid #ebebeb; border-radius: 6px; padding: 20px 24px; transition: border-color 120ms ease; }
+  .program-card:hover { border-color: #d4d4d4; }
+  .program-card h3 { font-size: 16px; font-weight: 600; margin: 0 0 6px; color: #1c1c1c; }
+  .program-card .desc { margin: 0 0 16px; color: #555; font-size: 13.5px; }
+  .card-stats { display: flex; gap: 20px; padding-top: 14px; border-top: 1px solid #f5f5f5; margin-bottom: 16px; }
+  .stat-label { font-size: 9.5px; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 3px; }
+  .stat-value { font-size: 14px; font-variant-numeric: tabular-nums; color: #1c1c1c; }
+  .card-link { font-size: 13px; color: #1c1c1c; text-decoration: underline; text-decoration-color: #ccc; text-underline-offset: 3px; }
+  .card-link:hover { text-decoration-color: #1c1c1c; }
+
+  .tag-row { display: flex; gap: 10px; margin-bottom: 28px; }
+
+  /* 06 — Charts */
+  .chart-swatch-grid { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 16px; }
+  .chart-swatch { width: 110px; }
+  .chart-swatch .chip { height: 36px; border-radius: 4px; margin-bottom: 6px; }
+  .chart-swatch .chip.bordered { border: 1px solid #ebebeb; }
+  .chart-swatch .name { font-size: 11.5px; font-weight: 600; }
+  .chart-swatch .hex { font-size: 10.5px; color: #888; }
+
+  .chart-card { border: 1px solid #ebebeb; border-radius: 6px; padding: 18px 20px 14px; margin-bottom: 16px; }
+  .chart-card svg { width: 100%; height: auto; display: block; }
+  .chart-legend { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 12px; }
+  .legend-item { font-size: 11px; color: #555; display: flex; align-items: center; gap: 6px; }
+  .legend-item.strong { color: #1c1c1c; font-weight: 600; }
+  .legend-swatch-dash { width: 14px; height: 0; border-top: 1.5px dashed #B4B4B4; }
+  .legend-swatch-line { width: 14px; height: 2px; background: #2D7A3A; }
+
+  /* 07 — Don't */
+  .dont-list { margin: 0 0 16px; padding-left: 20px; font-size: 13.5px; color: #333; }
+  .dont-list li { margin-bottom: 8px; }
+  .dont-list li:last-child { margin-bottom: 0; }
+
+  /* Colophon */
+  .colophon { border-top: 1px solid #ebebeb; padding: 24px 0 0; margin-top: 8px; }
+  .colophon p { font-size: 12px; color: #aaa; margin: 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">Brand Manual</div>
+    <h1>Dog Capital</h1>
+    <p class="dek">The complete visual identity — mark, color, type, and voice — for the research site and any material that carries the Dog Capital name. July 2026.</p>
+  </header>
+
+  <nav class="toc">
+    <a href="#mark">01 The Mark</a>
+    <a href="#color">02 Color</a>
+    <a href="#type">03 Typography</a>
+    <a href="#voice">04 Voice &amp; Tone</a>
+    <a href="#components">05 Components</a>
+    <a href="#charts">06 Charts</a>
+    <a href="#dont">07 Don't</a>
+  </nav>
+
+  <!-- 01 — The Mark -->
+  <section id="mark">
+    <h2>01 — The Mark</h2>
+    <p class="lead">A classic serif wordmark — <strong>DOG CAPITAL</strong> — with a dog's head silhouette worked into the counter of the O. It's the brand's one moment of character; everything else in the system stays quiet so this can carry it.</p>
+
+    <div class="frame">
+      <img src="LOGO-lockup.png" alt="Dog Capital primary lockup" style="height:64px;width:auto;display:block;">
+    </div>
+    <p class="caption">Primary lockup — full wordmark with dog-in-O</p>
+
+    <div class="mark-row">
+      <div class="frame">
+        <img src="logo-mark.png" alt="Dog Capital standalone mark" style="height:72px;width:72px;display:block;">
+      </div>
+      <div class="copy">
+        <p><strong>Standalone mark</strong> — the dog-in-O alone, cropped out. Use anywhere the full lockup won't fit or read: favicon, app icon, social avatar, small UI chrome.</p>
+        <p>Never redraw it. Always crop/export from the same master file as the full lockup so the two stay identical.</p>
+      </div>
+    </div>
+
+    <p class="label-sm">Clear space &amp; minimum size</p>
+    <div class="clearspace-frame">
+      <div class="clearspace-inner">
+        <img src="LOGO-lockup.png" alt="" style="height:44px;width:auto;display:block;">
+      </div>
+    </div>
+    <ul class="spec-list">
+      <li><strong>Clear space:</strong> minimum padding on all sides equal to the cap-height of the "D," before any rule, edge, or nav item — the dashed box above.</li>
+      <li><strong>Header size:</strong> 36px tall in the site header. Scale proportionally — never stretch on one axis.</li>
+      <li><strong>Minimum size:</strong> don't render the full lockup below 28px tall — the "CAPITAL" small-caps line breaks up at that scale. Below that, drop to the standalone mark.</li>
+      <li><strong>Color:</strong> single ink black (#1C1C1C) only, on white. No reversed/white version exists yet — don't place the mark on a dark or colored field until one is made.</li>
+    </ul>
+
+    <div class="callout callout-warn">
+      <div class="callout-label">Production note</div>
+      <p>The only source file today is a flattened raster with no alpha channel. Every crop here (lockup, mark, favicons) was produced by chroma-keying the background out — workable at header size, but soft at anything larger (a deck, print, a big favicon slot). Get a true vector (SVG/EPS/AI) or a 2000px+ PNG-24 with real transparency from whoever produced it, and regenerate every asset in this manual from that file. Placement and sizing rules above don't change.</p>
+    </div>
+  </section>
+
+  <!-- 02 — Color -->
+  <section id="color">
+    <h2>02 — Color</h2>
+    <p class="lead">One accent, used sparingly. The palette is built for a site that's mostly black text on white — color marks the one thing per view that matters (live status, the flagship line in a chart), not decoration.</p>
+
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#1C1C1C;"></div>
+        <div class="swatch-name">Ink</div>
+        <div class="swatch-hex">#1C1C1C</div>
+        <div class="swatch-desc">body text, mark, headings</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#2D7A3A;"></div>
+        <div class="swatch-name">Accent green</div>
+        <div class="swatch-hex">#2D7A3A</div>
+        <div class="swatch-desc">the one accent — live status, flagship series</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#888888;"></div>
+        <div class="swatch-name">Gray</div>
+        <div class="swatch-hex">#888888</div>
+        <div class="swatch-desc">secondary text, labels</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip bordered" style="background:#EBEBEB;"></div>
+        <div class="swatch-name">Hairline</div>
+        <div class="swatch-hex">#EBEBEB</div>
+        <div class="swatch-desc">rules, gridlines, card borders</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip bordered" style="background:#FFFFFF;"></div>
+        <div class="swatch-name">White</div>
+        <div class="swatch-hex">#FFFFFF</div>
+        <div class="swatch-desc">the only background</div>
+      </div>
+    </div>
+    <p class="footnote" style="margin-bottom:22px;">Extended chart-only grays (#D6D6D6, #B4B4B4, #595959) exist for data visualization — see Charts.</p>
+
+    <div class="usage-grid">
+      <div class="usage-card">
+        <span class="tag tag-live">Live</span>
+        <p>Accent used as a status tag — the strongest, rarest use of green on the site.</p>
+      </div>
+      <div class="usage-card">
+        <span class="tag tag-paper">Paper</span>
+        <p>Neutral gray tag — no new color needed for "not live yet."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 — Typography -->
+  <section id="type">
+    <h2>03 — Typography</h2>
+    <p class="lead">Two voices, deliberately kept apart: a serif mark for identity, a system sans for everything the reader has to work with. Adopting serif headings site-wide would compete with the mark instead of framing it, and would cost legibility in dense metrics tables.</p>
+
+    <div class="type-frame">
+      <div class="type-serif-sample">Dog Capital</div>
+      <p class="note">Serif — mark only. Never used for body copy, headings, or UI.</p>
+    </div>
+
+    <div class="type-frame">
+      <div class="type-sans-sample">Systematic Strategies</div>
+      <div class="eyebrow" style="margin-bottom:10px;">Section Label</div>
+      <p class="lead-body">Body copy sits at 15px with 1.75 line-height — generous enough to carry dense research prose without feeling like a legal document.</p>
+      <p class="stack">System stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif</p>
+    </div>
+
+    <table class="spec-table">
+      <thead>
+        <tr><th>Role</th><th>Size / weight</th><th>Color</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>H1 — page title</td><td>24px / 700, -0.5px tracking</td><td>#1C1C1C</td></tr>
+        <tr><td>H2 — section label</td><td>11px / 700, uppercase, 2.5px tracking</td><td>#888888</td></tr>
+        <tr><td>H3 — subhead</td><td>16px / 600</td><td>#1C1C1C</td></tr>
+        <tr><td>Body</td><td>15px / 400, 1.75 line-height</td><td>#1C1C1C</td></tr>
+        <tr><td>Meta / caption</td><td>12–13px / 400</td><td>#888888</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 04 — Voice & Tone -->
+  <section id="voice">
+    <h2>04 — Voice &amp; Tone</h2>
+    <p class="lead">Plain, precise, unhyped. This is a systematic research shop writing for people who read backtest tables for a living — not a fintech consumer app.</p>
+
+    <div class="voice-grid">
+      <div class="voice-card">
+        <div class="voice-label do">Do</div>
+        <ul>
+          <li>State the number, then the one line of context it needs.</li>
+          <li>Name what's live vs. paper plainly — no euphemism.</li>
+          <li>Use "we" sparingly; let the data carry the argument.</li>
+        </ul>
+      </div>
+      <div class="voice-card dont">
+        <div class="voice-label dont-label">Don't</div>
+        <ul>
+          <li>Superlatives ("industry-leading," "revolutionary").</li>
+          <li>Exclamation points, emoji, or growth-hacker urgency copy.</li>
+          <li>Burying a drawdown number below the fold.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 — Components -->
+  <section id="components">
+    <h2>05 — Components</h2>
+
+    <p class="label-sm">Header</p>
+    <div class="component-frame">
+      <div class="component-header-body">
+        <img src="LOGO-lockup.png" alt="Dog Capital">
+        <p>Systematic Strategies for Argentine Investors</p>
+      </div>
+      <div class="component-nav">
+        <span>Programs</span>
+        <span>Research</span>
+      </div>
+    </div>
+
+    <p class="label-sm">Program cards</p>
+    <div class="card-grid">
+      <div class="program-card">
+        <div style="margin-bottom:10px;"><span class="tag tag-live">Live</span></div>
+        <h3>ETF Core</h3>
+        <p class="desc">Vol-Targeted CEDEARs for Argentine Investors</p>
+        <div class="card-stats">
+          <div><div class="stat-label">CAGR</div><div class="stat-value">11.58%</div></div>
+          <div><div class="stat-label">Sharpe</div><div class="stat-value">0.826</div></div>
+          <div><div class="stat-label">Max DD</div><div class="stat-value">-34.71%</div></div>
+        </div>
+        <a href="#" class="card-link">View research →</a>
+      </div>
+      <div class="program-card">
+        <div style="margin-bottom:10px;"><span class="tag tag-paper">Paper</span></div>
+        <h3>ES Core</h3>
+        <p class="desc">Vol-Targeted Futures</p>
+        <div class="card-stats">
+          <div><div class="stat-label">CAGR</div><div class="stat-value">10.08%</div></div>
+          <div><div class="stat-label">Sharpe</div><div class="stat-value">0.515</div></div>
+          <div><div class="stat-label">Max DD</div><div class="stat-value">-48.26%</div></div>
+        </div>
+        <a href="#" class="card-link">View research →</a>
+      </div>
+    </div>
+    <p class="footnote" style="margin-bottom:24px;">Border-color hover only (#ebebeb → #d4d4d4, 120ms ease) — no shadow, no lift. The site doesn't use elevation anywhere.</p>
+
+    <p class="label-sm">Status tags</p>
+    <div class="tag-row">
+      <span class="tag tag-live">Live</span>
+      <span class="tag tag-paper">Paper</span>
+    </div>
+  </section>
+
+  <!-- 06 — Charts -->
+  <section id="charts">
+    <h2>06 — Charts</h2>
+    <p class="lead">Every figure is generated in matplotlib, no live charting library. White canvas, no top/right/left spines, horizontal hairline gridlines only, flagship series in accent green, everything else a gray ramp.</p>
+
+    <div class="chart-swatch-grid">
+      <div class="chart-swatch">
+        <div class="chip bordered" style="background:#D6D6D6;"></div>
+        <div class="name">Gray 1</div>
+        <div class="hex">#D6D6D6</div>
+      </div>
+      <div class="chart-swatch">
+        <div class="chip" style="background:#B4B4B4;"></div>
+        <div class="name">Gray 2</div>
+        <div class="hex">#B4B4B4</div>
+      </div>
+      <div class="chart-swatch">
+        <div class="chip" style="background:#888888;"></div>
+        <div class="name">Gray 3</div>
+        <div class="hex">#888888</div>
+      </div>
+      <div class="chart-swatch">
+        <div class="chip" style="background:#595959;"></div>
+        <div class="name">Gray 4</div>
+        <div class="hex">#595959</div>
+      </div>
+      <div class="chart-swatch">
+        <div class="chip" style="background:#2D7A3A;"></div>
+        <div class="name">Accent</div>
+        <div class="hex">#2D7A3A</div>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <svg viewBox="0 0 700 200" preserveAspectRatio="xMidYMid meet">
+        <line x1="6" y1="55" x2="694" y2="55" stroke="#EBEBEB" stroke-width="1"/>
+        <line x1="6" y1="105" x2="694" y2="105" stroke="#EBEBEB" stroke-width="1"/>
+        <line x1="6" y1="155" x2="694" y2="155" stroke="#EBEBEB" stroke-width="1"/>
+        <polyline points="6,175 90,168 175,172 260,155 345,140 430,148 515,120 600,95 694,80" fill="none" stroke="#B4B4B4" stroke-width="1.25" stroke-dasharray="4,2"/>
+        <polyline points="6,175 90,160 175,150 260,130 345,110 430,95 515,70 600,45 694,20" fill="none" stroke="#2D7A3A" stroke-width="2"/>
+      </svg>
+      <div class="chart-legend">
+        <span class="legend-item"><span class="legend-swatch-dash"></span>Benchmark</span>
+        <span class="legend-item strong"><span class="legend-swatch-line"></span>Strategy</span>
+      </div>
+    </div>
+
+    <ul class="spec-list" style="margin-bottom:12px;">
+      <li>Two lines, one comparison, one conclusion — the target shape for every headline equity/drawdown chart.</li>
+      <li>No in-figure title — the page's own H2 carries it.</li>
+      <li>Drawdown charts stay grayscale, no accent — the least appropriate place to reach for color.</li>
+      <li>Font stack: Helvetica Neue, Arial, DejaVu Sans (matplotlib's own fallback, so it never silently drops to Times).</li>
+    </ul>
+    <p class="footnote">Full palette constants, rcParams module, and per-chart-type specs live in the Visual System Spec doc.</p>
+  </section>
+
+  <!-- 07 — Don't -->
+  <section id="dont">
+    <h2>07 — Don't</h2>
+    <ul class="dont-list">
+      <li>Don't redraw, recolor, or "clean up" the dog-in-O — export it from the master file only.</li>
+      <li>Don't set headings or body copy in the serif — it's mark-only.</li>
+      <li>Don't introduce a second accent color. If a chart needs more than one series distinguished, use the gray ramp before reaching for a new hue.</li>
+      <li>Don't add drop shadows, gradients, or card elevation — the whole system is flat, hairline-bordered.</li>
+      <li>Don't place the mark on a colored or dark background until a reversed version exists.</li>
+    </ul>
+  </section>
+
+  <footer class="colophon">
+    <p>Dog Capital — Brand Manual · July 2026</p>
+  </footer>
+
+</div>
+</body>
+</html>
