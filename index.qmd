@@ -4,64 +4,90 @@ page-layout: full
 ---
 
 <div id="site-header">
-<img src="LOGO-lockup.png" alt="Dog Capital" style="height: 36px; width: auto; display: block; margin: 0;">
-<p>Systematic Strategies for Argentine Investors.</p>
-<p>Rules-based — Evidence-driven — Transparently-tracked</p>
+<div class="logo-lockup">
+<span class="logo-text-wrap"><img src="logo-icon.png" alt="Dog Capital" class="logo-icon"><span class="logo-wordmark">DOG CAPITAL</span><span class="logo-spacer"></span></span>
+</div>
 </div>
 
 <div id="site-nav">
-<a href="index.qmd#programs">Active Strategies</a>
+<a href="#about" class="nav-item">About Us</a>
+<a href="#programs" class="nav-item">Programs</a>
+<a href="#research" class="nav-item">Research</a>
+<a href="#contact" class="nav-item">Contact</a>
+<a href="#legal" class="nav-item">Legal</a>
 </div>
 
-<div id="programs" style="padding: 4rem 0 2rem 0;">
+<div id="about" class="page-section">
 
-### Active Strategies
+### About Us {.section-title}
+
+Dog Capital is an independent Argentine research and investment group building systematic, rules-based strategies for Argentine investors.
+
+Our approach is grounded in more than nine years of active trading across futures, ETFs, and discretionary execution — a search for durable, evidence-backed edges rather than short-lived signals. Every program is designed, tested, and run against a real track record, whether in a live account or a live paper account, tracked transparently as the results accumulate.
+
+Each program is built around the realities of investing from Argentina — tax treatment, capital access, and execution across multiple venues — rather than adapted as an afterthought.
+
+The thesis is simple: disciplined, rules-based strategies beat the pursuit of the next holy grail.
+
+</div>
+
+<div id="programs" class="page-section">
+
+### Programs {.section-title}
 
 <div class="program-grid">
 
 <div class="program-card">
-<span class="tag">Paper Trading</span>
-<span class="tag">Interactive Brokers</span>
-
-### ES Core — Futures
-
-The core research strategy — S&P500 futures core with a dynamic tactical sleeve. Executed as Futures on CME.
-
-<div class="stats-group-label">Paper Results Overview</div>
-<div class="card-stats">
-<div><div class="stat-label">CAGR</div><div class="stat-value">Populating</div></div>
-<div><div class="stat-label">Sharpe</div><div class="stat-value">Populating</div></div>
-<div><div class="stat-label">Max DD</div><div class="stat-value">Populating</div></div>
+<div class="card-header-row">
+<h3>SPY Core — ETFs</h3>
+<div class="card-status"><span class="tag live">Live Trading</span></div>
 </div>
 
-<div class="backtest-ref">Backtest CAGR 9.80% · 04-09-2001 to 03-07-2026</div>
+U.S. large-cap ETF as a permanent equity core with a dynamic tactical sleeve. Executed as CEDEARs on BYMA. The tax-efficient, capital-accessible strategy for Argentine investors — CEDEAR capital gains are exempt, and ETF positions need far less capital than futures to run properly.
 
-[View research →](programs/es-core.qmd)
+[To Program](programs/spy-core.qmd)
 
 </div>
 
 <div class="program-card">
-<span class="tag live">Live Trading</span>
-<span class="tag">Invertir Online</span>
-
-### SPY Core — ETFs
-
-U.S. large-cap ETF as a permanent equity core with a dynamic tactical sleeve. Executed as CEDEARs on BYMA.
-
-<div class="stats-group-label">Live Results Overview</div>
-<div class="card-stats">
-<div><div class="stat-label">CAGR</div><div class="stat-value">Populating</div></div>
-<div><div class="stat-label">Sharpe</div><div class="stat-value">Populating</div></div>
-<div><div class="stat-label">Max DD</div><div class="stat-value">Populating</div></div>
+<div class="card-header-row">
+<h3>S&P — CFD Futures</h3>
+<div class="card-status"><span class="tag live">Live Trading</span></div>
 </div>
 
-<div class="backtest-ref">Backtest CAGR 11.68% · 04-09-2001 to 02-07-2026</div>
-
-[View research →](programs/spy-core.qmd)
+*Program page in progress.*
 
 </div>
 
 </div>
+
+</div>
+
+<div id="research" class="page-section">
+
+### Research {.section-title}
+
+Every program on this site traces back to one foundational body of research: ES Core, the systematic S&P 500 vol-targeting strategy every allocation decision derives from. Full methodology, backtest results, and live paper-trading performance are documented on its own dedicated page.
+
+[Read the ES Core Research →](programs/es-core.qmd)
+
+</div>
+
+<div id="contact" class="page-section">
+
+### Contact {.section-title}
+
+*Contact details are being finalized — check back soon.*
+
+</div>
+
+<div id="legal" class="page-section">
+
+### Legal {.section-title}
+
+*Hypothetical backtested results. Not investment advice.*
+
+Full disclaimer and legal terms are being finalized as part of ongoing legal review.
 
 </div>
 
