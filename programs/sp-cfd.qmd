@@ -1,0 +1,73 @@
+---
+title: "S&P — CFD Futures"
+---
+
+S&P 500 exposure via CFD futures, sized with the same downside-volatility
+targeting logic as every other Dog Capital program — adapted for a
+CFD/futures account rather than spot ETFs.
+
+<a href="../index.qmd#programs" class="back-link">← Back</a>
+
+---
+
+## Why CFD Futures
+
+CFD futures give leveraged, capital-efficient exposure to the S&P 500 without
+the capital lockup a fully-funded futures or equity position requires. For
+Argentine investors specifically, this is also the direct-USD-exposure
+counterpart to SPY Core's CEDEAR-based approach — a different venue and tax
+treatment, sized and risk-managed with the same discipline.
+
+Leverage without a systematic risk framework is how most CFD accounts fail.
+The point of this program is the framework, not the leverage itself.
+
+---
+
+## Strategy Design
+
+The position is sized against realized downside volatility, not a fixed
+leverage multiple — the same core logic as [ES Core](es-core.qmd), adapted
+for a single-instrument CFD/futures account instead of a multi-asset
+portfolio.
+
+**Framework:**
+
+- Single instrument: S&P 500
+- Volatility target: 20% annualized downside semi-deviation
+- Leverage: dynamic, bounded 0–3.0x
+- EMA(10) smoothing on the leverage signal
+- 21-day realized volatility lookback
+- Equity-based position sizing — exposure scales with account equity, not a
+  fixed lot size
+- Automated drawdown and rollover alerting
+
+Exposure contracts automatically as realized volatility rises and expands as
+it falls — no discretionary override, no directional forecasting.
+
+---
+
+## Track Record
+
+This program has a real, live discretionary track record that predates the
+systematic version above — manually traded, run over more than a year before
+any automation existed. The systematic strategy is currently proving itself
+on a demo account before taking over live execution.
+
+Once the systematic track record has enough live history to stand on its
+own, this page will carry a real performance comparison — discretionary vs.
+systematic vs. a passive S&P 500 benchmark — the same standard every other
+Dog Capital program is held to. No hypothetical or backtested figures are
+shown here in the meantime.
+
+---
+
+## Execution Layer
+
+Signal generation and position sizing run on a dedicated automated terminal,
+independent of the ETF/CEDEAR and IBKR-futures execution used by the other
+programs. Risk alerting (drawdown, rollover) runs alongside the sizing logic,
+not as a separate manual check.
+
+---
+
+*© 2026 Dog Capital*

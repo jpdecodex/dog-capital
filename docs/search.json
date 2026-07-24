@@ -53,7 +53,7 @@
     "href": "index.html",
     "title": "Dog Capital",
     "section": "",
-    "text": "DOG CAPITAL\n\n\n\nAbout Us Programs Research Contact Legal\n\n\n\nAbout Us\nDog Capital is an independent Argentine research and investment group building systematic, rules-based strategies for Argentine investors.\nOur approach is grounded in more than nine years of active trading across futures, ETFs, and discretionary execution — a search for durable, evidence-backed edges rather than short-lived signals. Every program is designed, tested, and run against a real track record, whether in a live account or a live paper account, tracked transparently as the results accumulate.\nEach program is built around the realities of investing from Argentina — tax treatment, capital access, and execution across multiple venues — rather than adapted as an afterthought.\nThe thesis is simple: disciplined, rules-based strategies beat the pursuit of the next holy grail.\n\n\n\nPrograms\n\n\n\n\nSPY Core — ETFs\n\n\nLive Trading\n\n\nU.S. large-cap ETF as a permanent equity core with a dynamic tactical sleeve. Executed as CEDEARs on BYMA. The tax-efficient, capital-accessible strategy for Argentine investors — CEDEAR capital gains are exempt, and ETF positions need far less capital than futures to run properly.\nTo Program\n\n\n\n\nS&P — CFD Futures\n\n\nLive Trading\n\n\nProgram page in progress.\n\n\n\n\nResearch\nEvery program on this site traces back to one foundational body of research: ES Core, the systematic S&P 500 vol-targeting strategy every allocation decision derives from. Full methodology, backtest results, and live paper-trading performance are documented on its own dedicated page.\nRead the ES Core Research →\n\n\nContact\nContact details are being finalized — check back soon.\n\n\nLegal\nHypothetical backtested results. Not investment advice.\nFull disclaimer and legal terms are being finalized as part of ongoing legal review.\n\n\n© 2026 Dog Capital  ·  Buenos Aires"
+    "text": "DOG CAPITAL\n\n\n\nAbout Us Programs Research Contact Legal\n\n\n\nAbout Us\nDog Capital is an independent Argentine research and investment group building systematic, rules-based strategies for Argentine investors.\nOur approach is grounded in more than nine years of active trading across futures, ETFs, and discretionary execution — a search for durable, evidence-backed edges rather than short-lived signals. Every program is designed, tested, and run against a real track record, whether in a live account or a live paper account, tracked transparently as the results accumulate.\nEach program is built around the realities of investing from Argentina — tax treatment, capital access, and execution across multiple venues — rather than adapted as an afterthought.\nThe thesis is simple: disciplined, rules-based strategies beat the pursuit of the next holy grail.\n\n\n\nPrograms\n\n\n\n\nSPY Core — ETFs\n\n\nLive Trading\n\n\nU.S. large-cap ETF as a permanent equity core with a dynamic tactical sleeve. Executed as CEDEARs on BYMA. The tax-efficient, capital-accessible strategy for Argentine investors — CEDEAR capital gains are exempt, and ETF positions need far less capital than futures to run properly.\nTo Program\n\n\n\n\nS&P — CFD Futures\n\n\nLive Trading\n\n\nS&P 500 exposure via CFD futures, sized with the same downside-volatility targeting logic as every other Dog Capital program — a real, live discretionary track record predating a systematic version now proving itself before taking over execution.\nTo Program\n\n\n\n\nResearch\nEvery program on this site traces back to one foundational body of research: ES Core, the systematic S&P 500 vol-targeting strategy every allocation decision derives from. Full methodology, backtest results, and live paper-trading performance are documented on its own dedicated page.\nRead the ES Core Research →\n\n\nContact\nContact details are being finalized — check back soon.\n\n\nLegal\nHypothetical backtested results. Not investment advice.\nFull disclaimer and legal terms are being finalized as part of ongoing legal review.\n\n\n© 2026 Dog Capital  ·  Buenos Aires"
   },
   {
     "objectID": "programs/es-core.html",
@@ -138,5 +138,40 @@
     "title": "ES Core",
     "section": "Execution Layer",
     "text": "Execution Layer\nES Core is the research core the rest of Dog Capital’s programs are built from — every live and paper strategy in the lineup, including ETF Core, inherits its allocation logic. Direct futures execution at this scale requires substantial dedicated capital, so the strategy proves itself first on IBKR paper trading ahead of live deployment.\n\n\nDisclaimer. These are hypothetical backtested results. They were not achieved by any investor. Hypothetical performance does not reflect the impact of taxes, brokerage fees, slippage, or the inability to execute at historical prices. Past hypothetical performance is not a reliable indicator of future results. This is not investment advice.\n\n\n© 2026 Dog Capital"
+  },
+  {
+    "objectID": "programs/sp-cfd.html",
+    "href": "programs/sp-cfd.html",
+    "title": "S&P — CFD Futures",
+    "section": "",
+    "text": "S&P 500 exposure via CFD futures, sized with the same downside-volatility targeting logic as every other Dog Capital program — adapted for a CFD/futures account rather than spot ETFs.\n← Back"
+  },
+  {
+    "objectID": "programs/sp-cfd.html#why-cfd-futures",
+    "href": "programs/sp-cfd.html#why-cfd-futures",
+    "title": "S&P — CFD Futures",
+    "section": "Why CFD Futures",
+    "text": "Why CFD Futures\nCFD futures give leveraged, capital-efficient exposure to the S&P 500 without the capital lockup a fully-funded futures or equity position requires. For Argentine investors specifically, this is also the direct-USD-exposure counterpart to SPY Core’s CEDEAR-based approach — a different venue and tax treatment, sized and risk-managed with the same discipline.\nLeverage without a systematic risk framework is how most CFD accounts fail. The point of this program is the framework, not the leverage itself."
+  },
+  {
+    "objectID": "programs/sp-cfd.html#strategy-design",
+    "href": "programs/sp-cfd.html#strategy-design",
+    "title": "S&P — CFD Futures",
+    "section": "Strategy Design",
+    "text": "Strategy Design\nThe position is sized against realized downside volatility, not a fixed leverage multiple — the same core logic as ES Core, adapted for a single-instrument CFD/futures account instead of a multi-asset portfolio.\nFramework:\n\nSingle instrument: S&P 500\nVolatility target: 20% annualized downside semi-deviation\nLeverage: dynamic, bounded 0–3.0x\nEMA(10) smoothing on the leverage signal\n21-day realized volatility lookback\nEquity-based position sizing — exposure scales with account equity, not a fixed lot size\nAutomated drawdown and rollover alerting\n\nExposure contracts automatically as realized volatility rises and expands as it falls — no discretionary override, no directional forecasting."
+  },
+  {
+    "objectID": "programs/sp-cfd.html#track-record",
+    "href": "programs/sp-cfd.html#track-record",
+    "title": "S&P — CFD Futures",
+    "section": "Track Record",
+    "text": "Track Record\nThis program has a real, live discretionary track record that predates the systematic version above — manually traded, run over more than a year before any automation existed. The systematic strategy is currently proving itself on a demo account before taking over live execution.\nOnce the systematic track record has enough live history to stand on its own, this page will carry a real performance comparison — discretionary vs. systematic vs. a passive S&P 500 benchmark — the same standard every other Dog Capital program is held to. No hypothetical or backtested figures are shown here in the meantime."
+  },
+  {
+    "objectID": "programs/sp-cfd.html#execution-layer",
+    "href": "programs/sp-cfd.html#execution-layer",
+    "title": "S&P — CFD Futures",
+    "section": "Execution Layer",
+    "text": "Execution Layer\nSignal generation and position sizing run on a dedicated automated terminal, independent of the ETF/CEDEAR and IBKR-futures execution used by the other programs. Risk alerting (drawdown, rollover) runs alongside the sizing logic, not as a separate manual check.\n\n© 2026 Dog Capital"
   }
 ]

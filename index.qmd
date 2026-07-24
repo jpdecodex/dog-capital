@@ -55,7 +55,9 @@ U.S. large-cap ETF as a permanent equity core with a dynamic tactical sleeve. Ex
 <div class="card-status"><span class="tag live">Live Trading</span></div>
 </div>
 
-*Program page in progress.*
+S&P 500 exposure via CFD futures, sized with the same downside-volatility targeting logic as every other Dog Capital program — a real, live discretionary track record predating a systematic version now proving itself before taking over execution.
+
+[To Program](programs/sp-cfd.qmd)
 
 </div>
 
